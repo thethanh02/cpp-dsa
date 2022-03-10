@@ -1981,3 +1981,740 @@ Cho số tự nhiên N. Hãy tìm cặp số nguyên tố đầu tiên có tổn
 2 5
 ```
 
+## DSA06015 - MERGE SORT
+
+Cho mảng A[] gồm N phần tử chưa được sắp xếp. Nhiệm vụ của bạn là sắp xếp các phần tử của mảng A[] theo thứ tự tăng dần bằng thuật toán Merge Sort.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào số N tương ứng với số phần tử của mảng A[]; phần thứ 2 là N số của mảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N, A[i]≤10<sup>6</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+5
+4 1 3 9 7
+10
+10 9 8 7 6 5 4 3 2 1
+```
+
+### output
+```
+1 3 4 7 9
+1 2 3 4 5 6 7 8 9 10
+```
+
+## DSA06016 - TÍCH LỚN NHẤT - NHỎ NHẤT
+
+Cho mảng A[] gồm n phần tử và mảng B[] gồm m phần tử. Nhiệm vụ của bạn là tìm tích giữa phần tử lớn nhất của mảng A[] và phần tử nhỏ nhất của mảng B[]. Ví dụ A[] = {5, 7, 112, 9, 3, 6, 2 }, B[] = {1, 2, 6, -1, 0, 9} ta có kết quả là -9 = 9*(-1).
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm ba dòng: dòng đầu tiên đưa vào n, m tương ứng với số phần tử của mảng A[] và B[]; dòng tiếp theo là n số A[i] ; dòng cuối cùng là m số B[i]; các số được viết cách nhau một vài khoảng trống.
+- T, n, m, A[i], B[i] thỏa mãn ràng buộc: 1≤ T ≤100; 1≤ n, m ≤10<sup>6</sup>; -10<sup>8</sup>≤ A[i] ≤10<sup>8</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+6 6
+5 7 9 3 6 2
+1 2 6 -1 0 9
+6 6
+1 4 2 3 10 2
+4 2 6 5 2 9
+```
+
+### output
+```
+-9
+20
+```
+
+## DSA06017 - TRỘN HAI DÃY
+
+Cho mảng A[] gồm n phần tử và mảng B[] gồm m phần tử. Nhiệm vụ của bạn là hợp nhất hai mảng A[] và B[] để được một mảng mới đã được sắp xếp. Ví dụ A[] = {5, 7, 112, 9, 3, 6, 2 }, B[] = {1, 2, 6, -1, 0, 9} ta có kết quả là C[] = {-1, 1, 0, 2, 3, 5, 6, 6, 7, .
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm ba dòng: dòng đầu tiên đưa vào n, m tương ứng với số phần tử của mảng A[] và B[]; dòng tiếp theo là n số A[i] ; dòng cuối cùng là m số B[i]; các số được viết cách nhau một vài khoảng trống.
+- T, n, m, A[i], B[i] thỏa mãn ràng buộc: 1≤ T ≤100; 1≤ n, m ≤10<sup>6</sup>; -10<sup>8</sup>≤ A[i] ≤10<sup>8</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+1
+3 3
+10 5 15
+20 3 2
+```
+
+### output
+```
+2 3 5 10 15 20
+```
+
+## DSA06018 - BỔ SUNG PHẦN TỬ
+
+Cho mảng A[] gồm n số nguyên dương. Gọi L, R là max và min các phần tử của A[]. Nhiệm vụ của bạn là tìm số phần tử cần thiết cần thêm vào mảng để mảng có đầy đủ các số trong khoảng [L, R]. Ví dụ A[] = {5, 7, 9, 3, 6, 2 } ta nhận được kết quả là 2 tương ứng với các số còn thiếu là 4, 8.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm hai dòng: dòng đầu tiên đưa vào n, tương ứng với số phần tử của mảng A[]; dòng tiếp theo là n số A[i] ; các số được viết cách nhau một vài khoảng trống.
+- T, n, A[i] thỏa mãn ràng buộc: 1≤ T ≤100; 1≤ n, A[i] ≤10<sup>3</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+5
+4 5 3 8 6
+3
+2 1 3
+```
+
+### output
+```
+1
+0
+```
+
+## DSA06019 - SẮP XẾP THEO SỐ LẦN XUẤT HIỆN
+
+Cho mảng A[] gồm n số nguyên. Nhiệm vụ của bạn là sắp xếp mảng theo số lần xuất hiện các phần tử của mảng. Số xuất hiện nhiều lần nhất đứng trước. Nếu hai phần tử có số lần xuất hiện như nhau, số nhỏ hơn đứng trước. Ví dụ A[] = {5, 5, 4, 6, 4 }, ta nhận được kết quả là A[] = {4, 4, 5, 5, 6}.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm hai dòng: dòng đầu tiên đưa vào n, tương ứng với số phần tử của mảng A[] và số k; dòng tiếp theo là n số A[i] ; các số được viết cách nhau một vài khoảng trống.
+- T, n, A[i] thỏa mãn ràng buộc: 1≤ T ≤100; 1≤ n ≤10<sup>4</sup>; 1≤ k ≤10<sup>3</sup>; 1≤ A[i] ≤10<sup>5</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+5
+5 5 4 6 4
+5
+9 9 9 2 5
+```
+
+### output
+```
+4 4 5 5 6
+9 9 9 2 5
+```
+
+## DSA06020 - TÌM KIẾM
+
+Cho mảng A[] gồm n phần tử đã được sắp xếp. Hãy đưa ra 1 nếu X có mặt trong mảng A[], ngược lại đưa ra -1.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất đưa vào n, X là số các phần tử của mảng A[] và số X cần tìm; dòng tiếp theo đưa vào n số A[i] (1≤i≤n) các số được viết cách nhau một vài khoảng trống.
+- T, n, A, X thỏa mãn ràng buộc: 1≤T≤100; 1≤N, X, A[i] ≤10<sup>6</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2 
+5 16
+2 4 7 9 16
+7 98
+1 22 37 47 54 88 96
+```
+
+### output
+```
+1
+-1
+```
+
+## DSA06021 - TÌM KIẾM TRONG DÃY SẮP XẾP VÒNG
+
+Một mảng được sắp được chia thành hai đoạn tăng dần được gọi là mảng sắp xếp vòng. Ví dụ mảng A[] = { 5, 6, 7, 8, 9, 10, 1, 2, 3, 4} là mảng sắp xếp vòng. Cho mảng A[] gồm n phần tử, hãy tìm vị trí của phần tử x trong mảng A[] với thời gian log(n).
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất đưa vào n và x; dòng tiếp theo đưa vào n số A[i]; các số được viết cách nhau một vài khoảng trống.
+- T, n, A[i], x  thỏa mãn ràng buộc: 1≤T≤100; 1≤N, x, A[i] ≤10<sup>7</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+10 3
+5 6 7 8 9 10 1 2 3 4
+10 3
+1 2 3 4 5 6 7 8 9 10
+```
+
+### output
+```
+9
+3
+```
+
+## DSA06022 - SỐ NHỎ NHẤT VÀ NHỎ THỨ HAI
+
+Cho mảng A[] gồm n phần tử, hãy đưa ra số nhỏ nhất và số nhỏ thứ hai của mảng. Nếu không có số nhỏ thứ hai, hãy đưa ra -1.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất đưa vào n là số phần tử của mảng A[]; dòng tiếp theo đưa vào n số A[i]; các số được viết cách nhau một vài khoảng trống.
+- T, n, A[i] thỏa mãn ràng buộc: 1≤T≤100; 1≤N, A[i] ≤10<sup>7</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+10
+5 6 7 8 9 10 1 2 3 4
+5
+1 1 1  1  1
+```
+
+### output
+```
+1 2
+-1
+```
+
+## DSA06023 - SẮP XẾP ĐỔI CHỖ TRỰC TIẾP
+
+Hãy thực hiện thuật toán sắp xếp đổi chỗ trực tiếp trên dãy N số nguyên. Ghi ra các bước thực hiện thuật toán.
+
+**Input:**
+Dòng 1 ghi số N (không quá 100). Dòng 2 ghi N số nguyên dương (không quá 100).
+
+**Output:**
+Ghi ra màn hình từng bước thực hiện thuật toán. Mỗi bước trên một dòng, các số trong dãy cách nhau đúng một khoảng trống.
+
+### input
+```
+4
+5 7 3 2
+```
+
+### output
+```
+Buoc 1: 2 7 5 3
+Buoc 2: 2 3 7 5
+Buoc 3: 2 3 5 7
+```
+
+## DSA06024 - SẮP XẾP CHỌN
+
+Hãy thực hiện thuật toán sắp xếp chọn trên dãy N số nguyên. Ghi ra các bước thực hiện thuật toán.
+
+**Input:**
+Dòng 1 ghi số N (không quá 100). Dòng 2 ghi N số nguyên dương (không quá 100).
+
+**Output:**
+Ghi ra màn hình từng bước thực hiện thuật toán. Mỗi bước trên một dòng, các số trong dãy cách nhau đúng một khoảng trống.
+
+### input
+```
+4
+5 7 3 2
+```
+
+### output
+```
+Buoc 1: 2 7 3 5
+Buoc 2: 2 3 7 5
+Buoc 3: 2 3 5 7
+```
+
+## DSA06025 - SẮP XẾP CHÈN
+
+Hãy thực hiện thuật toán sắp xếp chọn trên dãy N số nguyên. Ghi ra các bước thực hiện thuật toán.
+
+**Input:**
+Dòng 1 ghi số N (không quá 100). Dòng 2 ghi N số nguyên dương (không quá 100).
+
+**Output:**
+Ghi ra màn hình từng bước thực hiện thuật toán. Mỗi bước trên một dòng, các số trong dãy cách nhau đúng một khoảng trống.
+
+### input
+```
+4
+5 7 3 2
+```
+
+### output
+```
+Buoc 0: 5
+Buoc 1: 5 7
+Buoc 2: 3 5 7
+Buoc 3: 2 3 5 7
+```
+
+## DSA06026 - SẮP XẾP NỔI BỌT
+
+Hãy thực hiện thuật toán sắp xếp chọn trên dãy N số nguyên. Ghi ra các bước thực hiện thuật toán.
+
+**Input:**
+Dòng 1 ghi số N (không quá 100). Dòng 2 ghi N số nguyên dương (không quá 100).
+
+**Output:**
+Ghi ra màn hình từng bước thực hiện thuật toán. Mỗi bước trên một dòng, các số trong dãy cách nhau đúng một khoảng trống.
+
+### input
+```
+4
+5 7 3 2
+```
+
+### output
+```
+Buoc 1: 3 2 5 7
+Buoc 2: 2 3 5 7
+```
+
+## DSA06027 - SẮP XẾP ĐỔI CHỖ TRỰC TIẾP - LIỆT KÊ NGƯỢC
+
+Cho dãy số A[] có n phần tử là các số nguyên dương. Hãy sắp xếp dãy số theo thuật toán sắp xếp đổi chỗ trực tiếp. Nhưng yêu cầu in ra lần lượt các bước chạy của thuật toán theo thứ tự ngược (bước cuối cùng in ra đầu tiên).
+
+**Input:**
+
+Dòng đầu ghi số bộ test (không quá 10). Mỗi test gồm 2 dòng:
+
+- Dòng đầu ghi số n (1 < n < 100)
+- Dòng thứ 2 ghi n số của dãy A (các số đều nguyên dương và nhỏ hơn 1000)
+
+**Output:**
+
+Ghi ra lần lượt các bước thuật toán theo thứ tự ngược (xem ví dụ mẫu để hiểu rõ hơn).
+
+### input
+```
+1
+6
+5 8 3 9 1 4
+```
+
+### output
+```
+Buoc 5: 1 3 4 5 8 9
+Buoc 4: 1 3 4 5 9 8
+Buoc 3: 1 3 4 9 8 5
+Buoc 2: 1 3 8 9 5 4
+Buoc 1: 1 8 5 9 3 4
+```
+
+## DSA06028 - SẮP XẾP CHỌN - LIỆT KÊ NGƯỢC
+
+Cho dãy số A[] có n phần tử là các số nguyên dương. Hãy sắp xếp dãy số theo thuật toán sắp xếp chọn. Nhưng yêu cầu in ra lần lượt các bước chạy của thuật toán theo thứ tự ngược (bước cuối cùng in ra đầu tiên).
+
+**Input:**
+- Dòng đầu ghi số n (1 < n < 100)
+- Dòng thứ 2 ghi n số của dãy A (các số đều nguyên dương và nhỏ hơn 100000)
+
+**Output:**
+- Ghi ra lần lượt các bước thuật toán theo thứ tự ngược (xem ví dụ mẫu để hiểu rõ hơn).
+
+### input
+```
+6
+5 8 3 9 1 4
+```
+
+### output
+```
+Buoc 5: 1 3 4 5 8 9
+Buoc 4: 1 3 4 5 9 8
+Buoc 3: 1 3 4 9 5 8
+Buoc 2: 1 3 8 9 5 4
+Buoc 1: 1 8 3 9 5 4
+```
+
+## DSA06029 - SẮP XẾP CHÈN - LIỆT KÊ NGƯỢC
+
+Cho dãy số A[] có n phần tử là các số nguyên dương. Hãy sắp xếp dãy số theo thuật toán sắp xếp chèn. Nhưng yêu cầu in ra lần lượt các bước chạy của thuật toán theo thứ tự ngược (bước cuối cùng in ra đầu tiên).
+
+**Input:**
+- Dòng đầu ghi số n (1 < n < 100)
+- Dòng thứ 2 ghi n số của dãy A (các số đều nguyên dương và nhỏ hơn 100000)
+
+**Output:**
+- Ghi ra lần lượt các bước thuật toán theo thứ tự ngược (xem ví dụ mẫu để hiểu rõ hơn).
+
+### input
+```
+6
+5 8 3 9 1 4
+```
+
+### output
+```
+Buoc 5: 1 3 4 5 8 9
+Buoc 4: 1 3 5 8 9
+Buoc 3: 3 5 8 9
+Buoc 2: 3 5 8
+Buoc 1: 5 8
+Buoc 0: 5
+```
+
+## DSA06030 - SẮP XẾP NỔI BỌT - LIỆT KÊ NGƯỢC
+
+Cho dãy số A[] có n phần tử là các số nguyên dương. Hãy sắp xếp dãy số theo thuật toán sắp xếp nổi bọt. Nhưng yêu cầu in ra lần lượt các bước chạy của thuật toán theo thứ tự ngược (bước cuối cùng in ra đầu tiên).
+
+Chú ý: thuật toán sắp xếp nổi bọt có thể kết thúc khi tất cả dãy đã sắp xếp, không còn cặp số cạnh nhau nào sai thứ tự.
+
+**Input:**
+
+Dòng đầu ghi số bộ test (không quá 10). Mỗi test gồm 2 dòng:
+
+- Dòng đầu ghi số n (1 < n < 100)
+- Dòng thứ 2 ghi n số của dãy A (các số đều nguyên dương và nhỏ hơn 1000)
+
+**Output:**
+
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+1
+6
+4 1 3 9 8 5
+```
+
+### output
+```
+Buoc 2: 1 3 4 5 8 9
+Buoc 1: 1 3 4 8 5 9
+```
+
+## DSA06031 - PHẦN TỬ LỚN NHẤT TRONG DÃY CON
+
+Cho dãy số A[] gồm có N phần tử và số nguyên K.
+
+Với mỗi dãy con liên tiếp có độ dài bằng K (từ trái sang phải), bạn hãy in ra phần tử lớn nhất trong dãy con này.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test gồm số nguyên N và K (1≤ N ≤ 100 000, 1 ≤ K ≤ N).
+- Dòng tiếp theo gồm N số nguyên A[i] (0 ≤ A[i] ≤ 10<sub>9</sub>).
+
+**Output:**
+- Với mỗi test, in ra trên một dòng N-K+1 số nguyên là đáp án tìm được.
+
+### input
+```
+2
+9 3
+1 2 3 1 4 5 2 3 6
+10 4
+8 5 10 7 9 4 15 12 90 13
+```
+
+### output
+```
+3 3 4 5 5 5 6
+10 10 10 15 15 90 90
+```
+
+## DSA06032 - BỘ BA SỐ CÓ TỔNG NHỎ HƠN K
+
+Cho dãy số A[] gồm có N phần tử.
+
+Nhiệm vụ của bạn là hãy đếm số bộ ba (i, j, k) mà A[i] + A[j] + A[k] < K cho trước.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm số nguyên N và K (1≤ N ≤5000, -10<sup>9</sup> ≤ K ≤ 10<sup>9</sup>).
+- Dòng tiếp theo gồm N số nguyên A[i] (-10<sup>9</sup> ≤ A[i] ≤ 10<sup>9</sup>).
+
+**Output:**
+- Với mỗi test, in ra trên một dòng là đáp án tìm được.
+
+### input
+```
+2
+4 2
+-2 0 1 3
+5 12
+5 1 3 4 7
+```
+
+### output
+```
+2
+4
+```
+
+## DSA06043 - ĐIỂM CÂN BẰNG
+
+Cho dãy số A[] gồm có N phần tử nguyên dương. Phần tử thứ i được gọi là điểm cân bằng của dãy số nếu như tổng các số bên trái bằng tổng các số bên phải của nó.
+
+Nhiệm vụ của bạn là điểm cân bằng đầu tiên của dãy A[] cho trước. Nếu không có đáp án, in ra -1.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test gồm số nguyên N (1≤ N ≤ 100 000), số lượng phần tử trong dãy số ban đầu.
+- Dòng tiếp theo gồm N số nguyên A[i] (-1000 ≤ A[i] ≤ 1000).
+
+**Output:**
+- Với mỗi test, in ra trên một dòng vị trí của điểm cân bằng tìm được.
+
+### input
+```
+2
+7
+-7 1 5 2 -4 3 0
+5
+1 2 3 4 5
+```
+
+### output
+```
+4
+-1
+```
+
+## DSA06046 - CHÊNH LỆCH NHỎ NHẤT
+
+Cho dãy số A[] gồm có N phần tử. Bạn cần tìm chênh lệch nhỏ nhất giữa hai phần tử bất kì trong dãy số đã cho.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test gồm số nguyên N (1≤ N ≤ 100 000).
+- Dòng tiếp theo gồm N số nguyên A[i] (0 ≤ A[i] ≤ 10<sup>9</sup>).
+
+**Output:**
+- Với mỗi test, in ra trên một dòng là đáp án tìm được.
+
+### input
+```
+3
+6
+1 5 3 19 18 25
+4
+30 5 20 9
+7
+1 19 2 31 38 25 100
+```
+
+### output
+```
+1
+4
+1
+```
+
+## DSA02004 - DI CHUYỂN TRONG MÊ CUNG 2
+
+Cho một mê cung bao gồm các khối được biểu diễn như một ma trận nhị phân A[N][N]. Một con chuột đi từ ô đầu tiên góc trái (A[0][0]) đến ô cuối cùng góc phải (A[N-1][N-1]) theo nguyên tắc:
+
+- Down (D): Chuột được phép xuống dưới nếu ô dưới nó có giá trị 1.
+- Right (R): Chuột được phép sang phải dưới nếu ô bên phải nó có giá trị 1.
+- Left (L): Chuột được phép sang trái dưới nếu ô bên trái nó có giá trị 1.
+- Up (U): Chuột được phép lên trên nếu ô trên nó có giá trị 1.
+
+Hãy đưa ra tất cả các hành trình của con chuột trên mê cung. Đưa ra -1 nếu chuột không thể đi đến đích.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào số N là kích cỡ của mê cung; dòng tiếp theo đưa vào ma trận nhị phân A[N][N].
+- T, N, A[i][j] thỏa mãn ràng buộc: 1≤T ≤10; 2≤N≤8; 0≤A[i][j] ≤1.
+
+**Output:**
+- Đưa ra các xâu ký tự được sắp xếp, trong đó mỗi xâu là một đường đi của con chuột trong mê cung. In ra đáp án theo thứ tự từ điển. Đưa ra -1 nếu chuột không đi được đến đích.
+
+### input
+```
+3
+4
+1 0 0 0
+1 1 0 1
+0 1 0 0
+0 1 1 1
+4
+1 0 0 0
+1 1 0 1
+1 1 0 0
+0 1 1 1
+5
+1 0 0 0 0
+1 1 1 1 1
+1 1 1 0 1
+0 0 0 0 1
+0 0 0 0 1
+```
+
+### output
+```
+DRDDRR
+DDRDRR DRDDRR
+DDRRURRDDD DDRURRRDDD DRDRURRDDD DRRRRDDD
+```
+
+## DSA03026 - LỰA CHỌN THAM LAM
+
+Cho hai số nguyên dương N và S. Hãy lựa chọn các chữ số phù hợp để tạo ra số nhỏ nhất và số lớn nhất có N chữ số sao cho tổng chữ số đúng bằng S.
+
+**Input:**
+
+Chỉ có một dòng ghi hai số N và S. (0 < N <= 100; 0 <= S <= 900)
+
+**Output:**
+
+Ghi ra hai số nhỏ nhất và lớn nhất tìm được, cách nhau một khoảng trống.
+
+Nếu không thể tìm được thì ghi ra “-1 -1”
+
+
+### input
+```
+3 20
+________________________________________________________________
+2 900
+________________________________________________________________
+3 0
+```
+
+### output
+```
+299 992
+________________________________________________________________
+-1 -1
+________________________________________________________________
+-1 -1
+```
+
+## DSA04008 - SỐ FIBONACCI THỨ N
+
+Dãy số Fibonacci được xác định bằng công thức như sau:
+
+F[0] = 0, F[1] = 1;
+
+F[n] = F[n-1] + F[n-2] với mọi n >= 2.
+
+Các phần tử đầu tiên của dãy số là 0, 1, 1, 2, 3, 5, 8, ...
+
+Nhiệm vụ của bạn là hãy xác định số Fibonaci thứ n. Do đáp số có thể rất lớn, in ra kết quả theo modulo 10<sup>9</sup>+7.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 1000).
+- Mỗi test bắt gồm một số nguyên N (1 ≤ N ≤ 10<sup>9</sup>).
+
+**Output:**
+- Với mỗi test, in ra đáp án trên một dòng.
+
+### input
+```
+3
+2
+6
+20
+```
+
+### output
+```
+1
+8
+6765
+```
+
+## DSA04009 - LŨY THỪA MA TRẬN 1
+
+Cho ma trận vuông A kích thước N x N. Nhiệm vụ của bạn là hãy tính ma trận X = A<sup>K</sup> với K là số nguyên cho trước. Đáp số có thể rất lớn, hãy in ra kết quả theo modulo 10<sup>9</sup>+7.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 100).
+- Mỗi test bắt gồm một số nguyên N và K (1 ≤ N ≤ 10, 1 ≤ K ≤ 10<sup>9</sup>) là kích thước của ma trận và số mũ.
+
+**Output:**
+- Với mỗi test, in ra kết quả của ma trận X.
+
+### input
+```
+2
+2 5
+1 1
+1 0
+3 1000000000
+1 2 3
+4 5 6
+7 8 9
+```
+
+### output
+```
+8 5
+5 3
+597240088 35500972 473761863
+781257150 154135232 527013321
+965274212 272769492 580264779
+```
+
+## DSA06044 - SẮP XẾP CHẴN LẺ
+
+Cho dãy số a[] có n phần tử, đánh số từ 1 đến n. Hãy sắp xếp các phần tử ở vị trí lẻ theo thứ tự tăng dần, các phần tử ở vị trí chẵn theo thứ tự giảm dần.
+
+**Input:**
+- Dòng đầu tiên ghi số n, không quá 10<sup>5</sup>
+- Dòng thứ 2 ghi n số của dãy a[] (a ≤ a[i] ≤ 10<sup>9</sup>)
+
+**Output:**
+- Ghi ra dãy số kết quả trên một dòng
+
+### input
+```
+4
+1 2 3 4
+```
+
+### output
+```
+1 4 3 2
+```
+
+## DSA09011 - SỐ LƯỢNG HÒN ĐẢO
+
+Cho một bản đồ kích thước N x M được mô tả bằng ma trận A[][].A[i][j] = 1 có nghĩa vị trí (i, j) là nổi trên biển. 2 vị trí (i, j) và (x, y) được coi là liền nhau nếu như nó có chung đỉnh hoặc chung cạnh. Một hòn đảo là một tập hợp các điểm (i, j) mà A[i][j] = 1 và có thể di chuyển giữa hai điểm bất kì trong đó.
+
+Nhiệm vụ của bạn là hãy đếm số lượng đảo xuất hiện trên bản đồ.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi 2 số nguyên N và M (1 ≤ N, M ≤ 500).
+- N dòng tiếp theo, mỗi dòng gồm M số nguyên A[i][j].
+
+**Output:**
+- Với mỗi test, in ra số lượng hòn đảo tìm được.
+
+### input
+```
+1
+5 5
+1 1 0 0 0
+0 1 0 0 1
+1 0 0 1 1
+0 0 0 0 0
+1 0 1 0 1
+```
+
+### output
+```
+5
+```
+
