@@ -121,7 +121,7 @@ Output:
 1 2 3
 ```
 
-### DSA01003 - HOÁN VỊ KẾ TIẾP
+## DSA01003 - HOÁN VỊ KẾ TIẾP
 
 Cho số tự nhiên N và một hoán vị X\[\] của 1, 2, .., N. Nhiệm vụ của bạn là đưa ra hoán vị tiếp theo của X\[\]. Ví dụ N=5, X\[\] = {1, 2, 3, 4, 5} thì hoán vị tiếp theo của X\[\] là {1, 2, 3, 5, 4}.
 
