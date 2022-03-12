@@ -2753,3 +2753,59 @@ Nhiệm vụ của bạn là đếm xem có bao nhiêu cặp (i, j) mà A[i] + A
 9
 ```
 
+## DSA03002 - NHẦM CHỮ SỐ
+
+Trong một buổi học toán, giáo viên viết 2 số nguyên, A và B, và yêu cầu Tèo thực hiện phép cộng. Tèo không bao giờ tính toán sai, nhưng thỉnh thoảng cậu ta chép các con số một cách không chính xác. Lỗi duy nhất của là ghi nhầm '5' thành '6' hoặc ngược lại.  Cho hai số, A và B, tính tổng nhỏ nhất và lớn nhất mà Tèo có thể nhận được.
+
+**Input:**
+Có một dòng chứa hai số nguyên dương A và B ( 1 ≤ A, B ≤ 1 000 000).
+
+**Output:**
+In ra 2 số nguyên cách nhau một dấu cách, tổng nhỏ nhất và lớn nhất có thể nhận được.
+
+(Ví dụ 3 test)
+### input
+```
+11 25
+_____________
+1430 4862
+_____________
+16796 58786
+```
+
+### output
+```
+36 37
+_____________
+6282 6292
+_____________
+74580 85582
+```
+
+## DSA03003 - TÌM MAX
+
+Cho mảng A[] gồm N phần tử. Nhiệm vụ của bạn là tìm **max = for(i: 0 to n - 1) A<sub>i</sub> * i** bằng cách sắp đặt lại các phần tử trong mảng. Chú ý, kết quả của bài toán có thể rất lớn vì vậy bạn hãy đưa ra kết quả lấy modulo với 10<sup>9</sup>+7.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất đưa vào số phần tử của mảng N; dòng tiếp theo đưa vào N số A[i] tương ứng với các phần tử của mảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N, A[i] ≤10<sup>7</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+5
+5 3 2 4 1
+3
+1 2 3
+```
+
+### output
+```
+40
+8
+```
+
