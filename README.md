@@ -2795,3 +2795,169 @@ Cho mảng A[] gồm N phần tử. Nhiệm vụ của bạn là tìm **max = fo
 8
 ```
 
+## DSA03004 - TỔNG NHỎ NHẤT
+
+Cho mảng A[] gồm các số từ 0 đến 9. Nhiệm vụ của bạn là tìm tổng nhỏ nhất của hai số được tạo bởi các số trong mảng A[]. Chú ý, tất cả các số trong mảng A[] đều được sử dụng để tạo nên hai số.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất đưa vào số phần tử của mảng N; dòng tiếp theo đưa vào N số A[i] tương ứng với các phần tử của mảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤20; 0≤A[i]≤9.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+6
+6 8 4 5 2 3
+5
+5 3 0 7 4
+```
+
+### output
+```
+604
+82
+```
+
+## DSA03005 - CHIA MẢNG THÀNH HAI MẢNG CON CÓ TỔNG LỚN NHẤT
+
+Cho mảng A[] gồm N số nguyên không âm và số K. Nhiệm vụ của bạn là hãy chia mảng A[] thành hai mảng con có kích cỡ K và N-K sao cho hiệu giữa tổng hai mảng con là lớn nhất. Ví dụ với mảng A[] = {8, 4, 5, 2, 10}, K=2 ta có kết quả là 17 vì mảng A[] được chia thành hai mảng {4, 2} và { 8, 5,10} có hiệu của hai mảng con là 23-6=17 là lớn nhất.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất đưa vào số phần tử của mảng N và số K; dòng tiếp theo đưa vào N số A[i] tương ứng với các phần tử của mảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, K, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤ K<N ≤50; 0≤A[i]≤1000.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+5 2
+8 4 5 2 10
+8 3
+1 1 1 1 1 1 1 1
+```
+
+### output
+```
+17
+2
+```
+
+## DSA03006 - SẮP XẾP THAM LAM
+
+Cho mảng A[] gồm N số và thực hiện các thao tác theo nguyên tắc dưới đây:
+
+- Ta chọn một mảng con sao cho phần tử ở giữa của mảng con cũng là phần tử ở giữa của mảng A[] (trong trường hợp N lẻ).
+- Đảo ngược mảng con đã chọn trong mảng A[]. Ta được phép chọn mảng con và phép đảo ngược mảng con bao nhiêu lần tùy ý.
+
+Ví dụ với mảng A[] = {1, 6, **3, 4, 5**, 2, 7} ta có câu trả lời là Yes vì: ta chọn mảng con {3, 4, 5} và đảo ngược để nhận được mảng A[]={1, 6, **5, 4, 3**, 2, 7}, chọn tiếp mảng con {6, 5, 4, 3, 2} và đảo ngược ta nhận được mảng A[]={1, 2, 3, 4, 5, 6, 7}. Hãy cho biết ta có thể sắp xếp được mảng A[] bằng cách thực hiện các thao tác kể trên hay không?
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất đưa vào số phần tử của mảng N; dòng tiếp theo đưa vào N số A[i] tương ứng với các phần tử của mảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤ N ≤50; 0≤A[i]≤1000.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+7
+1 6 3 4 5 2 7
+7
+1 6 3 4 5 7 2
+```
+
+### output
+```
+Yes
+No
+```
+
+## DSA03010 - NỐI DÂY 1
+
+Cho N sợi dây với độ dài khác nhau được lưu trong mảng A[]. Nhiệm vụ của bạn là nối N sợi dây thành một sợi sao cho tổng chi phí nối dây là nhỏ nhất. Biết chi phí nối sợi dây thứ i và sợi dây thứ j là tổng độ dài hai sợi dây A[i] và A[j].
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất đưa vào số lượng sợi dây N; dòng tiếp theo đưa vào N số A[i] là độ dài của các sợi dây; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N≤10<sup>6</sup>; 0≤A[i]≤10<sup>6</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+4
+4 3 2 6
+5
+4 2 7 6 9
+```
+
+### output
+```
+29
+62
+```
+
+## DSA03012 - SẮP ĐẶT XÂU KÝ TỰ 1
+
+Cho xâu ký tự S bao gồm các ký tự in thường. Nhiệm vụ của bạn là kiểm tra xem ta có thể sắp đặt lại các ký tự trong S để hai ký tự giống nhau đều không kề nhau hay không? Đưa ra 1 nếu có thể sắp đặt lại các ký tự trong S thỏa mãn yêu cầu bài toán, ngược lại đưa ra -1.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một xâu ký tự S được viết trên một dòng.
+- T, S thỏa mãn ràng buộc: 1≤T≤100;  1≤length(S)≤10000.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+3
+geeksforgeeks
+bbbabaaacd
+bbbbb
+```
+
+### output
+```
+1
+1
+-1
+```
+
+## DSA03013 - SẮP ĐẶT XÂU KÝ TỰ 2
+
+Cho xâu ký tự S bao gồm các ký tự và số D. Nhiệm vụ của bạn là kiểm tra xem ta có thể sắp đặt lại các ký tự trong S để tất cả các ký tự giống nhau đều có khoảng cách là D hay không? Đưa ra 1 nếu có thể sắp đặt lại các ký tự trong S thỏa mãn yêu cầu bài toán, ngược lại đưa ra -1.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là số D; dòng tiếp theo là xâu S.
+- T, S, D thỏa mãn ràng buộc: 1≤T≤100;  1≤length(S)≤10000; 1≤D≤100.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+2
+ABB
+2
+AAA
+```
+
+### output
+```
+1
+-1
+```
