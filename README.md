@@ -2961,3 +2961,185 @@ AAA
 1
 -1
 ```
+
+## DSA03015 - MUA LƯƠNG THỰC
+
+Giả sử bạn là một người nghèo trong địa phương của bạn. Địa phương của bạn có duy nhất một cửa hàng bán lương thực. Cửa hàng của bạn mở cửa tất cả các ngày trong tuần ngoại trừ chủ nhật. Cho bộ ba số N, S, M thỏa mãn ràng buộc sau:
+
+- N : số đơn vị lương thực nhiều nhất bạn có thể mua trong ngày.
+- S : số lượng ngày bạn cần được sử dụng lương thực để tồn tại.
+- M : số đơn vị lương thực cần có mỗi ngày để bạn tồn tại.
+
+Giả sử bạn đang ở ngày thứ 2 trong tuần và cần tồn tại trong S ngày tới. Hãy cho biết số lượng ngày ít nhất bạn cần phải mua lương thực từ của hàng để tồn tại hoặc bạn sẽ bị chết đói trong S ngày tới.
+
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là bộ 3 số N, S, M được viết trên một dòng.
+- T, N, S, M thỏa mãn ràng buộc: 1≤T≤100;  1≤N, S, M ≤30.
+
+**Output:**
+- Đưa ra số ngày ít nhất bạn có thể mua lương thực để tồn tại hoặc đưa ra -1 nếu bạn bị chết đói.
+
+### input
+```
+2
+16 10 2
+20 10 30
+```
+
+### output
+```
+2
+-1
+```
+
+## DSA03022 - TÍCH LỚN NHẤT
+
+Cho dãy số A gồm N phần tử là các số nguyên. Hãy tính tích lớn nhất của **2 hoặc 3** phần tử trong dãy.
+
+**Input:**
+- Dòng đầu tiên ghi số N (3 ≤ N ≤ 10000)
+- Dòng thứ 2 ghi N số của dãy A (|A<sub>i</sub>| ≤ 1000)
+
+**Output:**
+- Ghi ra kết quả trên một dòng
+
+### input
+```
+6
+5 10 -2 3 5 2
+```
+
+### output
+```
+250
+```
+
+## DSA03024 - LỰA CHỌN TỐI ƯU
+
+Bạn được giao cho N công việc, công việc thứ i có thời gian bắt đầu là A[i] và kết thúc tại B[i]. Tại một thời điểm, bạn chỉ có thể làm một công việc.
+
+Bạn hãy lựa chọn các công việc một cách tối ưu sao cho số công việc làm được là nhiều nhất.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test gồm 1 số nguyên N ( 1 ≤ N ≤ 100 000).
+- N dòng tiếp theo, mỗi dòng gồm 2 số A[i] và B[i] (0 ≤ A[i] < B[i] ≤ 10<sup>6</sup>).
+
+**Output:**
+- Với mỗi test, in ra đáp án trên một dòng.
+
+### input
+```
+1
+6
+5 9
+1 2
+3 4
+0 6
+5 7
+8 9
+```
+
+### output
+```
+4
+```
+
+*Giải thích test: Lựa chọn công việc 2, 3, 5, 6.*
+
+## DSA03025 - TRỤC TỌA ĐỘ
+
+Trên trục Ox tính từ vị trí 0, người ta muốn xếp nhiều nhất các đoạn thẳng sao cho không đoạn nào chồng lấn lên nhau. Đoạn thẳng thứ i có vị trí bắt đầu là X1[i] và kết thúc tại X2[i], với X1[i] <= X2[i].
+
+Hãy tính số đoạn thẳng nhiều nhất có thể được lựa chọn để đưa lên trục Ox và không có đoạn nào chồng lấn lên nhau.
+
+**Input:**
+- Dòng đầu tiên ghi số bộ test, không quá 10.
+- Với mỗi bộ test: dòng đầu ghi số N là số đoạn thẳng (không quá 10<sup>5</sup>)
+- Tiếp theo là N dòng, mỗi dòng có 2 số nguyên mô tả đoạn thẳng. Các giá trị tọa độ đều là các số nguyên không âm và không quá 10<sup>6</sup>.
+
+**Output:**
+- Với mỗi test, viết trên 1 dòng số lượng đoạn thẳng nhiều nhất có thể được lựa chọn thỏa mãn điều kiện đề bài.
+
+### input
+```
+1
+10
+39 55
+37 74
+0 1
+19 25
+65 76
+51 52
+19 21
+5 94
+46 65
+32 40
+```
+
+### output
+```
+5
+```
+
+## DSA03034 - DÃY CON CHUNG
+
+Cho dãy số A[], B[] và C[] là dãy không giảm và có lần lượt N, M, K phần tử. Nhiệm vụ của bạn là hãy tìm các phần tử chung của 3 dãy số này.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm số nguyên N, M và K (1≤ N, M, K ≤ 100 000).
+- Dòng tiếp theo gồm N số nguyên A[i], rồi M số nguyên B[i] và K số nguyên C[i]. (0 ≤ A[i], B[i], C[i] ≤ 10<sup>9</sup>).
+
+**Output:**
+- Với mỗi test, in ra trên một dòng là đáp án thu được. Nếu không tìm được đáp án, in ra “NO”.
+
+### input
+```
+3
+6 5 8
+1 5 10 20 40 80
+5 7 20 80 100
+3 4 15 20 30 70 80 120
+3 5 4
+1 5 5
+3 4 5 5 10
+5 5 10 20
+3 3 3
+1 2 3
+4 5 6
+7 8 9
+```
+
+### output
+```
+20 80
+5 5
+NO
+```
+
+## DSA03035 - SẮP XẾP ĐƠN GIẢN
+
+Cho một dãy số a[] có n phần tử gồm các số từ 1 đến n theo 1 thứ tự ngẫu nhiên. Nhiệm vụ của bạn là sắp xếp lại dãy số này theo thứ tự tăng dần với điều kiện : ở mỗi bước sắp xếp, bạn chỉ được chọn 1 số ở 1 vị trí bất kì và chuyển số đó lên đầu dãy hoặc về cuối dãy.
+
+Hãy tính số bước tối thiểu cần thực hiện để hoàn thành việc sắp xếp.
+
+**Input:**
+- Dòng đầu tiên ghi 1 số n: số lượng phần tử của dãy a (1 ≤ n ≤ 100000)
+- Dòng tiếp theo gồm n số từ 1 đến n theo thứ tự ngẫu nhiên
+
+**Output:**
+- Một số nguyên duy nhất là số bước tối thiểu cần thực hiện để hoàn thành việc sắp xếp.
+
+### input
+```
+5
+4 1 2 5 3
+```
+
+### output
+```
+2
+```
