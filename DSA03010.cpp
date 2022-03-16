@@ -5,19 +5,15 @@ using namespace std;
 void Solution() {
     int n;
     cin >> n;
-    priority_queue<int, vector<int>, greater<int>> pq;
-    for (int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        pq.push(x);
-    }
-
+    int a[n];
+    for (int i = 0; i < n; i++) cin >> a[i];
+    
+    priority_queue<int, vector<int>, greater<int>> pq(a, a + n);
     ll res = 0;
-    while (!pq.empty()) {
+    while (pq.size() > 1) {
         ll fst = pq.top(); pq.pop();
         ll snd = pq.top(); pq.pop();
         res += fst + snd;
-        if (pq.empty()) break;
         pq.push(fst + snd);
     }
     cout << res << endl;
