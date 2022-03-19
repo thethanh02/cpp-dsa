@@ -3218,3 +3218,101 @@ Một phân số đơn vị nếu tử số của phân số đó là 1. Mọi p
 1/2 + 1/6 
 1/3
 ```
+
+## DSA05004 - DÃY CON TĂNG DÀI NHẤT
+
+Cho một dãy số nguyên gồm N phần tử A[1], A[2], ... A[N]. 
+
+Biết rằng dãy con tăng là 1 dãy A[i1],... A[ik] thỏa mãn i1 < i2 < ... < ik và A[i1] < A[i2] < .. < A[ik].
+
+Hãy cho biết dãy con tăng dài nhất của dãy này có bao nhiêu phần tử? 
+
+**Input:**
+Dòng 1 gồm 1 số nguyên là số N (1 ≤ N ≤ 1000). Dòng thứ 2 ghi N số nguyên A[1], A[2], .. A[N] (1 ≤ A[i] ≤ 1000). 
+
+**Output:**
+Ghi ra độ dài của dãy con tăng dài nhất.
+
+### input
+```
+6
+1 2 5 4 6 2
+```
+
+### output
+```
+4
+```
+
+## DSA05012 - TỔ HỢP C(n, k)
+
+Cho 2 số nguyên n, k. Bạn hãy tính C(n, k) modulo 10<sup>9</sup>+7.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm 2 số nguyên n, k (1 ≤ k ≤ n ≤ 1000).
+
+**Output:**
+- Với mỗi test, in ra đáp án trên một dòng.
+
+### input
+```
+2
+5 2
+10 3
+```
+
+### output
+```
+10
+120
+```
+
+## DSA05025 - CON ẾCH
+
+Một con ếch có thể nhảy 1, 2, 3 bước để có thể lên đến một đỉnh cần đến. Hãy đếm số các cách con ếch có thể nhảy đến đỉnh.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là số n là số bước con ếch có thể lên được đỉnh.
+- T, n thỏa mãn ràng buộc: 1≤T≤100;  1≤n ≤50.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+1
+5
+```
+
+### output
+```
+1
+13
+```
+
+## DSA05013 - BẬC THANG
+
+Một chiếc cầu thang có N bậc. Mỗi bước, bạn được phép bước lên trên tối đa K bước. Hỏi có tất cả bao nhiêu cách bước để đi hết cầu thang? (Tổng số bước đúng bằng N).
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 100).
+- Mỗi test gồm hai số nguyên dương N và K(1 ≤ N ≤ 100000, 1 ≤ K ≤ 100).
+
+**Output:**
+- Với mỗi test, in ra đáp án tìm được trên một dòng theo modulo 10<sup>9</sup>+7.
+
+### input
+```
+2
+2 2
+4 2
+```
+
+### output
+```
+2
+5
+```
