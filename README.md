@@ -3316,3 +3316,110 @@ Một chiếc cầu thang có N bậc. Mỗi bước, bạn được phép bư�
 2
 5
 ```
+
+## DSA05005 - SỐ BƯỚC ÍT NHẤT
+
+Cho mảng A[] gồm N số nguyên. Nhiệm vụ của bạn là sắp xếp lại mảng số với số lượng bước là ít nhất. Tại mỗi bước, bạn chỉ được phép chèn phần tử bất kỳ của mảng vào vị trí bất kỳ trong mảng. Ví dụ A[] = {2, 3, 5, 1, 4, 7, 6 }sẽ cho ta số phép chèn ít nhất là 3 bằng cách lấy số 1 chèn trước số 2, lấy số 4 chèn trước số 5, lấy số 6 chèn trước số 7 ta nhận được mảng được sắp.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là một số N; dòng tiếp theo đưa vào N số của mảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤1000; 1≤A[i] ≤1000.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+1
+7
+2 3 5 1 4 7 6
+```
+
+### output
+```
+3
+```
+
+## DSA05006 - TỔNG LỚN NHẤT CỦA DÃY CON TĂNG DẦN
+
+Cho dãy số A[] gồm N số. Nhiệm vụ của bạn là tìm tổng lớn nhất của dãy con được sắp theo thứ tự tăng dần của dãy A[]. Ví dụ với dãy A[] = {1, 101, 2, 3, 100, 4, 5} ta có kết quả là 106 = 1 + 2 + 3 + 100. Với dãy A[] = {10, 7, 5} ta có kết quả là 10. Với dãy A[] = {1, 2, 3, 5} ta có kết quả là 11.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng đầu tiên đưa vào N là số phần tử của dãy A[]; dòng tiếp theo đưa vào N số A[i]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤10<sup>3</sup>; 0≤A[i] ≤10<sup>3</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+3
+7
+1 101 2 3 100 4 5
+3
+10 7 5
+4
+1 2 3 5
+```
+
+### output
+```
+106
+10
+11
+```
+
+## DSAKT110 - NHÀ KHÔNG KỀ NHAU -- DSA05007 - TỔNG LỚN NHẤT CỦA DÃY CON KHÔNG KỀ NHAU
+
+Có N ngôi nhà trên một dãy phố, mỗi ngôi nhà chứa đựng một số lượng tài sản khác nhau. Một tên trộm muốn ăp cắp được nhiều nhất tài sản của dãy phố nhưng không muốn lấy tài sản của hai nhà kề nhau. Hãy cho biết, bằng cách đó tên trộm có thể đánh cắp được nhiều nhất bao nhiêu tài sản.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là một số N là số lượng ngôi nhà; dòng tiếp theo đưa vào N số là tài sản tương ứng trong mỗi ngôi nhà; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤10<sup>6</sup>; 1≤A[i] ≤10<sup>7</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input
+```
+2
+6
+5 5 10 100 10 5
+4
+3 2 7 10
+```
+
+### output
+```
+110
+13
+```
+
+## DSA05001 - XÂU CON CHUNG DÀI NHẤT
+
+Cho 2 xâu S1 và S2. Hãy tìm xâu con chung dài nhất của 2 xâu này *(các phần tử không nhất thiết phải liên tiếp nhau).*
+
+**Input:** 
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20). Mỗi test gồm hai dòng, mô tả xâu S1 và S2, mỗi xâu có độ dài không quá 1000 và chỉ gồm các chữ cái in hoa.
+
+**Output:** 
+Với mỗi test, in ra độ dài dãy con chung dài nhất trên một dòng.
+
+### input
+```
+2
+AGGTAB
+GXTXAYB
+AA
+BB
+```
+
+### output
+```
+4
+0
+```
+
