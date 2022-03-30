@@ -3475,4 +3475,56 @@ Cho hệ gồm N hành động. Mỗi hành động được biểu diễn như 
 4
 ```
 
+## DSA02035 - HOÁN VỊ CÁC CHỮ SỐ
+
+Độ chênh lệch của một dãy số nguyên dương được định nghĩa là hiệu của số lớn nhất trừ đi số nhỏ nhất trong dãy.
+
+Cho hai số nguyên dương n và k, với 1 <= n, k <= 8.
+
+Với n xâu ký tự số có độ dài k, có thể có chữ số 0 ở đầu. Hãy tìm cách duyệt tất cả hoán vị các chữ số của từng số trong danh sách sao cho độ chênh lệch của dãy số tạo được là bé nhất có thể.
+
+**Input:**
+- Dòng đầu ghi hai số n và k.
+- Tiếp theo là n dòng, mỗi dòng ghi một xâu ký tự đúng k chữ số.
+
+**Output:**
+- Ghi ra độ chênh lệch bé nhất có thể.
+
+### input:
+```
+6 4
+5237
+2753
+7523
+5723
+5327
+2537
+```
+
+### output:
+```
+2700
+```
+
+## CTDL_004 - DÃY CON TĂNG DẦN BẬC K
+
+Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN } và số tự nhiên K (K<=N<=100). Ta gọi một dãy con tăng dần bậc K của dãy số AN là một dãy các số gồm K phần tử trong dãy đó thỏa mãn tính chất tăng dần. Bài toán được đặt ra là in ra màn hình  số các dãy con tăng dần bậc K của dãy số AN. Ví dụ :
+
+**Input:**
+- Dòng đầu tiên ghi lại hai số N và K tương ứng với số phần tử của dãy số và bậc của dãy con.
+- Dòng kế tiếp : N số của dãy số AN, các số trong dãy không lớn hơn 100. 
+
+**Output:**
+- In ra ra kết quả tìm được.
+
+### input:
+```
+5 3
+2 5 15 10 20  
+```
+
+### output:
+```
+7
+```
 
