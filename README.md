@@ -165,18 +165,20 @@ Output:
 *   Đưa ra kết quả mỗi test theo từng dòng.
 
 
-## input
+### input
 ```
 2
 4 3
 5 3
 ```
 
-## output
+### output
 ```
 123 124 134 234
 123 124 125 134 135 145 234 235 245 345
 ```
+
+## DSA01005 - SINH HOÁN VỊ
 
 Cho số nguyên dương N. Nhiệm vụ của bạn là hãy liệt kê tất cả các hoán vị của 1, 2, .., N. Ví dụ với N = 3 ta có kết quả: 123, 132, 213, 231, 312, 321.
 
