@@ -352,7 +352,7 @@ Cho xâu nhị phân X\[\], nhiệm vụ của bạn là hãy đưa ra xâu nh�
 111110
 ```
 
-## DSA01021 - TỔ HỢP TIẾP THEO
+## DSA01021 - TỔ HỢP TIẾP THEO - DSA01010 - TẬP QUÂN SỰ
 
 Cho số nguyên dương (1<N<40) và số nguyên dương K<N. Với 1 tổ hợp chập K phần tử của N, hãy cho biết tổ hợp tiếp theo sẽ có bao nhiêu phần tử mới. Nếu tổ hợp đã cho là cuối cùng thì kết quả là K.  
 
@@ -3528,3 +3528,28 @@ Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN } và số tự nhiên K
 7
 ```
 
+## DSA01009 - XÂU AB ĐẶC BIỆT
+
+Một xâu kí tự S = (s1, s2, .., sn) được gọi là xâu AB độ dài n nếu với mọi siÎS thì si hoặc là kí tự A hoặc si là kí tự B . Ví dụ xâu S = “ABABABAB” là một xâu AB độ dài 8. Cho số tự nhiên N và số tự nhiên K (1£K<N£15 được nhập từ bàn phím), hãy viết chương trình liệt kê tất cả các xâu AB có độ dài N chứa duy nhất một dãy K kí tự A liên tiếp.
+
+**Input:** 
+chỉ có một dòng ghi hai số N và K.
+
+**Output:**
+- Dòng đầu tiên ghi lại số các xâu AB thỏa mãn yêu cầu bài toán;
+- Những dòng kế tiếp, mỗi dòng ghi lại một xâu AB thỏa mãn. Các xâu được ghi ra theo thứ tự từ điển.
+
+### input:
+```
+5 3
+```
+
+### output:
+```
+5
+AAABA
+AAABB
+ABAAA
+BAAAB
+BBAAA
+```
