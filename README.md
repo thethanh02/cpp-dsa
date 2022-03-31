@@ -3571,6 +3571,7 @@ Dòng đầu tiên ghi số nguyên  t là số bộ test (1 ≤ t ≤ 1000).  M
 
 **Output:**
 Với mỗi bộ test hãy đưa ra một dòng gồm thứ tự bộ test, một dấu cách, tiếp theo đó là hoán vị kế tiếp hoặc chuỗi “BIGGEST” nếu không có hoán vị kế tiếp. 
+
 ### input:
 ```
 3
@@ -3585,3 +3586,171 @@ Với mỗi bộ test hãy đưa ra một dòng gồm thứ tự bộ test, mộ
 2 279134423799
 3 BIGGEST
 ```
+
+## DSA01012 - MÃ GRAY 1
+
+Số nhị phân được xem là cách mặc định biểu diễn các số. Tuy nhiên, trong nhiều ứng dụng của điện tử và truyền thông lại dùng một biến thể của mã nhị phân đó là mã Gray. Mã Gray độ dài n có mã đầu tiên là n số 0, mã kế tiếp của nó là một xâu nhị phân độ dài n khác biệt với xâu trước đó một bít. Ví dụ với n=3 ta có 2<sup>3</sup> mã Gray như sau: 000, 001, 011, 010, 110, 111, 101, 100. Hãy viết chương trình liệt kê các mã Gray có độ dài n.
+
+**Input:** 
+- Dòng đầu tiên là số lượng test T.
+- T dòng kế tiếp ghi lại mỗi dòng một test. Mỗi test là một số tự nhiên n.
+- T, n thỏa mãn ràng buộc: 1≤T, n≤10.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+3
+4
+```
+
+### output:
+```
+000 001 011 010 110 111 101 100
+0000 0001 0011 0010 0110 0111 0101 0100 1100 1101 1111 1110 1010 1011 1001 1000
+```
+
+## DSA01013 - MÃ GRAY 2
+
+Số nhị phân được xem là cách mặc định biểu diễn các số. Tuy nhiên, trong nhiều ứng dụng của điện tử và truyền thông lại dùng một biến thể của mã nhị phân đó là mã Gray. Mã Gray độ dài n có mã đầu tiên là n số 0, mã kế tiếp của nó là một xâu nhị phân độ dài n khác biệt với xâu trước đó một bít. Ví dụ với n=3 ta có 2<sup>3</sup> mã Gray như sau: 000, 001, 011, 010, 110, 111, 101, 100. Hãy viết chương trình chuyển đổi một xâu mã Gray X có độ dài n thành một xâu mã nhị phân.
+
+
+**Input:** 
+- Dòng đầu tiên là số lượng test T.
+- T dòng kế tiếp ghi lại mỗi dòng một test. Mỗi test là một số tự nhiên n.
+- T, n thỏa mãn ràng buộc: 1≤T, n≤10.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+01101
+01011
+```
+
+### output:
+```
+01001
+01101
+```
+
+## DSA01017 - MÃ GRAY 3
+
+Số nhị phân được xem là cách mặc định biểu diễn các số. Tuy nhiên, trong nhiều ứng dụng của điện tử và truyền thông lại dùng một biến thể của mã nhị phân đó là mã Gray. Mã Gray độ dài n có mã đầu tiên là n số 0, mã kế tiếp của nó là một xâu nhị phân độ dài n khác biệt với xâu trước đó một bít. Ví dụ với n=3 ta có 2<sup>3</sup> mã Gray như sau: 000, 001, 011, 010, 110, 111, 101, 100. Hãy viết chương trình chuyển đổi một xâu mã nhị phân X có độ dài n thành một xâu mã Gray.
+
+**Input:** 
+- Dòng đầu tiên là số lượng test T.
+- T dòng kế tiếp ghi lại mỗi dòng một test. Mỗi test là một số tự nhiên n.
+- T, n thỏa mãn ràng buộc: 1≤T, n≤10.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+01001
+01101
+```
+
+### output:
+```
+01101
+01011
+```
+
+## DSA02020 - SỐ NHỎ NHẤT CÓ N ƯỚC SỐ
+
+Cho số nguyên dương N. Nhiệm vụ của bạn là tìm số K nhỏ nhất, sao cho K có đúng N ước. Input đảm bảo rằng đáp án không vượt quá 10<sup>18</sup>.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤  20).
+- Mỗi test gồm 1 số nguyên N ( 1 ≤  N ≤  1000).
+
+**Output:**
+- Với mỗi test, in ra đáp án trên một dòng.
+
+### input:
+```
+2
+4
+6
+```
+
+### output:
+```
+6
+12
+```
+
+## DSA01014 - TẬP HỢP
+
+Xét tất cả các tập hợp các số nguyên dương có các phần tử khác nhau và không lớn hơn số n cho trước. Nhiệm vụ của bạn là hãy đếm xem có tất cả bao nhiêu tập hợp có số lượng phần tử bằng k và tổng của tất cả các phần tử trong tập hợp bằng s?
+
+Các tập hợp là hoán vị của nhau chỉ được tính là một.
+
+Ví dụ với n = 9, k = 3, s = 23, {6, 8, 9} là tập hợp duy nhất thỏa mãn.
+
+**Input:** 
+- Gồm nhiều bộ test (không quá 100 test).
+- Mỗi bộ test gồm 3 số nguyên n, k, s với 1 ≤ n ≤ 20, 1 ≤ k ≤ 10 và 1 ≤ s ≤ 155. Input kết thúc bởi 3 số 0.
+
+**Output:**
+- Với mỗi test in ra số lượng các tập hợp thỏa mãn điều kiện đề bài.
+
+### input:
+```
+9 3 23
+9 3 22
+10 3 28
+16 10 107
+20 8 102
+20 10 105
+20 10 155
+3 4 3
+4 2 11
+0 0 0
+```
+
+### output:
+```
+1
+2
+0
+20
+1542
+5448
+1
+0
+0
+```
+
+## DSA01015 - TÌM BỘI SỐ
+
+Cho số nguyên N. Nhiệm vụ của bạn cần tìm số nguyên X nhỏ nhất là bội của N, và X chỉ chứa hai chữ số 0 và 9.
+
+**Input:** 
+Dòng đầu tiên là số lượng bộ test T (T ≤ 10000). Mỗi bộ test chứa số nguyên N trên một dòng (1 ≤ N ≤ 500).
+
+**Output:**
+Với mỗi test in ra đáp án tìm được trên một dòng.
+
+### input:
+```
+3
+2
+5
+11
+```
+
+### output:
+```
+90
+90
+99
+```
+
