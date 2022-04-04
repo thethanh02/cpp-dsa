@@ -3754,3 +3754,58 @@ Với mỗi test in ra đáp án tìm được trên một dòng.
 99
 ```
 
+## DSA01015 - TẬP CON LIỀN KỀ PHÍA TRƯỚC
+
+Cho hai số N, K và một tập con K phần tử X[] =(X1, X2,.., XK) của 1, 2, .., N. Nhiệm vụ của bạn là hãy đưa ra tập con K phần tử trước đó của X[]. Ví dụ N=5, K=3, X[] ={2, 3, 5} thì tập con trước đó của X[] là {2, 3, 4}. Chú ý nếu tập con trong input là đầu tiên thì trước đó là tập con cuối cùng.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là hai số N và K; dòng tiếp theo đưa vào K phần tử của X[] là một tập con K phần tử của 1, 2, .., N.
+- T, K, N, X[] thỏa mãn ràng buộc: 1≤T≤100; 1≤K≤N≤10<sup>3</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+5  3
+2  3  5
+5  3
+1  2  3
+```
+
+### output:
+```
+2 3 4
+3 4 5
+```
+
+## DSA03007 - GIÁ TRỊ NHỎ NHẤT CỦA BIỂU THỨC
+
+Cho mảng A[], B[] đều có N phần tử. Nhiệm vụ của bạn là tìm giá trị nhỏ nhất của  biểu thức P = A[0] * B[0] + A[1] * B[1] + ..+A[N-1] * B[N-1] bằng cách tráo đổi vị trí các phần tử của cả mảng A[] và B[].
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm 3 dòng: dòng thứ nhất đưa vào số phần tử của mảng N; dòng tiếp theo đưa vào N số A[i]; dòng cuối cùng đưa vào N số B[i] các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i], B[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤ N ≤10<sup>7</sup>; 0≤A[i], B[i] ≤10<sup>18</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+7
+1 6 3 4 5 2 7
+1 1 1 2 3 4 3
+7
+1 6 3 5 5 2 2
+0 1 9 0 1 2 3
+```
+
+### output:
+```
+45
+27
+```
