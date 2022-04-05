@@ -3809,3 +3809,80 @@ Cho mảng A[], B[] đều có N phần tử. Nhiệm vụ của bạn là tìm 
 45
 27
 ```
+
+## DSA01016 - PHÂN TÍCH SỐ 1
+
+Cho số nguyên dương N. Nhiệm vụ của bạn là hãy liệt kê tất cả các cách phân tích số tự nhiên N thành tổng các số tự nhiên nhỏ hơn hoặc bằng N. Phép hoán vị vủa một cách được xem là giống nhau. Ví dụ với N = 5 ta có kết quả là: (5), (4, 1), (3, 2), (3, 1, 1), (2, 2, 1), (2, 1, 1, 1), (1, 1, 1, 1, 1) .
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên N được viết trên một dòng.
+- T, n thỏa mãn ràng buộc: 1≤T, N≤10.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+4
+5
+```
+
+### output:
+```
+(4) (3 1) (2 2) (2 1 1) (1 1 1 1)
+(5) (4 1)  (3 2)  (3 1 1) (2 2 1)  (2 1 1 1)  (1 1 1 1 1)
+```
+
+## DSA02008 - CHỌN SỐ TỪ MA TRẬN VUÔNG CẤP N
+
+Cho ma trận vuông Ci,j cấp N (1<= i, j <= N<10) gồm N<sup>2</sup> số tự nhiên và số tự nhiên K (các số trong ma trận không nhất thiết phải khác nhau và đều không quá 100, K không quá 10<sup>4</sup>). Hãy viết chương trình lấy mỗi hàng, mỗi cột duy nhất một phần tử sao cho tổng các phần tử này đúng bằng K.
+
+**Input:** 
+Dòng 1 ghi hai số N và K. N dòng tiếp theo ghi ma trận C. 
+
+**Output:** 
+Dòng đầu ghi số cách tìm được. Mỗi dòng tiếp theo ghi một cách theo vị trí của số đó trong lần lượt từng hàng của ma trận. Xem ví dụ để hiểu rõ hơn. 
+
+### input:
+```
+3 10
+2 4 3
+1 3 6
+4 2 4
+```
+
+### output:
+```
+2
+1 3 2
+3 2 1
+```
+
+## DSA05003 - DÃY CON CHUNG DÀI NHẤT CỦA BA XÂU
+
+Cho ba xâu ký tự X, Y, Z. Nhiệm vụ của bạn là tìm độ dài dãy con chung dài nhất có mặt trong cả ba xâu.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng đầu tiên đưa vào độ dài xâu X, Y, X; dòng tiếp theo đưa vào ba xâu X, Y, Z.
+- T, X, Y, Z thỏa mãn ràng buộc: 1 ≤ T ≤ 100;  1 ≤ size(X), size(Y), size(Z) ≤ 100.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+5 8 13
+geeks geeksfor geeksforgeeks
+7 6 5
+abcd1e2 bc12ea bd1ea
+```
+
+### output:
+```
+5
+3
+```
