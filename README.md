@@ -3886,3 +3886,84 @@ abcd1e2 bc12ea bd1ea
 5
 3
 ```
+
+## DSA05026 - XEM PHIM
+
+John có một đàn bò. Một ngày đẹp trời, anh ta quyết định mua xe tải với khả năng chở được C kg (1000 ≤ C ≤ 25000) để đưa những con bò đi xem phim. Cho số con bò là N (20 ≤ N ≤ 100) và khối lượng w[i] của từng con (đều nhỏ hơn C), hãy cho biết khối lượng bò lớn nhất mà John có thể đưa đi xem phim là bao nhiêu.
+
+**Input:** 
+- Dòng 1: 2 số nguyên C và N cách nhau bởi dấu cách
+- Dòng 2..N+1:   Ghi lần lượt các số nguyên: w[i]
+
+**Output:** 
+- Một số nguyên là tổng khối lượng bò lớn nhất mà John có thể mang đi xem phim.
+
+### input:
+```
+259 5
+81
+58
+42
+33
+61
+```
+
+### output:
+```
+242
+```
+
+## DSAKT053 - SỐ NGUYÊN LỚN
+
+Cho hai số nguyên lớn N và M có không quá 1000 chữ số. Người ta muốn tính xem liệu có thể lấy ra nhiều nhất bao nhiêu chữ số trong N (không cần liên tiếp) và giữ nguyên thứ tự của nó để tạo ra một số X sao cho ta cũng có thể tìm thấy X trong số M theo cách tương tự.
+
+**Input:** 
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20). Mỗi test gồm hai dòng, dòng thứ nhất ghi số N, dòng thứ 2 ghi số M.
+
+**Output:** 
+Với mỗi test, hãy in ra số chữ số nhiều nhất có thể của X.
+
+### input:
+```
+2
+144615
+4976135
+44
+88
+```
+
+### output:
+```
+4
+0
+```
+
+## DSA06033 - KHOẢNG CÁCH XA NHẤT
+
+Cho dãy số A[] gồm có N phần tử. Bạn cần tìm 2 vị trí i, j sao cho j-i lớn nhất và A[j] > A[i].
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test gồm số nguyên N (1≤ N ≤ 100 000).
+- Dòng tiếp theo gồm N số nguyên A[i] (-10^6 ≤ A[i] ≤ 10^6).
+
+**Output:** 
+- Với mỗi test, in ra trên một dòng là giá trị của hiệu j-i tìm được.
+
+### input:
+```
+3
+9
+34 8 10 3 2 80 30 33 1
+6
+1 2 3 4 5 6
+6
+6 5 4 3 2 1
+```
+
+### output:
+```
+6
+5
+-1
+```
