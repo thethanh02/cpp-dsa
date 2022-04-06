@@ -2689,6 +2689,32 @@ Cho dãy số a[] có n phần tử, đánh số từ 1 đến n. Hãy sắp x�
 1 4 3 2
 ```
 
+<details><summary>CODE</summary>
+<p>
+  
+  ```
+  #include <bits/stdc++.h>
+  using namespace std;
+  int main() {
+      int n, j = 0, k = 0;
+      cin >> n;
+      int a[n], b[n], c[n];
+      for (int i = 0; i < n; i++) cin >> a[i];
+
+      for (int i = 0; i < n; i += 2) b[j++] = a[i];
+      sort(b, b + j);
+      j = 0;
+      for (int i = 0; i < n; i += 2) a[i] = b[j++];
+      for (int i = 1; i < n; i += 2) c[k++] = a[i];
+      sort(c, c + k); k--;
+      for (int i = 1; i < n; i += 2) a[i] = c[k--];
+      for (int i = 0; i < n; i++) cout << a[i] << " ";
+  }
+  ```
+                                               
+</p>
+</details>
+
 ## DSA09011 - SỐ LƯỢNG HÒN ĐẢO
 
 Cho một bản đồ kích thước N x M được mô tả bằng ma trận A[][].A[i][j] = 1 có nghĩa vị trí (i, j) là nổi trên biển. 2 vị trí (i, j) và (x, y) được coi là liền nhau nếu như nó có chung đỉnh hoặc chung cạnh. Một hòn đảo là một tập hợp các điểm (i, j) mà A[i][j] = 1 và có thể di chuyển giữa hai điểm bất kì trong đó.
