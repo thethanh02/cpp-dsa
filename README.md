@@ -4023,3 +4023,203 @@ Nhiệm vụ của bạn là đặt 8 quân hậu lên bàn cờ, sao cho không
 ```
 260
 ```
+
+## DSA05027 - CÁI TÚI -- DSAKT055 - BÀI TOÁN CÁI TÚI 0-1
+
+Một người có cái túi thể tích V (V<1000). Anh ta có N đồ vật cần mang theo (N≤1000), mỗi đồ vật có thể tích là A[i] (A[i]≤100) và giá trị là C[i] (C[i]≤100). Hãy xác định tổng giá trị lớn nhất của các đồ vật mà người đó có thể mang theo, sao cho tổng thể tích không vượt quá V.
+
+**Input:** 
+- Dòng đầu ghi số bộ test T (T<10)
+- Mỗi bộ test gồm ba dòng. Dòng đầu ghi 2 số N và V. Dòng tiếp theo ghi N số của mảng A. Sau đó là một dòng ghi N số của mảng C.
+- Dữ liệu vào luôn đảm bảo không có đồ vật nào có thể tích lớn hơn V.
+
+**Output:** 
+- Với mỗi bộ test, ghi trên một dòng giá trị lớn nhất có thể đạt được.
+
+### input:
+```
+1
+15 10
+5 2 1 3 5 2 5 8 9 6 3 1 4 7 8
+1 2 3 5 1 2 5 8 7 4 1 2 3 2 1
+```
+
+### output:
+```
+15
+```
+
+## DSA05029 - GIẢI MÃ
+
+Một bản tin M đã mã hóa bí mật thành các con số theo ánh xạ như sau: ‘A’->1, ‘B’->2, .., ‘Z’->26. Hãy cho biết có bao nhiêu cách khác nhau để giải mã bản tin M. Ví dụ với bản mã M=”123” nó có thể được giải mã thành ABC (1 2 3), LC (12 3), AW(1 23).
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một xâu ký tự số M.
+- T, M thỏa mãn ràng buộc: 1≤T≤100;  1≤length(M)≤40.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+123
+2563
+```
+
+### output:
+```
+3
+2
+```
+
+## DSA05017 - DÃY SỐ BI-TONIC
+
+Một dãy số được gọi là Bi-tonic nếu nó được chia thành hai dãy đầu tăng dần và dãy tiếp theo giảm dần. Nhiệm vụ của bạn là tìm tổng lớn nhất dãy con Bi-tonic của dãy số A[]. Ví dụ với dãy A[] = {1, 15, 51, 45, 33, 100, 12, 18, 9} ta có kết quả là 194 tương ứng với dãy Bi-tonic {1, 15, 51, 100, 18, 9}.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng đầu tiên đưa vào N là số phần tử của dãy A[]; dòng tiếp theo đưa vào N số A[i]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤100; 0≤A[i] ≤100.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+6
+80 60 30 40 20 10
+9
+1 15 51 45 33 100 12 18 9
+```
+
+### output:
+```
+210
+194
+```
+
+## DSA06035 - DÃY TAM GIÁC DÀI NHẤT
+
+Cho dãy số A[] gồm có N phần tử.
+
+Một dãy con liên tiếp được gọi là dãy tam giác nếu như dãy đó tăng dần rồi lại giảm dần, hay tồn tại i, j, k sao cho A[i] ≤ A[i+1] ≤ … ≤ A[k] >= A[k+1] >= … >= A[j].
+
+Nhiệm vụ của bạn là hãy tìm dãy con liên tiếp là dãy tam giác có độ dài lớn nhất.
+
+Lưu ý: Dãy đơn điệu không giảm hoặc không tăng cũng là dãy tam giác.
+
+Ví dụ A[] = {10, 20, 30, 40} là một dãy tam giác.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test gồm số nguyên N(1≤ N ≤ 100 000).
+- Dòng tiếp theo gồm N số nguyên A[i] (0 ≤ A[i] ≤ 10^6).
+
+**Output:** 
+- Với mỗi test, in ra trên một dòng là độ dài của dãy con tìm được.
+
+### input:
+```
+2
+6
+12 4 78 90 45 23
+8
+20 4 1 2 3 4 2 10
+```
+
+### output:
+```
+5
+5
+```
+
+## DSA05018 - XÂU CON ĐỐI XỨNG DÀI NHẤT
+
+Cho xâu S chỉ bao gồm các ký tự viết thường và dài không quá 1000 ký tự.
+
+Hãy tìm xâu con đối xứng dài nhất của S.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test gồm một xâu S có độ dài không vượt quá 1000, chỉ gồm các kí tự thường.
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được.
+
+### input:
+```
+2
+abcbadd
+aaaaa
+```
+
+### output:
+```
+5
+5
+```
+
+## DSA05019 - HÌNH VUÔNG LỚN NHẤT
+
+Cho một bảng số N hàng, M cột chỉ gồm 0 và 1. Bạn hãy tìm hình vuông có kích thước lớn nhất, sao cho các số trong hình vuông toàn là số 1.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test bắt đầu bởi 2 số nguyên N, M (1 ≤ N, M ≤ 500).
+- N dòng tiếp theo, mỗi dòng gồm M số mô tả một hàng của bảng.
+
+**Output:** 
+- Với mỗi test, in ra đáp án là kích thước của hình vuông lớn nhất tìm được trên một dòng.
+
+### input:
+```
+2
+6 5
+0 1 1 0 1
+1 1 0 1 0
+0 1 1 1 0
+1 1 1 1 0
+1 1 1 1 1
+0 0 0 0 0
+2 2
+0 0
+0 0
+```
+
+### output:
+```
+3
+0
+```
+
+## DSA05020 - ĐƯỜNG ĐI NHỎ NHẤT
+
+Cho bảng A[] kích thước N x M (N hàng, M cột). Bạn được phép đi xuống dưới, đi sang phải và đi xuống ô chéo dưới. Khi đi qua ô (i, j), điểm nhận được bằng A[i][j].
+
+Hãy tìm đường đi từ ô (1, 1) tới ô (N, M) sao cho tổng điểm là nhỏ nhất.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm số nguyên dương N và M.
+- N dòng tiếp theo, mỗi dòng gồm M số nguyên A[i][j] (0 ≤ A[i] ≤ 1000).
+
+**Output:** 
+- Với mỗi test, in ra độ dài dãy con tăng dài nhất trên một dòng.
+
+### input:
+```
+1
+3 3
+1 2 3
+4 8 2
+1 5 3
+```
+
+### output:
+```
+8
+```
+
