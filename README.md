@@ -3320,7 +3320,7 @@ Một con ếch có thể nhảy 1, 2, 3 bước để có thể lên đến m�
 13
 ```
 
-## DSA05013 - BẬC THANG
+## DSA05013 - BẬC THANG -- DSA05034 - TỔNG SỐ CÁCH DI CHUYỂN
 
 Một chiếc cầu thang có N bậc. Mỗi bước, bạn được phép bước lên trên tối đa K bước. Hỏi có tất cả bao nhiêu cách bước để đi hết cầu thang? (Tổng số bước đúng bằng N).
 
