@@ -4278,3 +4278,305 @@ Nhiệm vụ của bạn là hãy kiểm tra tồn tại bộ ba (i, j, k) mà A
 YES
 NO
 ```
+
+## DSA06047 - BỘ BA SỐ PYTAGO
+
+Cho dãy số A[] gồm có N phần tử. Một bộ 3 số (a, b, c) được gọi là bộ ba số Pytago nếu như a^2 + b^2 = c^2.
+
+Nhiệm vụ của bạn là kiểm tra xem có tồn tại bộ ba số Pytago trong dãy số A[] hay không?
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm số nguyên N và K (1≤ N ≤5000, 0 ≤ K ≤ 10^9).
+- Dòng tiếp theo gồm N số nguyên A[i] (1 ≤ A[i] ≤ 10^9).
+
+**Output:** 
+- Với mỗi test, in ra trên một dòng “YES” nếu tìm được, và “NO” trong trường hợp ngược lại.
+
+### input:
+```
+2
+5
+3 1 4 6 5
+3
+1 1 1
+```
+
+### output:
+```
+YES
+NO
+```
+
+## DSA05041 - BIẾN ĐỔI VỀ XÂU ĐỐI XỨNG
+
+Cho xâu ký tự S. Nhiệm vụ của bạn là tìm số phép loại bỏ ít nhất các ký tự trong S để S trở thành xâu đối xứng. Chú ý, phép loại bỏ phải bảo toàn tính trước sau của các ký tự trong S.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một xâu ký tự được viết trên một dòng
+- T, str thỏa mãn ràng buộc: 1≤T≤100;  1≤length(S)≤100.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+aebcbda
+geeksforgeeks
+```
+
+### output:
+```
+2
+8
+```
+
+## DSA06041 - SỐ XUẤT HIỆN NHIỀU NHẤT
+
+Cho dãy số A[] gồm có N phần tử. Nhiệm vụ của bạn là hãy tìm một số có tần số xuất hiện nhiều nhất, yêu cầu lớn hơn N/2 lần xuất hiện trong dãy số.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test gồm số nguyên N (1≤ N ≤ 100 000), số lượng phần tử trong dãy số ban đầu.
+- Dòng tiếp theo gồm N số nguyên A[i] (1 ≤ A[i] ≤ 1 000 000).
+
+**Output:** 
+- Với mỗi test in ra đáp án của bài toán trên một dòng. Nếu không tìm được đáp án, in ra “NO”.
+
+### input:
+```
+2
+9
+3 3 4 2 4 4 2 4 4
+8
+3 3 4 2 4 4 2 4
+```
+
+### output:
+```
+4
+NO
+```
+
+## DSA06048 - SỐ LẦN QUAY VÒNG
+
+Ban đầu dãy số A[] gồm N phần tử đã được sắp xếp tăng dần. Các phần tử của dãy A[] có thể giống nhau. Sau đó ta thực hiện quay vòng phải, mỗi lần lấy một ký tự ở cuối dãy đưa lên đầu dãy.
+
+Cho trạng thái dãy số của A[] sau khi đã thực hiện quay vòng K lần. Hãy tìm K.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất đưa vào số M, N, K; dòng tiếp theo đưa vào N số của mảng A[]các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤ N≤10<sup>7</sup>; 0≤ A[i]≤10<sup>18</sup>.
+
+**Output:** 
+- Đưa ra số lần quay vòng K của mỗi test theo từng dòng.
+
+### input:
+```
+2
+5
+5 1 2 3 4
+5
+1 2 3 4 5
+```
+
+### output:
+```
+1
+0
+```
+
+## DSA05042 - DÃY CON LIÊN TIẾP TỔNG BẰNG K
+
+Cho dãy số A[] gồm có N phần tử không âm và số K.
+
+Nhiệm vụ của bạn là hãy xác định xem có tìm được 1 dãy con liên tiếp mà tổng các phần tử bằng K hay không?
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm số nguyên N và K (1≤ N ≤ 100 000, 0 ≤ K ≤ 10<sup>18</sup>).
+- Dòng tiếp theo gồm N số nguyên A[i] (0 ≤ A[i] ≤ 10<sup>9</sup>).
+
+**Output:** 
+- Với mỗi test, in ra trên một dòng là đáp án thu được. Nếu có hãy in ra “YES”. Nếu không tìm được đáp án, in ra “NO”.
+
+### input:
+```
+3
+6 33
+1 4 20 3 10 5
+7 7
+1 4 0 0 3 10 5
+2 0
+1 4
+```
+
+### output:
+```
+YES
+YES
+NO
+```
+
+## DSA06049 - ĐẾM CẶP
+
+Cho mảng A[] gồm n số nguyên dương và số k. Nhiệm vụ của bạn là đếm số các cặp phần tử có hiệu nhỏ hơn k. Ví dụ A[] = {1, 10, 4, 2 }, k=3 ta nhận được kết quả là 2 tương ứng với hiệu các cặp (1, 2), (4, 2).
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm hai dòng: dòng đầu tiên đưa vào n, tương ứng với số phần tử của mảng A[] và số k; dòng tiếp theo là n số A[i] ; các số được viết cách nhau một vài khoảng trống.
+- T, n, k, A[i] thỏa mãn ràng buộc: 1 ≤  T  ≤ 100; 1 ≤  n  ≤ 10<sup>4</sup>; 1 ≤  k ≤ 10<sup>3</sup>; 1 ≤  A[i]  ≤ 10<sup>5</sup>.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+32
+4 3
+1 10 4 2
+3 5
+2 3 4
+```
+
+### output:
+```
+2
+3
+```
+
+## CTDL_005 - XÓA DỮ LIỆU TRONG DSLK ĐƠN
+
+Cho danh sách liên kết đơn lưu giữ các số nguyên được quản lý bởi con trỏ First. Viết chương trình con xóa tất cả các phần tử có giá trị bằng x trong danh sách liên kết đơn; chương trình con trả về số lượng các phần tử đã xóa. Sau khi xóa xong, liệt kê các phần tử còn lại trong danh sách liên kết đơn First.
+
+### input:
+```
+14
+1 1 1 4 5 1 1 1 1 7 1 8 1 9
+1
+```
+
+### output:
+```
+4 5 7 8 9
+```
+
+## CTDL_006 - LỌC DỮ LIỆU TRÙNG TRONG DSLK ĐƠN
+
+Cho danh sách liên kết đơn lưu giữ các số nguyên được quản lý bởi con trỏ First. Viết chương trình con lọc tất cả các phần tử có giá trị trùng nhau trong danh sách liên kết đơn First, chỉ để lại 1 phần tử đại diện cho nhóm trùng. Sau khi lọc xong, liệt kê các phần tử  trong danh sách liên kết đơn First.
+
+### input:
+```
+12
+1 1 1 4 5 1 4 7 7 8 1 9
+```
+
+### output:
+```
+1 4 5 7 8 9
+```
+
+## DSA05036 - TĂNG - GIẢM
+
+Cho hai dãy số thực A[] và B[] đều có N phần tử, các giá trị là số thực và không quá 100.
+
+Hãy tính độ dài dài nhất của dãy các vị trí (không cần liên tiếp) thỏa mãn cả hai điều kiện:
+
+- Nếu xét các vị trí đó trên dãy A[] thì dãy con thu được thỏa mãn tính chất tăng dần (giá trị bằng nhau không được tính vào dãy tăng).
+- Nếu xét các vị trí đó trên dãy A[] thì dãy con thu được thỏa mãn tính chất tăng dần (giá trị bằng nhau không được tính vào dãy tăng).
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Mỗi bộ test bắt đầu bởi số N (không quá 500).
+- Tiếp theo là N dòng, mỗi dòng ghi 2 giá trị A[i] và B[i]
+
+**Output:** 
+- Với mỗi test, ghi ra độ dài tính được trên một dòng.
+
+### input:
+```
+3
+2
+1.0 1.0
+1.5 0.0
+3
+1.0 1.0
+1.0 1.0
+1.0 1.0
+6
+1.5 9.0
+2.0 2.0
+2.5 6.0
+3.0 5.0
+4.0 2.0
+10.0 5.5
+```
+
+### output:
+```
+2
+1
+4
+```
+
+## DSA05023 - TỔNG CÁC XÂU CON
+
+Cho số nguyên dương N được biểu diễn như một xâu ký tự số. Nhiệm vụ của bạn là tìm tổng của tất cả các số tạo bởi các xâu con của N. Ví dụ N=”1234” ta có kết quả là 1670 = 1 + 2 + 3 + 4 + 12 + 23 + 34 + 123 + 234 + 1234.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Mỗi bộ test bắt đầu bởi số N (không quá 500).
+- T, N thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤10<sup>12</sup>.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+1234
+421
+```
+
+### output:
+```
+1670
+491
+```
+
+## DSA05022 - KÝ TỰ GIỐNG NHAU
+
+Giả sử bạn cần viết N ký tự giống nhau lên màn hình. Bạn chỉ được phép thực hiện ba thao tác dưới đây với chi phí thời gian khác nhau:
+
+- Thao tác insert: chèn một ký tự với thời gian là X.
+- Thao tác delete: loại bỏ ký tự cuối cùng với thời gian là Y.
+- Thao tác copying: copy và paste tất cả các ký tự đã viết để số ký tự được nhân đôi với thời gian là Z.
+
+Hãy tìm thời gian ít nhất để có thể đưa ra màn hình N ký tự giống nhau. Ví dụ với N = 9, X =1, Y = 2, Z =1 ta có kết quả là 5 bằng cách thực hiện: insert, insert, copying, copying, insert.
+
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng đầu tiên đưa vào N là số các ký tự giống nhau cần viết lên màn hình; dòng tiếp theo đưa vào bộ ba số X, Y, Z tương ứng với thời gian thực hiện ba thao tác; các số được viết cách nhau một vài khoảng trống.
+- T, N, X, Y, Z thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤100; 1≤X, Y, Z ≤100.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+### input:
+```
+2
+9
+1 2 1
+10
+2 5 4
+```
+
+### output:
+```
+5
+14
+```
