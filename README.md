@@ -1,5 +1,7 @@
 # Đề cấu trúc dữ liệu và giải thuật
 
+## Generation
+
 ### CTDL_001 - THUẬT TOÁN SINH
 
 Một xâu nhị phân độ dài n được gọi là thuận nghịch hay đối xứng nếu đảo ngược xâu nhị phân đó ta vẫn nhận được chính nó. Cho số tự nhiên n (n nhập từ bàn phím). Hãy viết chương trình liệt kê tất cả các xâu nhị phân thuận nghịch có độ dài n. Hai phần tử khác nhau của xâu thuận nghịch được ghi cách nhau một khoảng trống.
@@ -42,6 +44,40 @@ Các dãy con thoả mãn điều kiện tìm được liệt kê trên màn hì
 3
 ```
 
+### CTDL_003 - PHƯƠNG ÁN TỐI ƯU
+
+Cho a<sub>i</sub>, c<sub>i</sub>, W, N (i =1, 2,..,N; N£100) là những số nguyên dương và tập hợp
+
+![download](https://user-images.githubusercontent.com/64203006/163585339-596099cc-2785-4081-a14b-02fade62c9a4.png)
+
+Hãy viết chương trình tìm phương án tối ưu XOPT =(x<sub>1</sub>,x<sub>2</sub>,..,x<sub>N</sub>) và giá trị tối ưu FOPT=F(XOPT) của hàm mục tiêu
+
+![download](https://user-images.githubusercontent.com/64203006/163585512-e3d93877-5c6f-4a50-bb73-6b6c5d718902.png)
+
+Dữ liệu vào cho bởi file data.in theo khuôn dạng sau:
+
+- Dòng đầu tiên ghi lại số tự nhiên N và W. Hai số được viết cách nhau một vài khoảng trống;
+- Dòng kế tiếp ghi lại N số cj (j=1,2,..,N). Hai số được viết cách nhau một vài khoảng trống;
+- Dòng kế tiếp ghi lại N số aj (j=1,2,..,N). Hai số được viết cách nhau một vài khoảng trống;
+
+Giá trị tối ưu FOPT và phương án XOPT tìm được sẽ liệt kê trên màn hình theo khuôn dạng:
+
+- Dòng đầu tiên ghi lại giá trị tối ưu FOPT;
+- Dòng kế tiếp ghi lại phương án tối ưu XOPT. Hai phần tử khác nhau của phương án tối ưu được viết cách nhau bởi một khoảng trống.
+
+**input**
+```
+4 10                               
+6 5 3 7    
+5 4 6 5
+```
+
+**output**
+```
+13
+1 0 0 1
+```
+
 ### CTDL_004 - DÃY CON TĂNG DẦN BẬC K
 
 Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN } và số tự nhiên K (K<=N<=100). Ta gọi một dãy con tăng dần bậc K của dãy số AN là một dãy các số gồm K phần tử trong dãy đó thỏa mãn tính chất tăng dần. Bài toán được đặt ra là in ra màn hình  số các dãy con tăng dần bậc K của dãy số AN. Ví dụ :
@@ -62,37 +98,6 @@ Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN } và số tự nhiên K
 **output**
 ```
 7
-```
-
-### CTDL_005 - XÓA DỮ LIỆU TRONG DSLK ĐƠN
-
-Cho danh sách liên kết đơn lưu giữ các số nguyên được quản lý bởi con trỏ First. Viết chương trình con xóa tất cả các phần tử có giá trị bằng x trong danh sách liên kết đơn; chương trình con trả về số lượng các phần tử đã xóa. Sau khi xóa xong, liệt kê các phần tử còn lại trong danh sách liên kết đơn First.
-
-**input**
-```
-14
-1 1 1 4 5 1 1 1 1 7 1 8 1 9
-1
-```
-
-**output**
-```
-4 5 7 8 9
-```
-
-### CTDL_006 - LỌC DỮ LIỆU TRÙNG TRONG DSLK ĐƠN
-
-Cho danh sách liên kết đơn lưu giữ các số nguyên được quản lý bởi con trỏ First. Viết chương trình con lọc tất cả các phần tử có giá trị trùng nhau trong danh sách liên kết đơn First, chỉ để lại 1 phần tử đại diện cho nhóm trùng. Sau khi lọc xong, liệt kê các phần tử  trong danh sách liên kết đơn First.
-
-**input**
-```
-12
-1 1 1 4 5 1 4 7 7 8 1 9
-```
-
-**output**
-```
-1 4 5 7 8 9
 ```
 
 ### DSA01001 - XÂU NHỊ PHÂN KẾ TIẾP
@@ -492,33 +497,6 @@ Với mỗi test in ra đáp án tìm được trên một dòng.
 99
 ```
 
-### DSA01015 - TẬP CON LIỀN KỀ PHÍA TRƯỚC
-
-Cho hai số N, K và một tập con K phần tử X[] =(X1, X2,.., XK) của 1, 2, .., N. Nhiệm vụ của bạn là hãy đưa ra tập con K phần tử trước đó của X[]. Ví dụ N=5, K=3, X[] ={2, 3, 5} thì tập con trước đó của X[] là {2, 3, 4}. Chú ý nếu tập con trong input là đầu tiên thì trước đó là tập con cuối cùng.
-
-**Input:** 
-- Dòng đầu tiên đưa vào số lượng test T.
-- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là hai số N và K; dòng tiếp theo đưa vào K phần tử của X[] là một tập con K phần tử của 1, 2, .., N.
-- T, K, N, X[] thỏa mãn ràng buộc: 1≤T≤100; 1≤K≤N≤10<sup>3</sup>.
-
-**Output:**
-- Đưa ra kết quả mỗi test theo từng dòng.
-
-**input**
-```
-2
-5  3
-2  3  5
-5  3
-1  2  3
-```
-
-**output**
-```
-2 3 4
-3 4 5
-```
-
 ### DSA01016 - PHÂN TÍCH SỐ 1
 
 Cho số nguyên dương N. Nhiệm vụ của bạn là hãy liệt kê tất cả các cách phân tích số tự nhiên N thành tổng các số tự nhiên nhỏ hơn hoặc bằng N. Phép hoán vị vủa một cách được xem là giống nhau. Ví dụ với N = 5 ta có kết quả là: (5), (4, 1), (3, 2), (3, 1, 1), (2, 2, 1), (2, 1, 1, 1), (1, 1, 1, 1, 1) .
@@ -567,6 +545,33 @@ Số nhị phân được xem là cách mặc định biểu diễn các số. T
 ```
 01101
 01011
+```
+
+### DSA01018 - TẬP CON LIỀN KỀ PHÍA TRƯỚC
+
+Cho hai số N, K và một tập con K phần tử X[] =(X1, X2,.., XK) của 1, 2, .., N. Nhiệm vụ của bạn là hãy đưa ra tập con K phần tử trước đó của X[]. Ví dụ N=5, K=3, X[] ={2, 3, 5} thì tập con trước đó của X[] là {2, 3, 4}. Chú ý nếu tập con trong input là đầu tiên thì trước đó là tập con cuối cùng.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là hai số N và K; dòng tiếp theo đưa vào K phần tử của X[] là một tập con K phần tử của 1, 2, .., N.
+- T, K, N, X[] thỏa mãn ràng buộc: 1≤T≤100; 1≤K≤N≤10<sup>3</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+5  3
+2  3  5
+5  3
+1  2  3
+```
+
+**output**
+```
+2 3 4
+3 4 5
 ```
 
 ### DSA01019 - HAHAHA
@@ -737,42 +742,6 @@ Với mỗi bộ test, ghi ra trên một dòng số thứ tự của tổ hợp
 12
 ```
 
-### DSA01024 - ĐẶT TÊN - 1
-
-Kỳ thi ICPC có K đội của PTIT tham gia và đội tuyển đang rất đau đầu không biết chọn các cái tên như thế nào cho các đội. Yêu cầu phải đảm bảo tên không có khoảng trống và không được trùng nhau. Sau khi thảo luận, có N cái tên được đề xuất (có thể bị trùng nhau). Với K<15 và 4 < N < 30.
-
-Hãy liệt kê tất cả danh sách các tổ hợp K cái tên khác nhau có thể được tạo ra theo thứ tự từ điển.
-
-**Input**
-
-Dòng đầu ghi 2 số N và K.
-
-Tiếp theo là 1 dòng ghi N cái tên, mỗi cái tên có độ dài không quá 15 và cách nhau một khoảng trống. Tất cả đều là ký tự in hoa.
-
-**Output**
-
-Ghi ra tất cả các tổ hợp tên có thể được lựa chọn theo thứ tự từ điển.
-
-Tức là các tên trong mỗi tổ hợp liệt kê theo thứ tự từ điển và các tổ hợp cũng được liệt kê theo thứ tự từ điển.
-
-**Ví dụ**
-
-**input**
-```
-6 2
-DONG TAY NAM BAC TAY BAC
-```
-
-**ouput**
-```
-BAC DONG
-BAC NAM
-BAC TAY
-DONG NAM
-DONG TAY
-NAM TAY
-```
-
 ### DSA01025 - ĐẶT TÊN - 2
 
 Vương quốc PTIT sử dụng bảng chữ cái gồm N chữ cái Latinh viết hoa. Quy tắc đặt tên của gia đình Hoàng gia  PTIT là chọn ra K chữ cái (không trùng nhau) và sắp xếp lại theo thứ tự từ điển.
@@ -910,6 +879,70 @@ Ghi ra lần lượt các tổ hợp tìm được, mỗi tổ hợp trên một
 3 4 5
 ```
 
+### DSA02008 - CHỌN SỐ TỪ MA TRẬN VUÔNG CẤP N
+
+Cho ma trận vuông Ci,j cấp N (1<= i, j <= N<10) gồm N<sup>2</sup> số tự nhiên và số tự nhiên K (các số trong ma trận không nhất thiết phải khác nhau và đều không quá 100, K không quá 10<sup>4</sup>). Hãy viết chương trình lấy mỗi hàng, mỗi cột duy nhất một phần tử sao cho tổng các phần tử này đúng bằng K.
+
+**Input:** 
+Dòng 1 ghi hai số N và K. N dòng tiếp theo ghi ma trận C. 
+
+**Output:** 
+Dòng đầu ghi số cách tìm được. Mỗi dòng tiếp theo ghi một cách theo vị trí của số đó trong lần lượt từng hàng của ma trận. Xem ví dụ để hiểu rõ hơn. 
+
+**input**
+```
+3 10
+2 4 3
+1 3 6
+4 2 4
+```
+
+**output**
+```
+2
+1 3 2
+3 2 1
+```
+
+## Backtracking
+
+
+### DSA01024 - ĐẶT TÊN - 1
+
+Kỳ thi ICPC có K đội của PTIT tham gia và đội tuyển đang rất đau đầu không biết chọn các cái tên như thế nào cho các đội. Yêu cầu phải đảm bảo tên không có khoảng trống và không được trùng nhau. Sau khi thảo luận, có N cái tên được đề xuất (có thể bị trùng nhau). Với K<15 và 4 < N < 30.
+
+Hãy liệt kê tất cả danh sách các tổ hợp K cái tên khác nhau có thể được tạo ra theo thứ tự từ điển.
+
+**Input**
+
+Dòng đầu ghi 2 số N và K.
+
+Tiếp theo là 1 dòng ghi N cái tên, mỗi cái tên có độ dài không quá 15 và cách nhau một khoảng trống. Tất cả đều là ký tự in hoa.
+
+**Output**
+
+Ghi ra tất cả các tổ hợp tên có thể được lựa chọn theo thứ tự từ điển.
+
+Tức là các tên trong mỗi tổ hợp liệt kê theo thứ tự từ điển và các tổ hợp cũng được liệt kê theo thứ tự từ điển.
+
+**Ví dụ**
+
+**input**
+```
+6 2
+DONG TAY NAM BAC TAY BAC
+```
+
+**ouput**
+```
+BAC DONG
+BAC NAM
+BAC TAY
+DONG NAM
+DONG TAY
+NAM TAY
+```
+
 ### DSA02001 - DÃY SỐ 1
 
 Cho dãy số A\[\] gồm n số nguyên dương. Tam giác đặc biệt của dãy số A\[\] là tam giác được tạo ra bởi n hàng, trong đó hàng thứ 1 là dãy số A\[\], hàng i là tổng hai phần tử liên tiếp của hàng i-1 (2≤i≤n). Ví dụ A\[\] = {1, 2, 3, 4, 5}, khi đó tam giác được tạo nên như dưới đây:
@@ -924,7 +957,7 @@ Cho dãy số A\[\] gồm n số nguyên dương. Tam giác đặc biệt của 
 
 \[48\]
 
-            **Input:**
+**Input:**
 
 *   Dòng đầu tiên đưa vào số lượng bộ test T.
 *   Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất đưa vào N là số lượng phần tử của dãy số A\[\]; dòng tiếp theo đưa vào N số của mảng A\[\].
@@ -964,7 +997,7 @@ Cho dãy số A\[\] gồm n số nguyên dương. Tam giác đặc biệt của 
 
 \[1, 2, 3, 4, 5 \]
 
-            **Input:**
+**Input:**
 
 *   Dòng đầu tiên đưa vào số lượng bộ test T.
 *   Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất đưa vào N là số lượng phần tử của dãy số A\[\]; dòng tiếp theo đưa vào N số của mảng A\[\].
@@ -1130,29 +1163,118 @@ Cho dãy số A\[\] = (a1, a2, .., an) và số tự nhiên K. Hãy đưa ra t�
 [8 9 14 22] [8 14 15 16] [15 16 22]
 ```
 
-### DSA02008 - CHỌN SỐ TỪ MA TRẬN VUÔNG CẤP N
+### DSA02007 - ĐỔI CHỖ CÁC CHỮ SỐ
 
-Cho ma trận vuông Ci,j cấp N (1<= i, j <= N<10) gồm N<sup>2</sup> số tự nhiên và số tự nhiên K (các số trong ma trận không nhất thiết phải khác nhau và đều không quá 100, K không quá 10<sup>4</sup>). Hãy viết chương trình lấy mỗi hàng, mỗi cột duy nhất một phần tử sao cho tổng các phần tử này đúng bằng K.
+Cho số tự nhiên K và xâu ký tự các chữ số S.  Nhiệm vụ của bạn là đưa ra số lớn nhất bằng cách thực hiện nhiều nhất K lần đổi chỗ các ký tự trong S. Ví dụ K =3 và S = “1234567” ta được “7654321”.
 
-**Input:** 
-Dòng 1 ghi hai số N và K. N dòng tiếp theo ghi ma trận C. 
+**Input:**
 
-**Output:** 
-Dòng đầu ghi số cách tìm được. Mỗi dòng tiếp theo ghi một cách theo vị trí của số đó trong lần lượt từng hàng của ma trận. Xem ví dụ để hiểu rõ hơn. 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là số K; dòng tiếp theo là xâu ký tự S.
+- T, K, S thỏa mãn ràng buộc: 1≤T ≤100; 1≤K≤10; 1≤.lenght(S)≤7.
+
+**Output:**
+
+- Đưa ra kết quả mỗi test theo từng dòng.
 
 **input**
 ```
-3 10
-2 4 3
-1 3 6
-4 2 4
+3
+4
+1234567
+3
+3435335
+2
+1034
 ```
 
 **output**
 ```
+3
+4
+1234567
+3
+3435335
 2
-1 3 2
-3 2 1
+1034
+```
+
+### DSA02009 - CHIA MẢNG
+
+Cho mảng các số nguyên A[] gồm N phần tử. Hãy chia mảng số nguyên A[] thành K tập con khác rỗng sao cho tổng các phần tử của mỗi tập con đều bằng nhau. Mỗi phần tử thuộc tập con xuất hiện duy nhất một lần trong tất cả các tập con. Ví dụ với A[] = {2, 1, 4, 5, 6}, K =3 ta có kết quả {2, 4}, {1, 5}, {6}.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất là hai số N và K; dòng tiếp theo đưa vào N số của mảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, K, A[i] thỏa mãn ràng buộc: 1≤T ≤100; 1≤N, K≤20, 0≤A[i]≤100.
+
+**Output:**
+- Đưa ra 1 nếu có thể chia tập con thành K tập thỏa mãn yêu cầu bài toán, ngược lại đưa ra 0.
+
+**input**
+```
+2
+5 3
+2 1 4 5 6
+5 3
+2 1 5 5 6
+```
+
+**output**
+```
+1
+0
+```
+
+### DSA02010 - TỔ HỢP SỐ CÓ TỔNG BẰNG X
+
+Cho mảng A[] gồm N số nguyên dương phân biệt và số X. Nhiệm vụ của bạn là tìm phép tổ hợp các số trong mảng A[] có tổng bằng X. Các số trong mảng A[] có thể được sử dụng nhiều lần. Mỗi tổ hợp các số của mảng A[] được in ra theo thứ tự không giảm các số. Ví dụ với A[] = {2, 4, 6, 8}, X = 8 ta có các tổ hợp các số như sau:
+
+[2, 2, 2, 2], [2, 2, 4], [2, 6], [4, 4], [8].
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất là hai số N và X; dòng tiếp theo đưa vào N số của mmảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, X, A[i] thỏa mãn ràng buộc: 1≤T ≤10; 1≤X, A[i]≤100. N ≤ 20.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng. Mỗi đường tổ hợp được bao bởi cặp ký tự [, ]. Đưa ra -1 nếu không có tổ hợp nào thỏa mãn yêu cầu bài toán.
+
+**input**
+```
+1
+4 8
+2 4 6 8
+```
+
+**output**
+```
+[2 2 2 2][2 2 4][2 6][4 4][8]
+```
+
+### DSA02011 - MÁY ATM
+
+Một máy ATM hiện có n (n ≤ 30) tờ tiền có giá trị t[1], t[2], …, t[n]. Hãy tìm cách trả ít tờ nhất với số tiền đúng bằng S (các tờ tiền có giá trị bất kỳ và có thể bằng nhau, mỗi tờ tiền chỉ được dùng một lần).
+
+**Input:**
+
+Dòng đầu tiên ghi số bộ test T (T<10). Mỗi bộ test gồm 2 số nguyên n và S (S ≤ 10<sup>9</sup>). Dòng thứ hai chứa n số nguyên t[1], t[2], …, t[n] (t[i] ≤ 10<sup>9</sup>)
+
+**Output:**
+
+Với mỗi bộ test ghi ra số tờ tiền ít nhất phải trả.
+
+Nếu không thể tìm được kết quả, in ra -1.
+**input**
+```
+1
+3 5
+1 4 5
+```
+
+**output**
+```
+1
 ```
 
 ### DSA02012 - DI CHUYỂN TRONG MA TRẬN
@@ -1187,13 +1309,100 @@ Cho ma trận A\[M\]\[N\]. Nhiệm vụ của bạn là đếm tất cả các 
 2
 ```
 
+### DSA02013 - SỐ NGUYÊN TỐ
+
+Cho ba số N, P, S. Trong đó, P là một số nguyên tố. Nhiệm vụ của bạn là đưa ra tất cả N số nguyên tố tính từ P có tổng bằng S. Ví dụ với S = 28, P=7, N =2 ta có kết quả 11 + 17 = 28. Với N = 3, P = 2, S = 23 ta có kết quả : {3, 7, 13}, {5, 7, 11}
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là bộ ba số S, P, N được viết trên một dòng.
+- S, P, N thỏa mãn ràng buộc: 1≤T ≤100; 1 ≤ N ≤ 10; 2≤S, P≤200.
+
+**Output:**
+- Với mỗi test, dòng đầu tiên in ra số lượng đáp án tìm được. Mỗi dòng tiếp theo in ra kết quả tìm được theo thứ tự từ điển.
+
+**input**
+```
+2
+2 7 28
+3 2 23
+```
+
+**output**
+```
+1
+11 17
+2
+3 7 13
+5 7 11
+```
+
+### DSA02014 - TỪ ĐIỂN
+
+Cho tập từ ghi trong trừ điển dic[] và một bảng hai chiều A[M][N] các ký tự. Hãy tạo nên tất cả các từ có mặt trong từ điển dic[] bằng cách nối các ký tự kề nhau trong mảng A[][]. Chú ý, phép nối các ký tự kề nhau trong mảng A[][] được thực hiện theo 8 hướng nhưng không có phần tử A[i][j] nào được lặp lại. Ví dụ với từ điển dic[] ={ “GEEKS”, “FOR”, “QIUZ”, “GO”} và mảng A[][] dưới đây sẽ cho ta kết quả: “GEEKS”, “QUIZ”
+
+| G | I | Z |
+|---|---|---|
+| U | E | K |
+| Q | S | E |
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào ba số K, M, N tương ứng với số từ của từ điển dic[], số hàng và số cột của ma trận ký tự A[M][N]; dòng tiếp theo đưa vào K từ của từ điển dic[]; dòng cuối cùng đưa vào các phần tử A[i][j].
+- T, K, M, N thỏa mãn ràng buộc: 1≤T ≤10; 1≤K≤100; 1≤ M, N ≤3.
+
+**Output:**
+- Đưa ra theo thứ tự tăng dần các từ có mặt trong từ điển dic[] được tạo ra từ ma trận A[][]. Đưa ra -1 nếu không thể tạo ra từ nào thuộc dic[] từ A[][].
+
+**input**
+```
+1
+4 3 3
+GEEKS FOR QUIZ GO
+G I Z
+U E K
+Q S E
+```
+
+**output**
+```
+GEEKS QUIZ
+```
+
+### DSA02015 - LOẠI BỎ DẤU NGOẶC
+
+Cho biểu thức P chỉ chứa các ký tự ‘(’, ‘)’ và các ký tự. Không có phép toán nào trong biểu thức P. Nhiệm vụ của bạn là thực hiện ít nhất các phép loại bỏ các ký tự ‘(’, ‘)’ để P trở thành biểu thức đúng. Chú ý: một biểu thức chỉ có 1 ký tự chữ (không có dấu ngoặc) hoặc một biểu thức rỗng thì không được xem là biểu thức đúng.
+
+Nếu có nhiều hơn một biểu thức đúng với cùng số phép loại bỏ ít nhất hãy đưa ra tất cả các biểu thức đúng theo thứ tự từ điển.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một biểu thức P được viết trên một dòng.
+- T, P thỏa mãn ràng buộc: 1≤T ≤100; 1≤length(P)≤100.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng. Nếu không có đáp án, in ra -1.
+
+**input**
+```
+2
+()())()
+(u)())()
+```
+
+**output**
+```
+(())() ()()()
+(u())() (u)()() 
+```
+
 ### DSA02016 - SẮP XẾP QUÂN HẬU 1
 
 Cho một bàn cờ vua có kích thước n * n, ta biết ràng quân hậu có thể di chuyển theo chiều ngang, dọc, chéo. Vấn đề đặt ra rằng, có n quân hậu, bạn cần đếm số cách đặt n quân hậu này lên bàn cờ sao cho với 2 quân hậu bất kì, chúng không “ăn” nhau.
 
-Input: Dòng đầu ghi số bộ test T (T<5). Mỗi bộ test ghi một số nguyên dương n duy nhất (không quá 10)
+**Input:** Dòng đầu ghi số bộ test T (T<5). Mỗi bộ test ghi một số nguyên dương n duy nhất (không quá 10)
 
-Output:  Ghi kết quả mỗi bộ test trên một dòng. Số cách đặt quân hậu.
+**Output:**  Ghi kết quả mỗi bộ test trên một dòng. Số cách đặt quân hậu.
 
 Ví dụ:
 
@@ -1239,6 +1448,79 @@ Nhiệm vụ của bạn là đặt 8 quân hậu lên bàn cờ, sao cho không
 260
 ```
 
+### DSA02018 - BIỂU THỨC TOÁN HỌC
+
+Cho 5 số nguyên dương A, B, C, D, E. Bạn có thể hoán vị các phần tử cho nhau, hãy đặt các dấu biểu thức +, -, * sao cho biểu thức sau đúng:
+
+[[[A o(1) B] o(2) C] o(3) D] o(4) E = 23
+
+Trong đó: o(1) … o(4) là các phép toán +, -, *.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm 5 số nguyên dương A, B, C, D, E có giá trị không vượt quá 100.
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được, mỗi xâu in ra trên một dòng.
+
+**input**
+```
+3
+1 1 1 1 1
+1 2 3 4 5
+2 3 5 7 11
+```
+
+**output**
+```
+NO
+YES
+YES
+```
+
+### DSA02019 - ĐƯỜNG ĐI DÀI NHẤT
+
+Cho đồ thị vô hướng có N đỉnh và M cạnh. Bạn hãy tìm đường đi dài nhất trên đồ thị, sao cho mỗi cạnh chỉ được đi qua nhiều nhất 1 lần.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+- Mỗi test bắt đầu bằng số nguyên N và M (1 ≤ N, M ≤ 20). 
+- Các đỉnh đánh dấu từ 0, 1, …, N-1. M dòng tiếp theo, mỗi dòng gồm 2 số u, v cho biết có cạnh nối giữa uàv.
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được, mỗi xâu in ra trên một dòng.
+
+**input**
+```
+2
+3 2
+0 1
+1 2
+15 16
+0 2
+1 2
+2 3
+3 4
+3 5
+4 6
+5 7
+6 8
+7 8
+7 9
+8 10
+9 11
+10 12
+11 12
+10 13
+12 14
+```
+
+**output**
+```
+2
+12
+```
+
 ### DSA02020 - SỐ NHỎ NHẤT CÓ N ƯỚC SỐ
 
 Cho số nguyên dương N. Nhiệm vụ của bạn là tìm số K nhỏ nhất, sao cho K có đúng N ước. Input đảm bảo rằng đáp án không vượt quá 10<sup>18</sup>.
@@ -1262,6 +1544,37 @@ Cho số nguyên dương N. Nhiệm vụ của bạn là tìm số K nhỏ nhấ
 6
 12
 ```
+
+### DSA02021 - KÝ TỰ ĐẶC BIỆT
+
+Cho một xâu s. Xâu F(s) được xác định bằng cách ghép xâu xâu s ban đầu với xâu s sau khi đã được quay vòng sang bên phải 1 kí tự (kí tự cuối cùng của s được chuyển lên đầu).
+
+Thực hiện liên tiếp các bước cộng xâu như trên với xâu mới thu được, ta có được xâu X.
+
+![download](https://user-images.githubusercontent.com/64203006/163589667-637e3c59-f78e-4c8e-ba7e-3f88b283f2fc.png)
+
+Nhiệm vụ của bạn là hãy xác định kí tự thứ N trong xâu X là kí tự nào?
+
+
+
+**Input:** 
+Dòng đầu ghi số bộ test T (T<10). Mỗi bộ test gồm một xâu s có độ dài không vượt quá 30 kí tự và số nguyên N (1 ≤ N ≤ 10<sup>18</sup>).
+
+**Output:** 
+Với mỗi bộ test ghi ra trên một dòng kí tự tìm được.
+
+**input**
+```
+1
+COW 8
+```
+
+**output**
+```
+C
+```
+
+Giải thích test: COW -> COWWCO -> COWWCOOCOWWC. Kí tự thứ 8 là ‘C’.
 
 ### DSA02022 - NGÀY ĐẶC BIỆT
 
@@ -1344,6 +1657,174 @@ Ghi ra lần lượt các dãy con tăng dần theo thứ tự từ điển.
 6 7
 6 7 11
 7 11
+```
+
+### DSA02025 - KÝ TỰ LẶP
+
+Cho một dãy các xâu ký tự chỉ bao gồm các chữ cái in hoa từ A đến Z, trong đó các ký tự trong mỗi xâu đều đã được sắp xếp theo thứ tự từ điển và mỗi chữ cái chỉ xuất hiện nhiều nhất một lần (tức là độ dài xâu tối đa là 26). Nếu một ký tự xuất hiện trong hai xâu liên tiếp thì được coi là một lần lặp. Hãy tìm cách sắp xếp lại thứ tự các xâu sao cho số lần lặp là nhỏ nhất có thể. Ví dụ dưới đây là cùng một dãy xâu nhưng với cách sắp xếp lại thì số lần lặp chỉ còn 2.
+
+ABC
+
+ABEF
+
+DEF
+
+ABCDE
+
+FGH
+
+=> Số lần lặp là 6
+
+ABEF
+
+DEF
+
+ABC
+
+FGH
+
+ABCDE
+
+=> Số lần lặp là 2.
+
+**Input** 
+Dòng đầu tiên ghi số N (2 ≤ N ≤ 10) là số xâu ký tự. N dòng tiếp theo, mỗi dòng ghi một xâu. 
+
+**Output** 
+In ra trên một dòng số lần lặp nhỏ nhất có thể. 
+
+**input**
+
+test 1
+```
+5
+ABC
+ABEF
+DEF
+ABCDE
+FGH
+```
+test 2
+```
+6
+BDE
+FGH
+DEF
+ABC
+BDE
+ABEF
+```
+test 3
+```
+4
+XYZ
+XYZ
+ABYZ
+Z
+```
+
+**output**
+
+test 1
+```
+2
+```
+test 2
+```
+3
+```
+test 3
+```
+4
+```
+
+### DSA02026 - PHÉP TOÁN CƠ BẢN
+
+Cho một biểu thức trong phạm vi hai chữ số với các phép toán cộng trừ nhân chia. Các toán hạng và kết quả đảm bảo là số nguyên dương có hai chữ số, nếu có phép chia thì phải thỏa mãn tính chia hết.
+
+Người ta có thể ẩn đi một số chữ số hoặc phép toán bằng cách điền dấu chấm hỏi (?). Nhiệm vụ của bạn là khôi phục các dấu chấm hỏi và in ra phép toán chính xác ban đầu. Nếu không thể có kết quả đúng thì ghi ra WRONG PROBLEM!
+
+**Input**
+- Dòng đầu ghi số bộ test T (1 ≤ T ≤ 100).
+- T dòng tiếp theo, mỗi dòng là một biểu thức có thể có các dấu ?.
+
+*Nếu có thể có nhiều kết quả đúng thì in ra kết quả đầu tiên theo thứ tự từ điển, tức là số nhỏ nhất có thể tính từ trái sang phải.*
+
+**Output**
+- Với mỗi bộ test, ghi ra biểu thức đúng tìm được. Hoặc WRONG PROBLEM!
+
+**input**
+```
+2
+?0 ? 12 = 28
+40 / ?3 = ??
+```
+
+**output**
+```
+40 - 12 = 28
+WRONG PROBLEM!
+```
+
+### DSA02027 - NGƯỜI DU LỊCH
+
+Cho n thành phố đánh số từ 1 đến n và các tuyến đường giao thông hai chiều giữa chúng, mạng lưới giao thông này được cho bởi mảng C[1…n, 1…n] ở đây C[i][j] = C[j][i] là chi phí đi đoạn đường trực tiếp từ thành phố i đến thành phố j.
+
+Một người du lịch xuất phát từ thành phố 1, muốn đi thăm tất cả các thành phố còn lại mỗi thành phố đúng 1 lần và cuối cùng quay lại thành phố 1. Hãy chỉ ra chi phí ít nhất mà người đó phải bỏ ra.
+
+**Input** 
+Dòng đầu tiên là số nguyên n – số thành phố (n ≤ 15); n dòng sau, mỗi dòng chứa n số nguyên thể hiện cho mảng 2 chiều C.
+
+**Output** 
+Chi phí mà người đó phải bỏ ra.
+
+**input**
+```
+4
+0 20 35 10
+20 0 90 50
+35 90 0 12
+10 50 12 0
+```
+
+**output**
+```
+117
+```
+
+### DSA02028 - CHIA ĐỀU
+
+Cho dãy số A có N phần tử và số K. Hãy đếm số cách chia dãy A thành K nhóm các phần tử liên tiếp sao cho tổng giá trị của mỗi nhóm đều bằng nhau.
+
+**Input**
+- Dòng đầu ghi hai số N và K (0 < N ≤ 12; 0 < K < N ).
+- Dòng thứ 2 ghi N số của dãy A (-10000 ≤ A[i] ≤ 10000)
+
+**Output**
+- In ra số cách thỏa mãn
+
+**input**
+
+test 1
+```
+3 2
+-2 0 -2
+```
+test 2
+```
+3 2
+1 2 3
+```
+
+**output**
+
+test 1
+```
+2
+```
+test 2
+```
+1
 ```
 
 ### DSA02029 - THÁP HÀ NỘI
@@ -1452,6 +1933,36 @@ DBCA
 DCBA
 ```
 
+### DSA02032 - TỔ HỢP SỐ CÓ TỔNG BẰNG X
+
+Cho mảng A[] gồm N số nguyên dương phân biệt và số X. Nhiệm vụ của bạn là tìm phép tổ hợp các số trong mảng A[] có tổng bằng X. Các số trong mảng A[] có thể được sử dụng nhiều lần. Mỗi tổ hợp các số của mảng A[] được in ra theo thứ tự không giảm các số. Ví dụ với A[] = {2, 4, 6, 8}, X = 8 ta có các tổ hợp các số như sau:
+
+{2, 2, 2, 2}, {2, 2, 4}, {2, 6}, {4, 4}, {8}.
+
+**Input**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất là hai số N và X; dòng tiếp theo đưa vào N số của mmảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, X, A[i] thỏa mãn ràng buộc: 1≤T ≤10; 1≤X, A[i]≤100. N ≤ 20.
+
+**Output**
+- Đưa ra kết quả mỗi test theo từng dòng. 
+- Đầu tiên là số lượng tổ hợp thỏa mãn. Mỗi tổ hợp được bao bởi cặp ký tự { } và cách nhau một dấu cách. Đưa ra -1 nếu không có tổ hợp nào thỏa mãn yêu cầu bài toán.
+
+**input**
+```
+2
+4  8
+2  4  6  8
+2 9
+10 11
+```
+
+**output**
+```
+5 {2 2 2 2} {2 2 4} {2 6} {4 4} {8}
+-1
+```
+
 ### DSA02033 - SỐ XA CÁCH
 
 Cho số nguyên dương N (2 < N <10). Một số nguyên dương K có N chữ số được gọi là số xa cách nếu thỏa mãn:
@@ -1545,6 +2056,242 @@ Với n xâu ký tự số có độ dài k, có thể có chữ số 0 ở đ�
 ```
 2700
 ```
+
+### DSA02036 - DÃY CON CÓ TỔNG LẺ
+
+Cho dãy số A[] có N phần tử là các số nguyên dương khác nhau từng đôi một.
+
+Hãy sắp xếp dãy theo thứ tự giảm dần, sau đó liệt kê tất cả các dãy con (đúng thứ tự trước sau) của A[] có tổng các phần tử là số lẻ.
+
+Các dãy con được liệt kê theo thứ tự từ điển tăng dần.
+
+**Input:**
+
+Dòng đầu ghi số bộ test, mỗi test có 2 dòng:
+- Dòng đầu ghi số N (2 < N <15)
+- Dòng thứ 2 ghi N số của dãy A[], các số đều nguyên dương, nhỏ hơn 100 và khác nhau từng đôi một.
+
+**Output:** 
+Với mỗi test, liệt kê tất cả các dãy con có tổng các phần tử là số lẻ theo thứ tự từ điển tăng dần, mỗi dãy con trên một dòng.  
+
+**input**
+```
+1
+4
+2 3 4 5
+```
+
+**output**
+```
+3
+3 2
+4 3
+4 3 2
+5
+5 2
+5 4
+5 4 2
+```
+
+### DSA02037 - DÃY CON CÓ TỔNG NGUYÊN TỐ
+
+Cho dãy số A[] có N phần tử là các số nguyên dương khác nhau từng đôi một. Hãy liệt kê tất cả các dãy con của A[] có tổng các phần tử là số nguyên tố.
+
+Các dãy con được liệt kê theo thứ tự từ điển tăng dần.
+
+**Input:**
+
+Dòng đầu ghi số bộ test, mỗi test có 2 dòng:
+- Dòng đầu ghi số N (2 < N <15)
+- Dòng thứ 2 ghi N số của dãy A[], các số đều nguyên dương, nhỏ hơn 100 và khác nhau từng đôi một.
+
+**Output:** 
+Với mỗi test, liệt kê tất cả các dãy con có tổng các phần tử là số lẻ theo thứ tự từ điển tăng dần, mỗi dãy con trên một dòng.  
+
+**input**
+```
+1
+4
+3 2 5 4
+```
+
+**output**
+```
+2
+3
+3 2
+4 3
+5
+5 2
+5 4 2
+```
+
+### DSA02038 - DÃY CON CÓ K PHẦN TỬ TĂNG DẦN
+
+Cho dãy số A[] có N phần tử là các số nguyên dương khác nhau từng đôi một và một số K < N.
+
+Hãy liệt kê tất cả các dãy con khác nhau có K phần tử của A[], mỗi dãy đều được sắp xếp theo thứ tự tăng dần.
+
+Các dãy con được liệt kê lần lượt theo thứ tự từ điển.
+
+**Input:**
+
+Dòng đầu ghi số bộ test, mỗi test có 2 dòng:
+- Dòng đầu ghi số N (2 < N <15)
+- Dòng thứ 2 ghi N số của dãy A[], các số đều nguyên dương, nhỏ hơn 100 và khác nhau từng đôi một.
+
+**Output:** 
+Với mỗi test, liệt kê tất cả các dãy con thỏa mãn, mỗi dãy con trên một dòng. 
+
+**input**
+```
+1
+4 3
+3 2 5 4
+```
+
+**output**
+```
+2 3 4
+2 3 5
+2 4 5
+3 4 5
+```
+
+### DSA02039 - PHÂN TÍCH SỐ 2
+
+Cho số nguyên dương N. Nhiệm vụ của bạn là hãy liệt kê tất cả các cách phân tích số tự nhiên N thành tổng các số tự nhiên nhỏ hơn hoặc bằng N. Phép hoán vị của một cách được xem là giống nhau. Ví dụ với N = 5 ta có kết quả là: (5), (4, 1), (3, 2), (3, 1, 1), (2, 2, 1), (2, 1, 1, 1), (1, 1, 1, 1, 1) .
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên N được viết trên một dòng.
+- T, n thỏa mãn ràng buộc: 1≤T, N≤10.
+
+**Output:** 
+- Dòng đầu tiên là số lượng cách phân tích thỏa mãn. Dòng tiếp theo liệt kê đáp án theo mẫu ví dụ đã cho.
+
+**input**
+```
+2
+4
+5
+```
+
+**output**
+```
+5
+(4) (3 1) (2 2) (2 1 1) (1 1 1 1)
+7
+(5) (4 1) (3 2) (3 1 1) (2 2 1) (2 1 1 1) (1 1 1 1 1)
+```
+
+### DSA02041 - BIẾN ĐỔI VỀ 1
+
+Cho số nguyên dương N. Hãy đếm số bước ít nhất để đưa N về 1 bằng cách thực hiện ba thao tác dưới đây:
+- Nếu N chia hết cho 2 bạn có thể giảm N = N/2.
+- Nếu N chia hết cho 3 bạn có thể giảm N = N/3.
+- Giảm N đi 1.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số N được viết trên một dòng.
+- T, N thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤100000.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+10
+6
+```
+
+**output**
+```
+3
+2
+```
+
+### DSA02045 - TẬP CON CỦA XÂU KÝ TỰ
+
+Cho một xâu ký tự S không có ký tự lặp lại. Hãy đưa ra tất cả các tập con của xâu ký tự S theo thứ tự từ điển.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một xâu ký tự.
+- T, S thỏa mãn ràng buộc: 1≤T≤100; 1≤length(S)≤16.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+1
+3
+abc
+```
+
+**output**
+```
+a ab abc ac b bc c
+```
+
+### DSA05009 - TẬP CON BẰNG NHAU
+
+Cho tập các số A[] = (a1, a2, .., an). Hãy kiểm tra xem ta có thể chia tập A[] thành hai tập con sao cho tổng các phần tử của hai tập con bằng nhau hay không. Đưa ra YES nếu có thể thực hiện được, ngược lại đưa ra NO.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào số N là số lượng phần tử của dãy số A[]; dòng tiếp theo đưa vào N phần tử của dãy số A[].
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T ≤100; 1≤N≤100; 1≤ A[i] ≤100.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+4
+1 5 11 5
+3
+1 3 5 
+```
+
+**output**
+```
+YES
+NO
+```
+
+### DSAKT012 - ĐỔI TIỀN
+
+Có n tờ tiền có giá trị t[1], t[2], …, t[n].
+
+Hãy tìm cách trả ít tờ tiền nhất với số tiền đúng bằng S
+
+Chú ý: Các tờ tiền có giá trị bất kỳ và có thể bằng nhau, mỗi tờ tiền chỉ được dùng một lần.
+
+**Input:**
+- Mỗi bộ test gồm 2 số nguyên n và S (n ≤ 30; S ≤ 10<sup>9</sup>).
+- Dòng thứ hai chứa n số nguyên t[1], t[2], …, t[n] (t[i] ≤ 10<sup>9</sup>)
+
+**Output:**
+- Ghi ra trên một dòng số tờ tiền ít nhất phải trả.
+- Nếu không thể tìm được kết quả, in ra -1.
+
+**input**
+```
+3 5
+1 4 5 
+```
+
+**output**
+```
+1
+```
+
+## Greedy
 
 ### DSA03001 - ĐỔI TIỀN
 
@@ -1751,6 +2498,40 @@ Cho hệ gồm N hành động. Mỗi hành động được biểu diễn như 
 4
 ```
 
+### DSA03009 - SẮP XẾP CÔNG VIỆC 2
+
+Cho N công việc. Mỗi công việc được biểu diễn như một bộ 3 số nguyên dương <JobId, Deadline, Profit>, trong đó JobId là mã của việc, Deadline là thời gian kết thúc của việc, Profit là lợi nhuận đem lại nếu hoàn thành việc đó đúng hoặc trước thời gian. Thời gian tối thiểu để hoàn thành mỗi công việc là 1 đơn vị thời gian. Hãy cho biết lợi nhuận lớn nhất có thể thực hiện các việc với giả thiết mỗi việc được thực hiện đơn lẻ.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất là số lượng Job N; phần thứ hai đưa vào 3×N số tương ứng với N job.
+- T, N, JobId, Deadline, Profit thỏa mãn ràng buộc:1≤T≤100;  1≤N≤1000; 1≤ JobId ≤1000; 1≤ Deadline ≤1000; 1≤ Profit ≤1000.
+
+**Output:**
+- Đưa số lượng công việc tương ứng và lợi nhuận lớn nhất có thể đạt được.
+
+**input**
+```
+2
+4
+1 4 20
+2 1 10
+3 1 40
+4 1 30
+5
+1 2 100
+2 1 19
+3 2 27
+4 1 25
+5 1 15
+```
+
+**output**
+```
+2 60
+2 127
+```
+
 ### DSA03010 - NỐI DÂY 1
 
 Cho N sợi dây với độ dài khác nhau được lưu trong mảng A[]. Nhiệm vụ của bạn là nối N sợi dây thành một sợi sao cho tổng chi phí nối dây là nhỏ nhất. Biết chi phí nối sợi dây thứ i và sợi dây thứ j là tổng độ dài hai sợi dây A[i] và A[j].
@@ -1776,6 +2557,29 @@ Cho N sợi dây với độ dài khác nhau được lưu trong mảng A[]. Nhi
 ```
 29
 62
+```
+
+### DSA03011 - NỐI DÂY 2
+
+Cho N sợi dây với độ dài khác nhau được lưu trong mảng A[]. Nhiệm vụ của bạn là nối N sợi dây thành một sợi sao cho tổng chi phí nối dây là nhỏ nhất. Biết chi phí nối sợi dây thứ i và sợi dây thứ j là tổng độ dài hai sợi dây A[i] và A[j].
+
+**Input:**
+- Dòng đầu ghi số bộ test T (T<10). Mỗi bộ test gồm 2 dòng. Dòng đầu tiên là số nguyên N (N ≤ 2*10<sup>6</sup>).
+- Dòng tiếp theo gồm N số nguyên dương c[i] (1 ≤ A[i] ≤ 10<sup>9</sup>).
+
+**Output:**
+- In ra đáp án của bộ test trên từng dòng, theo modulo 10<sup>9</sup>+7.
+
+**input**
+```
+1
+7
+2 4 1 2 10 2 3
+```
+
+**output**
+```
+59
 ```
 
 ### DSA03012 - SẮP ĐẶT XÂU KÝ TỰ 1
@@ -1832,6 +2636,32 @@ AAA
 -1
 ```
 
+### DSA03014 - SỐ KHỐI LẬP PHƯƠNG
+
+Một số X được gọi là số khối lập phương nếu X là lũy thừa bậc 3 của số Y (X= Y<sup>3</sup>). Cho số nguyên dương N, nhiệm vụ của bạn là tìm số khối lập phương lớn nhất bằng cách loại bỏ đi các chữ số của N. Ví dụ số 4125 ta có kết quả là 125 = 5<sup>3</sup>.
+
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên N được viết trên một dòng.
+- T, N thỏa mãn ràng buộc: 1≤T≤100;  1≤N≤10<sup>18</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng. Nếu không tìm được đáp án in ra -1.
+
+**input**
+```
+2
+4125
+976
+```
+
+**output**
+```
+125
+-1
+```
+
 ### DSA03015 - MUA LƯƠNG THỰC
 
 Giả sử bạn là một người nghèo trong địa phương của bạn. Địa phương của bạn có duy nhất một cửa hàng bán lương thực. Cửa hàng của bạn mở cửa tất cả các ngày trong tuần ngoại trừ chủ nhật. Cho bộ ba số N, S, M thỏa mãn ràng buộc sau:
@@ -1862,6 +2692,31 @@ Giả sử bạn đang ở ngày thứ 2 trong tuần và cần tồn tại tron
 ```
 2
 -1
+```
+
+### DSA03016 - SỐ NHỎ NHẤT
+
+Cho hai số nguyên dương S và D, trong đó S là tổng các chữ số và D là số các chữ số của một số. Nhiệm vụ của bạn là tìm số nhỏ nhất thỏa mãn S và D? Ví dụ với S = 9, D = 2 ta có số nhỏ nhất thỏa mãn S và D là 18.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là bộ 2 số S và D được viết trên một dòng.
+- T, S, D thỏa mãn ràng buộc: 1≤T≤100;  1≤ S,D≤1000.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng. Nếu không có đáp án, in ra -1.
+
+**input**
+```
+2
+9 2
+20 3
+```
+
+**output**
+```
+18
+299
 ```
 
 ### DSA03017 - GIÁ TRỊ NHỎ NHẤT CỦA XÂU
@@ -1939,6 +2794,57 @@ Một phân số đơn vị nếu tử số của phân số đó là 1. Mọi p
 1/3
 ```
 
+### DSA03020 - BIỂU THỨC ĐÚNG
+
+Cho một mảng S gồm 2×N ký tự, trong đó có N ký tự ‘[’ và N ký tự ‘]’. Xâu S được gọi là viết đúng nếu S có dạng S2[S1] trong đó S, S2 là các xâu viết đúng. Nhiệm vụ của bạn là tìm số các phép đổi chỗ ít nhất các ký tự kề nhau của xâu S viết sai để  S trở thành viết đúng. Ví dụ với xâu S =”[]][][” ta có số phép đổi chỗ kề nhau ít nhất là 2.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một xâu S viết sai theo nguyên tắc kể trên.
+- T, S thòa mãn ràng buộc: 1≤T≤100; 1≤length(S)≤100000.
+
+**Output:**
+- Đưa kết quả trên một dòng.
+
+**input**
+```
+2
+[]][][
+[][][]
+```
+
+**output**
+```
+2
+0
+```
+
+### DSA03021 - TÌM DÃY SỐ
+
+Cho dãy số nguyên A[] gồm có N phần tử. Nhiệm vụ của bạn là tìm dãy số B[] có tổng phần tử nhỏ nhất thỏa mãn tính chất A[i] / B[i] = A[i+1] / B[i+1] với mọi chỉ số i (0 ≤ i ≤ N-2).
+
+Phép chia trong bài toán này là phép chia nguyên (tức là chỉ lấy phần nguyên của kết quả: ví dụ 5/3 = 1).   
+
+**Input:**
+- Dòng đầu tiên là số lượng phần tử N (1 ≤ N ≤ 1000).
+- Dòng tiếp theo gồm N số nguyên A[i] (1 ≤ A[i] ≤ 2000).
+
+**Output:**
+- In ra một số nguyên là tổng các phần tử của dãy số B[] tìm được.
+
+**input**
+```
+5
+18 27 16 22 6
+```
+
+**output**
+```
+25
+```
+
+*Giải thích test: Dãy B[] tìm được là 5, 7, 5, 6, 2.*
+
 ### DSA03022 - TÍCH LỚN NHẤT
 
 Cho dãy số A gồm N phần tử là các số nguyên. Hãy tính tích lớn nhất của **2 hoặc 3** phần tử trong dãy.
@@ -1959,6 +2865,28 @@ Cho dãy số A gồm N phần tử là các số nguyên. Hãy tính tích lớ
 **output**
 ```
 250
+```
+
+### DSA03023 - SẮP XẾP VIÊN BI
+
+Cho một dãy N viên bi gồm 3 màu xanh, trắng, đỏ xếp lẫn lộn. Bằng cách đổi chỗ từng cặp viên bi cho nhau có thể xếp lại dãy bi trên sao cho các viên bi xanh đứng trước, sau đó đến các viên bi trắng và cuối cùng là các viên bi đỏ. Tìm số lượng ít nhất các phép đổi chỗ cần thực hiện
+
+**Input:**
+- Dòng đầu  tiên ghi N (N≤100)
+- Dòng thứ hai ghi xâu ký tự mô tả dãy bi (T-trắng, X-xanh, D-đỏ).
+
+**Output:**
+- Một dòng duy nhất ghi số phép đổi chỗ tối thiểu cần thực hiện
+
+**input**
+```
+9
+TTXDDDTDX
+```
+
+**output**
+```
+4
 ```
 
 ### DSA03024 - LỰA CHỌN TỐI ƯU
@@ -2062,6 +2990,77 @@ ________________________________________________________________
 -1 -1
 ```
 
+### DSA03027 - GIÁ TRỊ LỚN NHẤT
+
+Cho dãy số nguyên A[] có N phần tử.
+- Gọi f(i,j) = |a<sub>i</sub>| + |a<sub>i+1</sub>| + … + |a<sub>j</sub>|
+- Gọi g(i,j) = a<sub>i</sub> + a<sub>i+1</sub> + … + a<sub>j</sub>
+
+Với tất cả các cặp 1 ≤ i ≤ j ≤ N.
+
+Hãy tính giá trị lớn nhất của f(i,j) + g(i,j).
+
+**Input:**
+- Dòng đầu ghi số N (1 ≤ N ≤ 50000)
+- Dòng thứ 2 ghi N số nguyên của dãy A[]
+
+**Output:**
+- Ghi ra giá trị lớn nhất của f(i,j) + g(i,j)
+
+**input**
+```
+5
+-3 5 -10 8 -2
+```
+
+**output**
+```
+26
+```
+
+### DSA03033 - ATM THẾ HỆ MỚI
+
+Tại một cây rút tiền ATM thế hệ mới, Tý muốn rút ra W đồng. Các tờ tiền trong máy ATM có mệnh giá từ 1000, 2000, 3000, 5000, 1000 * 10, 2000 * 10, 3000 * 10, 5000 * 10, …, 1000 * 10<sup>c</sup>, 2000 * 10<sup>c</sup>, 3000 * 10<sup>c</sup>, 5000 * 10<sup>c</sup>.
+
+Chiếc máy ATM đã được tối ưu hóa sao cho số lượng tờ tiền đưa ra cho khách hàng là nhỏ nhất.
+
+Các bạn hãy thử tính xem Tý sẽ nhận được bao nhiêu tờ tiền? Và có bao nhiêu cách thỏa mãn?
+
+**Input:**
+- Số đầu tiên là số lượng bộ test T (T ≤ 1000). Mỗi test gồm 2 dòng:
+- Dòng thứ nhất chứa số nguyên W.
+- Dòng thứ hai chứa số nguyên c.
+
+**Output:**
+- Với mỗi test, hãy in ra số lượng tờ tiền nhỏ nhất mà máy ATM sinh ra và số tổ hợp các tờ tiền khác nhau thỏa mãn tổng giá trị của chúng bằng W.
+- Nếu không có đáp án, in ra số 0 trên một dòng.
+
+**input**
+```
+4
+2000
+1
+7000
+1
+1500
+1
+110000
+1
+```
+
+**output**
+```
+1 1
+2 1
+0
+3 2
+```
+Subtask 1: 30% số test đầu tiên, c ≤ 5, W ≤ 10<sup>9</sup>.
+
+Subtask 2: 70% số test còn lại, c ≤ 15, W ≤ 10<sup>18</sup>.
+
+*Giải thích test 4: 2 cách tìm được là: 50000+50000+10000 và 50000+30000+30000*
+
 ### DSA03034 - DÃY CON CHUNG -- DSA06040 - GIAO CỦA BA DÃY SỐ
 
 Cho dãy số A[], B[] và C[] là dãy không giảm và có lần lượt N, M, K phần tử. Nhiệm vụ của bạn là hãy tìm các phần tử chung của 3 dãy số này.
@@ -2121,6 +3120,8 @@ Hãy tính số bước tối thiểu cần thực hiện để hoàn thành vi�
 ```
 2
 ```
+
+## Divide and Conquer
 
 ### DSA04001 - LŨY THỪA
 
@@ -2247,6 +3248,58 @@ A
 B
 ```
 
+### DSA04006 - ĐẾM SỐ BÍT 1
+
+Cho số nguyên dương N. Mỗi bước, bạn sẽ biến đổi N thành [N/2], N mod 2, [N/2]. Sau khi thực hiện một cách triệt để, ta thu được một dãy số chỉ toàn số 0 và 1.
+
+Nhiệm vụ của bạn là hãy đếm các số bằng 1 trong đoạn [L, R] của dãy số cuối cùng.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm 3 số nguyên N, L, R (1 ≤ N, L, R < 2<sup>50</sup>, 0 ≤ R-L ≤ 100 000).
+
+**Output:** 
+- Với mỗi test, in ra đáp án trên một dòng.
+
+**input**
+```
+2
+7 2 5
+10 3 10
+```
+
+**output**
+```
+4
+5
+```
+
+Giải thích test 1: [7] à [3, 1, 3] à [1, 1, 1, 1, 3] à [1, 1, 1, 1, 1, 1, 1].
+
+Giải thích test 2: Dãy số sau khi biến đổi là [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1].
+
+### DSA04007 - HỆ CƠ SỐ K
+
+Cho hai số A, B ở hệ cơ số K. Hãy tính tổng hai số đó ở hệ cơ số K.
+
+**Input:**
+- Dòng đầu ghi số bộ test T (T<10). Mỗi bộ test ghi 3 số K,A,B.
+- 2≤K≤10; A và B nếu biểu diễn trong hệ cơ số 10 đều nhỏ hơn 10<sup>9</sup>
+
+**Output:**
+- In ra tổng của A và B trong hệ cơ số K
+
+**input**
+```
+1
+2 1 10
+```
+
+**output**
+```
+11
+```
+
 ### DSA04008 - SỐ FIBONACCI THỨ N
 
 Dãy số Fibonacci được xác định bằng công thức như sau:
@@ -2325,7 +3378,6 @@ Cho mảng A[] gồm N số có cả các số âm và số dương. Nhiệm v�
 **Output:**
 - Đưa ra tổng con liên tục lớn nhất của mỗi test theo từng dòng.
 
-
 **input**
 ```
 1
@@ -2336,6 +3388,120 @@ Cho mảng A[] gồm N số có cả các số âm và số dương. Nhiệm v�
 **output**
 ```
 7
+```
+
+### DSA04011 - TÍCH HAI SỐ NHỊ PHÂN
+
+Cho hai xâu nhị phân biểu diễn hai số. Nhiệm vụ của bạn là đưa ra tích của hai số. Ví dụ với xâu S1=”1100” và S2=”1010” ta sẽ có kết quả là 120.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm 2 hai xâu nhị phân S1, S2 được viết trên một dòng.
+- T, S1, S2 thỏa mãn ràng buộc: 1≤T≤100;  1≤ length(S1), length(S2)≤30.
+
+**Output:**
+- Đưa ra tích của mỗi test theo từng dòng.
+
+**input**
+```
+2
+1100 01
+01 01
+```
+
+**output**
+```
+12
+1
+```
+
+### DSA04012 - TÍCH ĐA THỨC
+
+Cho hai đa thức P và Q được biểu diễn như một mảng bao gồm các hệ số của đa thức. Ví dụ với P(x) = 5 + 0x<sup>1</sup> +10x<sup>2</sup> + 6x<sup>3</sup> được biểu diễn như mảng P[] ={5, 0, 10, 6}. Hãy đưa ra đa thức R = P×Q theo các hệ số của R với cách biểu diễn như trên.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm 3 dòng: dòng thứ nhất đưa vào hai số M, N tương ứng với lũy thừa lớn nhất của đa thức P và Q; dòng tiếp theo đưa vào M số là hệ số của đa thức P; dòng cuối cùng đưa vào M số là hệ số của đa thức Q.
+- T, M, N, P[i], Q[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤M, N≤100; 1≤P[i], Q[i]≤100.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+4 3
+1 0 3 2
+2 0 4
+5 4
+1 9 3 4 7
+4 0 2 5
+```
+
+**output**
+```
+2 0 10 4 12 8
+4 36 14 39 79 23 34 35
+```
+
+### DSA04013 - SẮP XẾP KANGURU
+
+Có N con kanguru trong vườn thú, con thứ i có chiều cao bằng A[i]. Con kanguru có chiều cao X có thể chứa được một con có chiều cao bằng Y trong túi của nó nếu như X >= 2*Y.
+
+Một con đã chứa một con kanguru rồi, thì không thể nhảy vào túi một con kanguru khác.
+
+Bầy Kanguru rất thích chơi trốn tìm, vì vậy chúng thường xuyên nhảy vào túi của nhau. Các bạn hãy tính toán xem trong trường hợp tối ưu, số con kanguru nhìn thấy trong vườn thú ít nhất bằng bao nhiêu?
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm số nguyên N (1 ≤ N ≤ 100 000).
+- Dòng tiếp theo gồm N số nguyên A[i] (1 ≤ A[i] ≤ 100 000).
+
+**Output:**
+- Với mỗi test, in ra đáp án trên một dòng.
+
+**input**
+```
+2
+8
+2 5 7 6 9 8 4 2
+8
+9 1 6 2 6 5 8 3
+```
+
+**output**
+```
+5
+5
+```
+
+Giải thích test 1: Nhóm 2 – 5, 2 – 6, 4 – 8, 7, 9.
+
+### DSA04014 - CẶP NGHỊCH THẾ
+
+Cho mảng A[] gồm N phần. Ta gọi cặp nghịch thế của mảng A[] là số các cặp i, j sao cho i<j và A[i]>A[j]. Đối với mảng đã được sắp xếp thì số cặp nghịch thế bằng 0. Mảng đã sắp theo thứ tự giảm dần có số đảo ngược cực đại. Nhiệm vụ của bạn là hãy đưa ra số cặp nghịch thế của mảng A[] gồm N phần tử.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào số N tương ứng với số phần tử của mảng A[]; phần thứ 2 là N số của mảng A[]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N≤10<sup>7</sup>; 1≤A[i]≤10<sup>18</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+5
+2 4 1 3 5
+5
+5 4 3 2 1
+```
+
+**output**
+```
+3
+10
 ```
 
 ### DSA04015 - TÍNH FLOOR(X)
@@ -2453,6 +3619,40 @@ Cho mảng A[] gồm N phần tử chỉ bao gồm các số 0 và 1. Các số 
 0
 ```
 
+### DSA04019 - CẶP ĐIỂM GẦN NHẤT
+
+Cho N điểm trên mặt phẳng tọa độ Oxy. Bạn cần tìm khoảng cách ngắn nhất giữa hai điểm trong số N điểm đã cho.
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi một số nguyên N (1 ≤ N ≤ 100 000).
+- N dòng tiếp theo, mỗi dòng gồm 2 số nguyên X[i], Y[i] (-10<sup>6</sup> ≤ X[i], Y[i] ≤ 10<sup>6</sup>).
+
+**Output:**
+- Với mỗi test, in ra đáp án trên một dòng với độ chính xác 6 chữ số sau dấu phẩy.
+
+**input**
+```
+2
+6
+2 3
+12 30
+40 50
+5 1
+12 10
+3 4
+3
+0 0
+3 0
+4 0
+```
+
+**output**
+```
+1.414214
+1.000000
+```
+
 ### DSA04020 - TÌM KIẾM NHỊ PHÂN
 
 Cho dãy số A[] gồm có N phần tử đã được sắp xếp tăng dần và số K.
@@ -2547,6 +3747,33 @@ B
 D
 ```
 
+### DSA04023 - KHOẢNG CÁCH NHỎ HƠN K
+
+Cho mảng A[] gồm n số nguyên dương và số K. Hãy đếm số các cặp phần tử có hiệu nhỏ hơn K. Ví dụ A[] = {1, 10, 4, 2 }, K=3 ta nhận được kết quả là 2 tương ứng với các cặp (1, 2), (4, 2).
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Mỗi bộ test gồm hai dòng: dòng đầu tiên ghi số n và số K; dòng tiếp theo là n số A[i] ; các số được viết cách nhau một vài khoảng trống.
+- T, n, k, A[i] thỏa mãn ràng buộc: 1 ≤ T ≤ 100; 1 ≤ n ≤ 10<sup>4</sup>; 1 ≤ k ≤ 10<sup>3</sup>; 1 ≤ A[i] ≤ 10<sup>5</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+4 3
+1 10 4 2
+3 5
+2 3 4
+```
+
+**output**
+```
+2
+3
+```
+
 ### DSA04024 - LŨY THỪA MA TRẬN 2
 
 Cho ma trận vuông A kích thước N x N. Nhiệm vụ của bạn là hãy tính ma trận X = AK với K là số nguyên cho trước. Sau đó, tính tổng các phần tử của cột cuối cùng. Đáp số có thể rất lớn, hãy in ra kết quả theo modulo 10<sup>9</sup>+7.
@@ -2611,6 +3838,44 @@ Cho số nguyên dương N không quá 109. Hãy xác định số thứ N trong
 8
 ```
 
+### DSA04030 - SỐ TRIBONACCI
+
+Dãy số Tribonacci được xây dựng như sau:
+
+T(i) = i với i ≤ 3.
+
+T(i) = T(i-1) + T(i-2) + T(i-3) với i ≥ 4.
+
+Nhiệm vụ của bạn là hãy tính tổng N phần tử đầu tiên của dãy số này.
+
+F(N) = T(1) + T(2) + …+ T(N)
+
+**Input:**
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 100).
+- Mỗi test gồm một số nguyên dương N (N ≤ 10<sup>9</sup>).
+
+**Output:**
+- Với mỗi test, in ra đáp án tìm được theo modulo 10<sup>15</sup>+7.
+
+**input**
+```
+5
+1
+2
+3
+4
+5
+```
+
+**output**
+```
+1
+3
+6
+12
+23
+```
+
 ### DSA04035 - TÍNH LŨY THỪA
 
 Cho hai số nguyên không âm a và b. Hãy tính ab.
@@ -2641,6 +3906,8 @@ Với mỗi test ghi ra kết quả tính được trên một dòng.
 16
 9
 ```
+
+## Dynamic Programming
 
 ### DSA05001 - XÂU CON CHUNG DÀI NHẤT
 
@@ -2773,6 +4040,33 @@ Cho dãy số A[] gồm N số. Nhiệm vụ của bạn là tìm tổng lớn n
 11
 ```
 
+### DSA05007 - TỔNG LỚN NHẤT CỦA DÃY CON KHÔNG KỀ NHAU -- DSAKT110 - NHÀ KHÔNG KỀ NHAU
+
+Có N ngôi nhà trên một dãy phố, mỗi ngôi nhà chứa đựng một số lượng tài sản khác nhau. Một tên trộm muốn ăp cắp được nhiều nhất tài sản của dãy phố nhưng không muốn lấy tài sản của hai nhà kề nhau. Hãy cho biết, bằng cách đó tên trộm có thể đánh cắp được nhiều nhất bao nhiêu tài sản.
+
+**Input:**
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là một số N là số lượng ngôi nhà; dòng tiếp theo đưa vào N số là tài sản tương ứng trong mỗi ngôi nhà; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤10<sup>6</sup>; 1≤A[i] ≤10<sup>7</sup>.
+
+**Output:**
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+6
+5 5 10 100 10 5
+4
+3 2 7 10
+```
+
+**output**
+```
+110
+13
+```
+
 ### DSA05008 - DÃY CON CÓ TỔNG BẰNG S
 
 Cho N  số nguyên dương tạo thành dãy A={A1, A2, ..., AN}. Tìm ra một dãy con của dãy A (không nhất thiết là các phần tử liên tiếp trong dãy) có tổng bằng S cho trước.
@@ -2790,33 +4084,6 @@ Với mỗi bộ test, nếu bài toán vô nghiệm thì in ra “NO”, ngư�
 1 2 4 3 5
 10 15
 2 2 2 2 2 2 2 2 2 2
-```
-
-**output**
-```
-YES
-NO
-```
-
-### DSA05009 - TẬP CON BẰNG NHAU
-
-Cho tập các số A[] = (a1, a2, .., an). Hãy kiểm tra xem ta có thể chia tập A[] thành hai tập con sao cho tổng các phần tử của hai tập con bằng nhau hay không. Đưa ra YES nếu có thể thực hiện được, ngược lại đưa ra NO.
-
-**Input:**
-- Dòng đầu tiên đưa vào số lượng bộ test T.
-- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào số N là số lượng phần tử của dãy số A[]; dòng tiếp theo đưa vào N phần tử của dãy số A[].
-- T, N, A[i] thỏa mãn ràng buộc: 1≤T ≤100; 1≤N≤100; 1≤ A[i] ≤100.
-
-**Output:**
-- Đưa ra kết quả mỗi test theo từng dòng.
-
-**input**
-```
-2
-4
-1 5 11 5
-3
-1 3 5 
 ```
 
 **output**
@@ -3148,6 +4415,33 @@ Một bản tin M đã mã hóa bí mật thành các con số theo ánh xạ nh
 2
 ```
 
+### DSA05031 - TỔNG BÌNH PHƯƠNG
+
+Mọi số nguyên dương N đều có thể phân tích thành tổng các bình phương của các số nhỏ hơn N. Ví dụ số 100 = 10<sup>2</sup> hoặc 100 = 5<sup>2</sup> + 5<sup>2</sup> + 5<sup>2</sup> + 5<sup>2</sup>. Cho số nguyên dương N. Nhiệm vụ của bạn là tìm số lượng ít nhất các số nhỏ hơn N mà có tổng bình phương bằng N.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi test là một số tự nhiên N được viết trên 1 dòng.
+- T, N thỏa mãn ràng buộc: 1≤T≤100;  1≤N≤10000.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+3
+100
+6
+25
+```
+
+**output**
+```
+1
+3
+1
+```
+
 ### DSA05036 - TĂNG - GIẢM
 
 Cho hai dãy số thực A[] và B[] đều có N phần tử, các giá trị là số thực và không quá 100.
@@ -3246,6 +4540,64 @@ Nhiệm vụ của bạn là hãy xác định xem có tìm được 1 dãy con 
 YES
 YES
 NO
+```
+
+### DSAKT053 - SỐ NGUYÊN LỚN
+
+Cho hai số nguyên lớn N và M có không quá 1000 chữ số. Người ta muốn tính xem liệu có thể lấy ra nhiều nhất bao nhiêu chữ số trong N (không cần liên tiếp) và giữ nguyên thứ tự của nó để tạo ra một số X sao cho ta cũng có thể tìm thấy X trong số M theo cách tương tự.
+
+**Input:** 
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20). Mỗi test gồm hai dòng, dòng thứ nhất ghi số N, dòng thứ 2 ghi số M.
+
+**Output:** 
+Với mỗi test, hãy in ra số chữ số nhiều nhất có thể của X.
+
+**input**
+```
+2
+144615
+4976135
+44
+88
+```
+
+**output**
+```
+4
+0
+```
+
+## Sort and Search
+
+### CTDL_005 - XÓA DỮ LIỆU TRONG DSLK ĐƠN
+
+Cho danh sách liên kết đơn lưu giữ các số nguyên được quản lý bởi con trỏ First. Viết chương trình con xóa tất cả các phần tử có giá trị bằng x trong danh sách liên kết đơn; chương trình con trả về số lượng các phần tử đã xóa. Sau khi xóa xong, liệt kê các phần tử còn lại trong danh sách liên kết đơn First.
+
+**input**
+```
+14
+1 1 1 4 5 1 1 1 1 7 1 8 1 9
+1
+```
+
+**output**
+```
+4 5 7 8 9
+```
+
+### CTDL_006 - LỌC DỮ LIỆU TRÙNG TRONG DSLK ĐƠN
+
+Cho danh sách liên kết đơn lưu giữ các số nguyên được quản lý bởi con trỏ First. Viết chương trình con lọc tất cả các phần tử có giá trị trùng nhau trong danh sách liên kết đơn First, chỉ để lại 1 phần tử đại diện cho nhóm trùng. Sau khi lọc xong, liệt kê các phần tử  trong danh sách liên kết đơn First.
+
+**input**
+```
+12
+1 1 1 4 5 1 4 7 7 8 1 9
+```
+
+**output**
+```
+1 4 5 7 8 9
 ```
 
 ### DSA06001 - SẮP XẾP XEN KẼ
@@ -4504,56 +5856,4 @@ Nhiệm vụ của bạn là hãy đếm số lượng đảo xuất hiện trê
 **output**
 ```
 5
-```
-
-### DSAKT053 - SỐ NGUYÊN LỚN
-
-Cho hai số nguyên lớn N và M có không quá 1000 chữ số. Người ta muốn tính xem liệu có thể lấy ra nhiều nhất bao nhiêu chữ số trong N (không cần liên tiếp) và giữ nguyên thứ tự của nó để tạo ra một số X sao cho ta cũng có thể tìm thấy X trong số M theo cách tương tự.
-
-**Input:** 
-Dòng đầu tiên là số lượng bộ test T (T ≤ 20). Mỗi test gồm hai dòng, dòng thứ nhất ghi số N, dòng thứ 2 ghi số M.
-
-**Output:** 
-Với mỗi test, hãy in ra số chữ số nhiều nhất có thể của X.
-
-**input**
-```
-2
-144615
-4976135
-44
-88
-```
-
-**output**
-```
-4
-0
-```
-
-### DSAKT110 - NHÀ KHÔNG KỀ NHAU -- DSA05007 - TỔNG LỚN NHẤT CỦA DÃY CON KHÔNG KỀ NHAU
-
-Có N ngôi nhà trên một dãy phố, mỗi ngôi nhà chứa đựng một số lượng tài sản khác nhau. Một tên trộm muốn ăp cắp được nhiều nhất tài sản của dãy phố nhưng không muốn lấy tài sản của hai nhà kề nhau. Hãy cho biết, bằng cách đó tên trộm có thể đánh cắp được nhiều nhất bao nhiêu tài sản.
-
-**Input:**
-- Dòng đầu tiên đưa vào số lượng bộ test T.
-- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là một số N là số lượng ngôi nhà; dòng tiếp theo đưa vào N số là tài sản tương ứng trong mỗi ngôi nhà; các số được viết cách nhau một vài khoảng trống.
-- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100;  1≤N ≤10<sup>6</sup>; 1≤A[i] ≤10<sup>7</sup>.
-
-**Output:**
-- Đưa ra kết quả mỗi test theo từng dòng.
-
-**input**
-```
-2
-6
-5 5 10 100 10 5
-4
-3 2 7 10
-```
-
-**output**
-```
-110
-13
 ```
