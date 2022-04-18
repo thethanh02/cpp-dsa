@@ -5582,6 +5582,67 @@ YES
 NO
 ```
 
+### DSA06037 - SẮP XẾP ĐOẠN CON
+
+Cho dãy số nguyên A[] độ dài N. Xác định số lượng chỉ số M (M < N) thỏa mãn: nếu sắp xếp đoạn con (A<sub>1</sub>,…,A<sub>M</sub>) và (A<sub>M+1</sub>, …, A<sub>N</sub>) theo thứ tự tăng dần thì được dãy số A tăng dần.
+
+**Input:** 
+- Dòng đầu tiên ghi số bộ test T
+- Mỗi bộ test bắt đầu bằng một dòng chứa số N (2 ≤ N ≤ 10<sup>5</sup>)
+- Dòng tiếp theo ghi N số của dãy A (|Ai| ≤ 10<sup>9</sup>)
+
+**Output:** 
+
+Với mỗi bộ test:
+
+- Dòng đầu tiên ghi số K là số lượng vị trí M tìm được
+- Dòng thứ 2 ghi ra K số theo thứ tự tăng dần lần lượt là các chỉ số thỏa mãn. Nếu K = 0 thì dòng này bỏ trống. 
+
+**input**
+```
+2
+2
+2 1
+5
+2 1 3 5 4
+```
+
+**output**
+```
+0
+
+2
+2 3
+```
+
+### DSA06038 - CẶP SỐ
+
+Cho dãy số nguyên A có n phần tử.
+
+Hãy đếm xem có bao nhiêu cặp (i,j) thỏa mãn:
+- i < j
+- A[i] > A[j] và đều là số chẵn
+- Tồn tại chỉ số k với i < k < j sao cho A[k] là số lẻ
+
+**Input:** 
+
+Dòng đầu tiên ghi số n (1 ≤ n ≤ 10<sup>5</sup>).
+
+**Output:** 
+
+Dòng thứ 2 ghi n số của dãy A, các giá trị A[i] không vượt quá 10<sup>6</sup>.
+
+**input**
+```
+5
+4 3 2 5 1
+```
+
+**output**
+```
+1
+```
+
 ### DSA06039 - SỐ ĐẦU TIÊN BỊ LẶP
 
 Cho dãy số A[] gồm có N phần tử. Nhiệm vụ của bạn là hãy tìm số xuất hiện nhiều hơn 1 lần trong dãy số và số thứ tự là nhỏ nhất.
@@ -5712,6 +5773,47 @@ Cho dãy số a[] có n phần tử, đánh số từ 1 đến n. Hãy sắp x�
                                                
 </p>
 </details>
+
+### DSA06045 - XÂU TỐT
+
+Xâu đối xứng là xâu mà khi ta đảo ngược thứ tự của xâu thì nhận lại được xâu cũ.
+
+Xâu tốt là xâu mà mỗi ký tự của nó thuộc về ít nhất 1 xâu đối xứng có độ dài lớn hơn 1.
+
+Ví dụ: AABBAA,  AABA,.. là các xâu tốt.
+
+Giá sử cho xâu s chỉ có 2 ký tự A và B. Hãy đếm số xâu con là xâu tốt trong s ( Xâu con là hợp các phần tử liền kề nhau của xâu gốc ).
+
+**Input:**
+- Dòng đầu là số ký tự của s ( Không vượt quá 10<sup>5</sup>)
+- Dòng thứ 2 là xâu S chỉ gồm các ký tự A và B
+
+**Output:**
+- Ghi ra kết quả đếm được
+
+**input**
+
+test 1
+```
+7
+BABBAAB
+```
+test 2
+```
+6
+BAABBA
+```
+
+**output**
+
+test 1
+```
+13
+```
+test 2
+```
+8
+```
 
 ### DSA06046 - CHÊNH LỆCH NHỎ NHẤT
 
