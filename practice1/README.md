@@ -381,6 +381,9 @@ Với mỗi bộ test, ghi ra chi phí nhỏ nhất có thể trên một dòng.
 5
 ```
 
+*quên k chép lại input output :)*
+
+
 ## M. DÃY CON TĂNG DẦN
 
 Cho dãy số a[] có n phần tử là các số nguyên dương khác nhau từng đôi một. Hãy liệt kê tất cả các dãy con có từ 2 phần tử trở lên của dãy a[] thỏa mãn tính chất tăng dần.
