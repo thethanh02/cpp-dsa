@@ -1,9 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int n, a[100005], l[100005], r[100005];
+const int infi = 1e9;
+int n;
+int a[100005], l[100005], r[100005];
 void createLeft() {
     stack<int> st;
+    a[0] = infi;
+    st.push(0);
     for (int i = 1; i <= n; i++) {
         while (!st.empty() && a[st.top()] >= a[i]) st.pop();
         if (!st.empty()) l[i] = st.top();
@@ -13,6 +16,8 @@ void createLeft() {
 }
 void createRight() {
     stack<int> st;
+    a[n + 1] = infi;
+    st.push(n + 1);
     for (int i = n; i >= 1; i--) {
         while (!st.empty() && a[st.top()] >= a[i]) st.pop();
         if (!st.empty()) r[i] = st.top();
@@ -31,7 +36,7 @@ int main() {
         createLeft();
         createRight();
         for (int i = 1; i <= n; i++) {
-            long long dientich = (long long)(a[i] * (r[i] - l[i] - 1));
+            long long dientich = a[i] * (long long)(r[i] - l[i] - 1);
             ans = max(ans, dientich);
         }
         cout << ans << endl;
