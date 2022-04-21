@@ -5930,6 +5930,902 @@ Cho mảng A[] gồm n số nguyên dương và số k. Nhiệm vụ của bạn
 3
 ```
 
+## Stack
+
+### DSA07001 - NGĂN XẾP 1
+
+Cho một ngăn xếp các số nguyên. Các thao tác gồm 3 lệnh: push, pop và show. Trong đó thao tác push kèm theo một giá trị cần thêm (không quá 1000). Hãy viết chương trình ghi ra kết quả của các lệnh show.
+
+**Input:** 
+Gồm nhiều dòng, mỗi dòng chứa một lệnh push, pop hoặc show. Input đảm bảo số lượng phần tử trong stack khi nhiều nhất cũng không vượt quá 200.
+
+**Output:** 
+Ghi ra màn hình các phần tử đang có trong stack theo thứ tự lưu trữ mỗi khi gặp lệnh show. Các số viết cách nhau đúng một khoảng trống. Nếu trong stack không còn gì thì in ra dòng “empty”
+
+**input**
+```
+push 3
+push 5
+show
+push 7
+show
+pop
+pop
+show
+```
+
+**output**
+```
+3 5
+3 5 7
+3
+```
+
+### DSA07002 - NGĂN XẾP 2
+
+Yêu cầu bạn xây dựng một stack với các truy vấn sau đây:
+
+“PUSH x”: Thêm phần tử x vào stack (0 ≤ x ≤ 1000).
+
+“PRINT”: In ra phần tử đầu tiên của stack. Nếu stack rỗng, in ra “NONE”.
+
+“POP”: Xóa phần tử đầu tiên của stack. Nếu stack rỗng, không làm gì cả.
+
+**Input:** 
+- Dòng đầu tiên là số lượng truy vấn Q (Q ≤ 100000).
+- Mỗi truy vấn có dạng như trên.
+
+**Output:** 
+- Với mỗi truy vấn “PRINT”, hãy in ra phần tử đầu tiên của stack. Nếu stack rỗng, in ra “NONE”.
+
+**input**
+```
+9
+PUSH 1
+PUSH 2
+POP
+PRINT
+PUSH 3
+PRINT
+POP
+POP
+PRINT
+```
+
+**output**
+```
+1
+3
+NONE
+```
+
+### DSA07003 - KIỂM TRA BIỂU THỨC SỐ HỌC
+
+Cho biểu thức số học, hãy cho biết biểu thức số học có dư thừa các cặp ký hiệu ‘(’,’) ‘ hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:**
+- T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤20.
+
+**input**
+```
+3
+((a+b))
+(a + (b)/c)
+(a + b*(c-d))
+```
+
+**output**
+```
+Yes
+Yes
+No
+```
+
+### DSA07004 - ĐẾM SỐ DẤU NGOẶC ĐỔI CHIỀU
+
+Cho một xâu chỉ gồm các kí tự ‘(‘, ‘) và có độ dài chẵn. Hãy đếm số lượng dấu ngoặc cần phải đổi chiều ít nhất, sao cho xâu mới thu được là một dãy ngoặc đúng.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm 1 xâu S có độ dài không vượt quá 100 000, chỉ gồm dấu ( và ).
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được trên một dòng.
+
+**input**
+```
+4
+))((
+((((
+(((())
+)(())(((
+```
+
+**output**
+```
+2
+2
+1
+3
+```
+
+### DSA07005 - BIỂU THỨC TƯƠNG ĐƯƠNG
+
+Cho biểu thức đúng P chỉ bao gồm các phép toán +, -, các toán hạng cùng với các ký tự ‘(’, ‘)’. Hãy bỏ tất cả các ký tự ‘(’, ‘)’ trong P để nhận được biểu thức tương đương. Ví dụ với P = a – (b + c) ta có kết quả P = a – b – c .
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức P được viết trên một dòng.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:**
+- T, P thỏa mãn ràng buộc: 1≤T≤100; 1≤length(P)≤10<sup>3</sup>.
+
+**input**
+```
+2
+a-(b+c)
+a-(b-c-(d+e))-f
+```
+
+**output**
+```
+a-b-c
+a-b+c+d+e-f
+```
+
+### DSA07006 - XÓA DẤU NGOẶC
+
+Cho biểu thức toán học đúng, bạn cần tìm tất cả các biểu thức đúng có thể bằng cách xóa bỏ các cặp dấu ngoặc tương ứng với nhau từ biểu thức ban đầu.
+
+Ví dụ: Cho biểu thức: (2+(2*2)+2) Các biểu thức tìm được:
+
+(2+2*2+2)
+
+2+(2*2)+2
+
+2+2*2+2
+
+Các biểu thức (2+2*2)+2 và 2+(2*2+2) không được chấp nhận vì không xóa đi các cặp dấu ngoặc tương ứng với nhau
+
+**Input:** 
+- Một dòng chứa biểu thức gồm các số nguyên không âm, các dấu +, -, *, / và dấu ngoặc đơn.
+- Biểu thức không quá 200 kí tự, có chứa ít nhất 1 và không quá 10 cặp dấu ngoặc.
+
+**Output:** 
+- In ra tất các các biểu thức khác nhau thỏa mãn đầu bài theo thứ tự từ điển
+
+**input**
+```
+(1+(2*(3+4)))
+```
+
+**output**
+```
+(1+(2*3+4))
+(1+2*(3+4))
+(1+2*3+4)
+1+(2*(3+4))
+1+(2*3+4)
+1+2*(3+4)
+1+2*3+4
+```
+
+### DSA07007 - SO SÁNH BIỂU THỨC
+
+Cho P1, P2 là hai biểu thức đúng chỉ bao gồm các ký tự mở ngoặc ‘(’ hoặc đóng ngoặc ‘)’ và các toán hạng in thường. Nhiệm vụ của bạn là định xem P1 và P2 có giống nhau hay không.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất đưa vào P1, dòng tiếp theo đưa vào P2.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:**
+- T, P thỏa mãn ràng buộc: 1≤T≤100; 1≤length(P) ≤100.
+
+**input**
+```
+2
+-(a+b+c)
+-a-b-c
+a-b-(c-d)
+a-b-c-d
+```
+
+**output**
+```
+YES
+NO
+```
+
+### DSA07008 - BIẾN ĐỔI TRUNG TỐ - HẬU TỐ
+
+Hãy viết chương trình chuyển đổi biểu thức biểu diễn dưới dạng trung tố về dạng hậu tố.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức tiền tố exp.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:**
+- T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤10.
+- Các phép toán bao gồm +, -, *, /, ^. Phép lũy thừa có ưu tiên cao hơn nhân chia và cộng trừ.
+
+**input**
+```
+2
+(A+(B+C)
+((A*B)+C)
+```
+
+**output**
+```
+ABC++
+AB*C+
+```
+
+### DSA07009 - BIẾN ĐỔI TIỀN TỐ - TRUNG TỐ
+
+Hãy viết chương trình chuyển đổi biểu thức biểu diễn dưới dạng tiền tố về dạng trung tố.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức tiền tố exp.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:**
+- T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤10<sup>6</sup>.
+
+**input**
+```
+2
+*+AB-CD
+*-A/BC-/AKL
+```
+
+**output**
+```
+((A+B)*(C-D))
+((A-(B/C))*((A/K)-L)
+```
+
+### DSA07010 - BIẾN ĐỐI TIỀN TỐ - HẬU TỐ
+
+Hãy viết chương trình chuyển đổi biểu thức biểu diễn dưới dạng tiền tố về dạng hậu tố.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức tiền tố exp.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:**
+- T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤10<sup>6</sup>.
+
+**input**
+```
+2
+*+AB-CD
+*-A/BC-/AKL
+```
+
+**output**
+```
+AB+CD-*
+ABC/-AK/L-*
+```
+
+### DSA07011 - BIẾN ĐỔI HẬU TỐ - TIỀN TỐ
+
+Hãy viết chương trình chuyển đổi biểu thức biểu diễn dưới dạng hậu tố về dạng tiền tố.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức tiền tố exp.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:**
+- T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤10<sup>6</sup>.
+
+**input**
+```
+2
+AB+CD-*
+ABC/-AK/L-*
+```
+
+**output**
+```
+*+AB-CD
+*-A/BC-/AKL
+```
+
+### DSA07012 - BIẾN ĐỔI HẬU TỐ - TRUNG TỐ
+
+Hãy viết chương trình chuyển đổi biểu thức biểu diễn dưới dạng hậu tố về dạng trung tố.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức tiền tố exp.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:**
+- T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤10<sup>6</sup>.
+
+**input**
+```
+2
+ABC++
+AB*C+
+```
+
+**output**
+```
+(A+(B+C)
+((A*B)+C)
+```
+
+### DSA07013 - TÍNH GIÁ TRỊ BIỂU THỨC HẬU TỐ
+
+Hãy viết chương trình chuyển tính toán giá trị của biểu thức hậu tố.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức hậu tố exp. Các số xuất hiện trong biểu thức là các số đơn có 1 chữ số.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng, chỉ lấy giá trị phần nguyên.
+
+**Ràng buộc:**
+- T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤20.
+
+**input**
+```
+2
+231*+9–
+875*+9-
+```
+
+**output**
+```
+-4
+34
+```
+
+### DSA07014 - TÍNH GIÁ TRỊ BIỂU THỨC TIỀN TỐ
+
+Hãy viết chương trình tính toán giá trị của biểu thức tiền tố.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức tiền tố exp. Các số xuất hiện trong biểu thức là các số đơn có 1 chữ số.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng, chỉ lấy giá trị phần nguyên.
+
+**Ràng buộc:**
+- T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤20.
+
+**input**
+```
+2
+-+8/632
+-+7*45+20
+```
+
+**output**
+```
+8
+25
+```
+
+### DSA07015 - TÍNH TOÁN GIÁ TRỊ BIỂU THỨC TRUNG TỐ
+
+Cho biểu thức trung tố S với các toán tử +, -, *, / và dấu ngoặc (). Các toán hạng là các số có giá trị không vượt quá 100. Hãy tính giá trị biểu thức S. Phép chia thực hiện với số nguyên, input đảm bảo số bị chia luôn khác 0, đáp số biểu thức có không quá 10 chữ số.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test (T ≤ 100).
+- Mỗi dòng gồm một xâu S, không quá 100 kí tự. Các toán hạng là các số nguyên không âm.
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được.
+
+**input**
+```
+4
+6*3+2-(6-4/2)
+100+99*22
+6*((4*3)+5)
+1-2
+```
+
+**output**
+```
+16
+2278
+102
+-1
+```
+
+### DSA07016 - BIỂU THỨC TĂNG GIẢM
+
+Cho dãy ký tự S chỉ bao gồm các ký tự I hoặc D. Ký tự I được hiểu là tăng (Increasing) ký tự D được hiểu là giảm (Decreasing). Sử dụng các số từ 1 đến 9, hãy đưa ra số nhỏ nhất được đoán nhận từ S. Chú ý, các số không được phép lặp lại. Dưới đây là một số ví dụ mẫu:
+- A[] = “I”       : số tăng nhỏ nhất là 12.
+- A[] = “D”       : số giảm nhỏ nhất là 21
+- A[] = ”DD”      : số giảm nhỏ nhất là 321
+- A[] = “DDIDDIID”: số thỏa mãn 321654798
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test là một xâu S
+- T, S thỏa mãn ràng buộc: 1≤ T ≤100; 1≤ length(S) ≤8; .
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+4
+I
+D
+DD
+DDIDDIID
+```
+
+**output**
+```
+12
+21
+321
+321654798
+```
+
+### DSA07017 - PHẦN TỬ BÊN PHẢI NHỎ HƠN
+
+Cho mảng A[] gồm n phần tử. Hãy đưa ra các phần tử nhỏ hơn tiếp theo của phần tử lớn hơn đầu tiên phần tử hiện tại. Nếu phần tử hiện tại không có phần tử lớn hơn tiếp theo ta xem là -1. Nếu phần tử không có phần tử nhỏ hơn tiếp theo ta cũng xem là -1. Ví dụ với mảng A[] = {5, 1, 9, 2, 5, 1, 7} ta có kết quả là ans = {2, 2, -1, 1, -1, -1, -1} vì:
+
+| Next Greater | Right Smaller |
+|--------------|---------------|
+| 5 -> 9       | 9 -> 2        |
+| 1 -> 9       | 9 -> 2        |
+| 9 -> -1      | -1 -> -1      |
+| 2 -> 5       | 5 -> 1        |
+| 5 -> 7       | 7 -> -1       |
+| 1 -> 7       | 7 -> -1       |
+| 7 -> -1      | 7 -> -1       |
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất đưa vào n là số phần tử của mảng A[], dòng tiếp theo đưa vào n số A[i].
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:** 
+- T, n, A[i] thỏa mãn ràng buộc: 1≤T≤100; 1≤n, A[i] ≤10<sup>6</sup>.
+
+**input**
+```
+2
+7
+5 1 9 2 5 1 7
+8
+4 8 2 1 9 5 6 3
+```
+
+**output**
+```
+2 2 1 1 -1 -1 -1
+2 5 5 5 -1 3 -1 -1
+```
+
+### DSA07018 - TỔNG ĐA THỨC
+
+Cho hai đa thức có bậc không quá 10000 (chỉ viết ra các phần tử có hệ số khác 0). Hãy sử dụng danh sách liên kết đơn để viết chương trình tính tổng hai đa thức đó.
+
+**Input:** 
+- Dòng đầu ghi số bộ test. Mỗi bộ test có hai dòng, mỗi dòng ghi một đa thức theo mẫu như trong ví dụ. Số phần tử của đa thức không quá 20.
+- Chú ý: Bậc của các hạng tử luôn theo thứ tự giảm dần, trong đa thức chỉ có phép cộng và luôn được viết đầy đủ hệ số + số mũ (kể cả mũ 0).
+
+**Output:** 
+- Ghi ra một dòng đa thức tổng tính được (theo mẫu như ví dụ)
+
+**input**
+```
+1
+3*x^8 + 7*x^2 + 4*x^0
+11*x^6 + 9*x^2 + 2*x^1 + 3*x^0
+```
+
+**output**
+```
+3*x^8 + 11*x^6 + 16*x^2 + 2*x^1 + 7*x^0
+```
+
+### DSA07019 - HÌNH CHỮ NHẬT LỚN NHẤT
+
+Cho N cột, mỗi cột có chiều cao bằng H[i]. Bạn hãy tìm hình chữ nhật lớn nhất bị che phủ bởi các cột?
+
+<img width="279" alt="download" src="https://user-images.githubusercontent.com/64203006/164464014-3905aa14-3464-41a9-851e-d2e63816cd8c.png">
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi số nguyên N (N ≤ 100 000).
+- Dòng tiếp theo gồm N số nguyên H[i] (1 ≤ H[i] ≤ 10<sup>9</sup>).
+
+
+**Output:** 
+- Với mỗi test, in ra diện tích hình chữ nhật lớn nhất tìm được.
+
+**input**
+```
+2
+7
+6 2 5 4 5 1 6
+3
+2 2 2
+```
+
+**output**
+```
+12
+6
+```
+
+### DSA07021 - DÃY NGOẶC ĐÚNG DÀI NHẤT
+
+Cho một xâu chỉ gồm các kí tự ‘(‘ và ‘)’. Một dãy ngoặc đúng được định nghĩa như sau:
+- Xâu rỗng là 1 dãy ngoặc đúng.
+- Nếu A là 1 dãy ngoặc đúng thì (A) là 1 dãy ngoặc đúng.
+- Nếu A và B là 2 dãy ngoặc đúng thì AB là 1 dãy ngoặc đúng.
+
+Cho một xâu S. Nhiệm vụ của bạn là hãy tìm dãy ngoặc đúng dài nhất xuất hiện trong xâu đã cho.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm một xâu S có độ dài không vượt quá 10<sup>5</sup> kí tự.
+
+**Output:** 
+- Với mỗi test in ra một số nguyên là độ dài dãy ngoặc đúng dài nhất tìm được.
+
+**input**
+```
+3
+((()
+)()())
+()(()))))
+```
+
+**output**
+```
+2
+4
+6
+```
+
+### DSA07022 - PHẦN TỬ CÓ SỐ LẦN XUẤT HIỆN NHIỀU HƠN BÊN PHẢI
+
+Cho mảng A[]  gồm n phần tử. Nhiệm vụ của bạn là tìm phần tử gần nhất phía bên phải có số lần xuất hiện lớn hơn phần tử hiện tại. Nếu không có phần tử nào có số lần xuất hiện lớn hơn phần tử hiện tại hãy đưa ra -1.
+
+Ví dụ với dãy A[] = {1, 1, 2, 3, 4, 2, 1 }, ta nhận được kết quả ans[] = {-1, -1, 1, 2, 2, 1, -1} vì số lần xuất hiện mỗi phần tử trong mảng là F = {3, 3, 2, 1, 1, 2, 3} vì vậy phần tử A[0] = 1 có số lần xuất hiện là 3 và không có phần tử nào xuất hiện nhiều hơn 3 nên ans[0] = -1, tương tự như vậy với A[2]=2 tồn tại A[6] =1 có số lần xuất hiện là 3 nên ans[2] = 1.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test gồm hai dòng, dòng đầu tiên đưa vào số n là số các phần tử của mảng A[]; dòng tiếp theo đưa vào n số của mảng A[]; các phần tử được viết cách nhau một vài khoảng trống.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:** 
+- T, n, A[i] thỏa mãn ràng buộc: 1≤T≤100; 0≤n, A[i]≤10<sup>6</sup>.
+
+**input**
+```
+1
+7
+1 1 2 3 4 2 1
+```
+
+**output**
+```
+-1 -1 1 2 2 1 -1
+```
+
+### DSA07023 - ĐẢO TỪ
+
+Cho xâu ký tự S. Nhiệm vụ của bạn là đảo ngược các từ trong S. Ví dụ S =  “I like this program very much”, ta nhận được kết quả là “much very program this like I”.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test là một xâu ký tự S.
+- T, S thỏa mãn ràng buộc: 1≤ T ≤100; 1≤ Length(S)≤10<sup>3</sup>.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+I like this program very much
+much very program this like I
+```
+
+**output**
+```
+much very program this like I
+I like this program very much
+```
+
+### DSA07024 - GHÉP VÁN GỖ
+
+Trong giấc mơ, Tí thấy mình bị lạc trên hòn đảo với cư dân xa lạ. Không biết làm việc gì, Tí đành phải hái dừa đem bán. Tí muốn làm một tấm biến cho quán hàng cửa mình. Lục tung khắp nơi, Tí kiếm được N miếng gỗ hình chữ nhật, mỗi miếng có chiều dài bằng A[i] và chiều rộng bằng 1. Tí đã ghép N miếng gỗ thành một tấm ván lớn, rồi thực hiện cắt các miếng gỗ để thu được tấm biển.
+
+Tí muốn tấm biển quảng cáo của mình thật đặc biệt, nên Tí đã chọn nhất định nó sẽ là hình vuông. Không có eke, thước, dây, … nên Tí phải dựa vào các miếng gỗ ban đầu để căn nhát cưa. Việc cưa theo chiều dọc rất dễ dàng, nhưng theo chiều ngang, Tí chỉ có thể cưa theo một đường thẳng trùng với một cạnh của miếng gỗ nào đó.
+
+Các bạn hãy giúp Tí tính thử xem tấm biển quảng cáo của Tí có kích thước lớn nhất bằng bao nhiêu (kích thước ở đây là độ dài cạnh hình vuông).
+
+![download](https://user-images.githubusercontent.com/64203006/164464958-3e77cb17-e203-4610-b132-8bf5f78c4079.jpg)
+
+**Input:** 
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20). Mỗi test bắt đầu bởi số nguyên N (N ≤ 100 000). Dòng tiếp theo gồm N số nguyên A[i] (1 ≤ A[i] ≤ 10<sup>9</sup>).
+
+**Output:** 
+Với mỗi test, in ra chiều dài cạnh của tấm biển. Nếu Tí không thể tạo thành tấm biển, in ra 0.
+
+**input**
+```
+4
+5 2 4 3 3 1 4
+3
+2 2 2
+2
+6 6
+6
+5 5 5 5 3 1
+```
+
+**output**
+```
+4
+2
+0
+3
+```
+
+### DSA07027 - PHẦN TỬ BÊN PHẢI ĐẦU TIÊN LỚN HƠN
+
+Cho dãy số A[] gồm N phần tử. Với mỗi A[i], bạn cần tìm phần tử bên phải đầu tiên lớn hơn nó. Nếu không tồn tại, in ra -1.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi số nguyên N (1 ≤ N ≤ 100000).
+- Dòng tiếp theo gồm N số nguyên A[i] (0 ≤ A[i] ≤ 10<sup>9</sup>).
+
+**Output:** 
+- Với mỗi test, in ra trên một dòng N số R[i], với R[i] là giá trị phần tử đầu tiên lớn hơn A[i].
+
+**input**
+```
+3
+4
+4 5 2 25
+3
+2 2 2
+4
+4 4 5 5
+```
+
+**output**
+```
+5 25 25 -1
+-1 -1 -1
+5 5 -1 -1
+```
+
+### DSA07028 - NHỊP CHỨNG KHOÁN
+
+Bạn là một nhà đầu tư chứng khoán nổi tiếng. Nhiệm vụ hàng ngày của bạn là tính nhịp tăng giảm của phiên chứng khoán trong N ngày để có thể bắt kịp thị trường. Nhịp chứng khoán của ngày thứ i được định nghĩa là số ngày liên tiếp từ ngày thứ i trở về mà giá chứng khoán bé hơn hoặc bằng với giá chứng khoán của ngày i.
+
+**Input:** 
+- Dòng đầu ghi số bộ test (không quá 10). Mỗi test có 2 dòng.
+- Dòng đầu tiên gồm 1 số nguyên N (1 ≤ N ≤ 105) là số ngày.
+- Dòng tiếp theo gồm N số nguyên A1, A2, …, AN (1 ≤ Ai ≤ 10<sup>6</sup>) là giá chứng khoán của các ngày.
+
+**Output:** 
+- In ra N số B1, B2, …, BN trong đó Bi là nhịp chứng khoán của ngày thứ i.
+
+**input**
+```
+1
+7
+100 80 60 70 60 75 85
+```
+
+**output**
+```
+1 1 1 2 1 4 6
+```
+
+### DSA07029 - GIẢI MÃ XÂU KÝ TỰ
+
+Cho xâu ký tự mã hóa str. Hãy viết chương trình giải mã xâu ký tự str. Xâu ký tự mã hóa được thực hiện theo số lần lặp các xâu con của str như sau:
+
+Xâu đầu vào: “abbbababbbababbbab ”
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T;
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một xâu mã hóa str được viết trên một dòng.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**Ràng buộc:** 
+- T, str thỏa mãn ràng buộc: 1≤T≤100; 1≤length(str)≤100.
+
+**input**
+```
+2
+1[b]
+3[b2[ca]]
+```
+
+**output**
+```
+b
+bcacabcacabcaca
+```
+
+### DSA07030 - HÌNH CHỮ NHẬT 0-1
+
+Cho một bảng kích thước NxM, được chia thành lưới ô vuông đơn vị N dòng M cột. Trên các ô của bảng ghi số 0 hoặc 1. Các dòng của bảng được đánh số 1, 2... N theo thứ tự từ trên xuống dưới và các cột của bảng được đánh số 1, 2..., M theo thứ tự từ trái qua phải
+
+Yêu cầu: Hãy tìm một hình chữ nhật gồm các ô của bảng thoả mãn các điều kiện sau:
+
+1. Hình chữ nhật đó chỉ gồm các số 1
+2. Cạnh hình chữ nhật song song với cạnh bảng
+3. Diện tích hình chữ nhật là lớn nhất có thể
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi hai số nguyên N và M (1 ≤ M, N ≤ 500).
+- N dòng tiếp theo, mỗi dòng gồm M số nguyên 0 hoặc 1.
+
+**Output:** 
+- Với mỗi test, in ra diện tích hình chữ nhật lớn nhất tìm được.
+
+**input**
+```
+1
+11 13
+0 0 0 0 0 1 0 0 0 0 0 0 0
+0 0 0 0 1 1 1 0 0 0 0 0 0
+0 0 1 1 1 1 1 1 1 0 0 0 0
+0 0 1 1 1 1 1 1 1 0 0 0 0
+0 1 1 1 1 1 1 1 1 1 0 0 0
+1 1 1 1 1 1 1 1 1 1 1 0 0
+0 1 1 1 1 1 1 1 1 1 0 0 0
+0 0 1 1 1 1 1 1 1 0 0 0 0
+0 0 1 1 1 1 1 1 1 0 0 0 0
+0 0 0 0 1 1 1 0 0 0 0 1 1
+0 0 0 0 0 1 0 0 0 0 0 1 1
+```
+
+**output**
+```
+49
+```
+
+### DSA07041 - BIỂU THỨC ĐÚNG DÀI NHẤT
+
+Cho biểu thức P chỉ bao gồm các ký tự mở ngoặc ‘(’ hoặc đóng ngoặc ‘)’. Biểu thức P có thể viết đúng hoặc không đúng. Nhiệm vụ của bạn là tìm tổng độ dài lớn nhất của các biểu thức con viết đúng trong P (các biểu thức đúng không nhất thiết phải liên tiếp nhau).
+
+Chú ý: Độ dài của biểu thức đúng ngắn nhất là 2.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T (không quá 100)
+- Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức P được viết trên một dòng (độ dài của P không quá 100).
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+4
+(()(
+()()((
+((()()())))
+()(())(
+```
+
+**output**
+```
+2
+4
+10
+6
+```
+
+### DSA07045 - BIỂU THỨC ĐÚNG DÀI NHẤT
+
+Trong quá trình gõ một dòng văn bản, chúng ta thường sử dụng phím sang trái, sang phải hoặc xóa lùi (backspace). Cho một dãy ký tự mô tả các thao tác gõ phím, trong đó:
+
+- Ký tự ‘-’ mô tả phím backspace (xóa lùi). Ký tự ở phía trước con trỏ (nếu có) sẽ bị xóa.
+- Ký tự ‘<’ mô tả phím di chuyển sang trái. Con trỏ sẽ sang trái 1 ký tự nếu có thể.
+- Ký tự ‘>’ mô tả phím di chuyển sang phải. Con trỏ sẽ sang phải 1 ký tự nếu có thể.
+- Các ký tự khác là các chữ cái Tiếng Anh (in hoa hoặc in thường). Bàn phím để ở chế độ Insert. Tức là nếu con trỏ không ở cuối dòng thì khi chèn các ký tự sẽ đẩy các ký tự khác sang phải một vị trí.
+
+Hãy thử tính toán và viết ra kết quả tương ứng.
+
+**Input:** 
+
+Có một dòng không quá 10<sup>6</sup> ký tự mô tả dãy gõ bàn phím.
+
+**Output:** 
+
+Ghi ra kết quả.
+
+**input**
+```
+<<PI<T>>Ta-
+```
+
+**output**
+```
+PTIT
+```
+
+### DSA07110 - KIỂM TRA DÃY NGOẶC ĐÚNG
+
+Cho một xâu chỉ gồm các kí tự ‘(‘, ‘)’, ‘[‘, ‘]’, ‘{‘, ‘}’. Một dãy ngoặc đúng được định nghĩa như sau:
+
+- Xâu rỗng là 1 dãy ngoặc đúng.
+- Nếu A là 1 dãy ngoặc đúng thì (A), [A], {A} là 1 dãy ngoặc đúng.
+- Nếu A và B là 2 dãy ngoặc đúng thì AB là 1 dãy ngoặc đúng.
+
+Cho một xâu S. Nhiệm vụ của bạn là xác định xâu S có là dãy ngoặc đúng hay không?
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm 1 xâu S có độ dài không vượt quá 100 000.
+
+**Output:** 
+- Với mỗi test, in ra “YES” nếu như S là dãy ngoặc đúng, in ra “NO” trong trường hợp ngược lại.
+
+**input**
+```
+2
+[()]{}{[()()]()}
+[(])
+```
+
+**output**
+```
+YES
+NO
+```
+
+## Queue
+
 ### DSA09011 - SỐ LƯỢNG HÒN ĐẢO
 
 Cho một bản đồ kích thước N x M được mô tả bằng ma trận A[][].A[i][j] = 1 có nghĩa vị trí (i, j) là nổi trên biển. 2 vị trí (i, j) và (x, y) được coi là liền nhau nếu như nó có chung đỉnh hoặc chung cạnh. Một hòn đảo là một tập hợp các điểm (i, j) mà A[i][j] = 1 và có thể di chuyển giữa hai điểm bất kì trong đó.

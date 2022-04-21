@@ -28,9 +28,9 @@ int Solution(int lft[], int rght[], string st) {
         v = q.front().second;
         q.pop();
         if (u == en) return mp[en];
-        if (v >= 15) break;
         update(mp, q, u, v, lft);
         update(mp, q, u, v, rght);
+        if (v >= 15) break;
     }
     return v;
 }
