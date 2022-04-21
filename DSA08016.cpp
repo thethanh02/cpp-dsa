@@ -29,7 +29,7 @@ void Solution(queue<pair<string, int>> q, map<string, int>& mp, string st, int k
         if (k && mp[u] > 0) ans = min(ans, mp[u] + v);
         update(mp, q, u, v, left, k);
         update(mp, q, u, v, right, k);
-        if (v >= 14) break;
+        if (v >= 13) break;
     }
 }   
 int Result() {
