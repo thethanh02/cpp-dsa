@@ -32,7 +32,7 @@ void Solution(queue<pair<string, int>> q, map<string, int>& mp, string st, int k
         if (v >= 14) break;
     }
 }   
-int Result(int leftCW[], int rightCW[]) {
+int Result() {
     map<string, int> mp;
     queue<pair<string, int>> qCW, qCCW;
     Solution(qCW, mp, st, 0, leftCW, rightCW);
@@ -49,6 +49,6 @@ int main() {
             cin >> x;
             st += to_string(x);
         }
-        cout << Result(leftCW, rightCW) << endl;
+        cout << Result() << endl;
     }
 }
