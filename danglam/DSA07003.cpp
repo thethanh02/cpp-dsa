@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 string Result(string s) {
@@ -9,6 +9,7 @@ int main() {
     cin >> t;
     cin.ignore();
     while (t--) {
+        vector<string> ds;
         string s;
         getline(cin, s);
         cout << Result(s) << endl;

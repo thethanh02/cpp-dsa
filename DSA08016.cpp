@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int n = 10, ans = 100;
@@ -13,16 +13,17 @@ string rotateHex(string u, int pos[]) {
     for (int i = 0; i < n; i++) s += u[pos[i]];
     return s;
 }
-void update(map<string, int>& mp, queue<pair<string, int>> &q, string u, int v, int pos[], int k) {
+void update(map<string, int>& mp, queue<pair<string, int>>& q, string u, int v, int pos[], int k) {
     string tmp = rotateHex(u, pos);
     if (!k && mp[tmp] == 0) mp[tmp] = mp[u] + 1;
     q.push({tmp, v + 1});
 }
 void Solution(queue<pair<string, int>> q, map<string, int>& mp, string st, int k, int left[], int right[]) {
-    string u; int v = 0;
+    string u;
+    int v = 0;
     q.push({st, 0});
     while (!q.empty()) {
-        u = q.front().first; 
+        u = q.front().first;
         v = q.front().second;
         q.pop();
 
@@ -31,7 +32,7 @@ void Solution(queue<pair<string, int>> q, map<string, int>& mp, string st, int k
         update(mp, q, u, v, right, k);
         if (v >= 13) break;
     }
-}   
+}
 int Result() {
     map<string, int> mp;
     queue<pair<string, int>> qCW, qCCW;
