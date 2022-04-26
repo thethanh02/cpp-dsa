@@ -6017,8 +6017,8 @@ Cho biểu thức số học, hãy cho biết biểu thức số học có dư t
 ```
 3
 ((a+b))
-(a + (b)/c)
-(a + b*(c-d))
+(a+(b)/c)
+(a+b*(c-d))
 ```
 
 **output**

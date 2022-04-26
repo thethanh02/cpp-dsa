@@ -1,7 +1,0 @@
----
-BasedOnStyle: Google
-ColumnLimit: '0'
-IndentWidth: '4'
-SpaceAfterTemplateKeyword: 'true'
-
-...
