@@ -6826,6 +6826,823 @@ NO
 
 ## Queue
 
+### DSA08001 - CẤU TRÚC DỮ LIỆU HÀNG ĐỢI 1
+
+Ban đầu cho một queue rỗng. Bạn cần thực hiện các truy vấn sau:
+
+1. Trả về kích thước của queue
+2. Kiểm tra xem queue có rỗng không, nếu có in ra “YES”, nếu không in ra “NO”.
+3. Cho một số nguyên và đẩy số nguyên này vào cuối queue.
+4. Loại bỏ phần tử ở đầu queue nếu queue không rỗng, nếu rỗng không cần thực hiện.
+5. Trả về phần tử ở đầu queue, nếu queue rỗng in ra -1.
+6. Trả về phần tử ở cuối queue, nếu queue rỗng in ra -1.
+
+**Input:** 
+- Dòng đầu tiên chứa số nguyên T là số bộ dữ liệu, mỗi bộ dữ theo dạng sau.
+- Dòng đầu tiên chứa số nguyên n - lượng truy vấn (1 ≤ n ≤ 1000)
+- N dòng tiếp theo, mỗi dòng sẽ ghi loại truy vấn như trên, với truy vấn loại 3 sẽ có thêm một số nguyên, không quá 10<sup>6</sup>.
+
+**Output:** 
+- In ra kết quả của các truy vấn..
+
+**input**
+```
+1
+14
+3 1
+3 2
+3 3
+5
+6
+4
+4
+4
+4
+4
+3 5
+3 6
+5
+1
+```
+
+**output**
+```
+1
+3
+5
+2
+```
+
+### DSA08002 - CẤU TRÚC DỮ LIỆU HÀNG ĐỢI 2
+
+Yêu cầu bạn xây dựng một queue với các truy vấn sau đây:
+
+“PUSH x”: Thêm phần tử x vào cuối của queue (0 ≤ x ≤ 1000).
+
+“PRINTFRONT”: In ra phần tử đầu tiên của queue. Nếu queue rỗng, in ra “NONE”.
+
+“POP”: Xóa phần tử ở đầu của queue. Nếu queue rỗng, không làm gì cả.
+
+**Input:** 
+- Dòng đầu tiên là số lượng truy vấn Q (Q ≤ 100000).
+- Mỗi truy vấn có dạng như trên.
+
+**Output:** 
+- Với mỗi truy vấn “PRINT”, hãy in ra phần tử đầu tiên của queue. Nếu queue rỗng, in ra “NONE”.
+
+**input**
+```
+9
+PUSH 1
+PUSH 2
+POP
+PRINTFRONT
+PUSH 3
+PRINTFRONT
+POP
+POP
+PRINTFRONT
+```
+
+**output**
+```
+2
+2
+NONE
+```
+
+### DSA08003 - HÀNG ĐỢI HAI ĐẦU (DEQUEUE)
+
+Yêu cầu bạn xây dựng một hàng đợi hai đầu với các truy vấn sau đây:
+
+“PUSHFRONT x”: Thêm phần tử x vào đầu của dequeue (0 ≤ x ≤ 1000).
+
+“PRINTFRONT”: In ra phần tử đầu tiên của dequeue. Nếu dequeue rỗng, in ra “NONE”.
+
+“POPFRONT”: Xóa phần tử đầu của dequeue. Nếu dequeue rỗng, không làm gì cả.
+
+“PUSHBACK x”: Thêm phần tử x vào cuối của dequeue (0 ≤ x ≤ 1000).
+
+“PRINTBACK”: In ra phần tử cuối của dequeue. Nếu dequeue rỗng, in ra “NONE”.
+
+“POPBACK”: Xóa phần tử cuối của dequeue. Nếu dequeue rỗng, không làm gì cả.
+
+**Input:** 
+- Dòng đầu tiên là số lượng truy vấn Q (Q ≤ 100000).
+- Mỗi truy vấn có dạng như trên.
+
+**Output:** 
+- Với mỗi truy vấn “PRINTFRONT” và “PRINTBACK”, hãy in ra kết quả trên một dòng.
+
+**input**
+```
+10
+PUSHBACK 1
+PUSHFRONT 2
+PUSHBACK 3
+PRINTFRONT
+POPFRONT
+PRINTFRONT
+POPFRONT
+PRINTBACK
+POPFRONT
+PRINTBACK
+```
+
+**output**
+```
+2
+1
+3
+NONE
+```
+
+### DSA08004 - GIÁ TRỊ NHỎ NHẤT CỦA XÂU
+
+Cho xâu ký tự S[] bao gồm các ký tự in hoa [A, B, …,Z]. Ta định nghĩa giá trị của xâu S[] là tổng bình phương số lần xuất hiện mỗi ký tự trong xâu. Ví dụ với xâu S[] = “AAABBCD” ta có F(S) = 3<sup>2</sup> + 2<sup>2</sup> + 1<sup>2</sup> + 1<sup>2</sup> = 15. Hãy tìm giá trị nhỏ nhất của xâu S[] sau khi loại bỏ K ký tự trong xâu.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T (T≤100).
+- Mỗi test được tổ chức thành 2 dòng. Dòng thứ nhất ghi lại số K. Dòng thứ 2 ghi lại xâu ký tự S[] có độ dài không vượt quá 10^6.
+
+**Output:** 
+- Đưa ra giá trị nhỏ nhất của mỗi test theo từng dòng.
+
+**input**
+```
+2
+0
+ABCC
+1
+ABCC
+```
+
+**output**
+```
+6
+3
+```
+
+### DSA08005 - SỐ NHỊ PHÂN TỪ 1 ĐẾN N
+
+Cho số tự nhiên n. Hãy in ra tất cả các số nhị phân từ 1 đến n.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T (T≤100).
+- Mỗi test là một số tự nhiên n được ghi trên một dòng (n≤10000).
+
+**Output:** 
+- Đưa ra kết quả mỗi test trên một dòng.
+
+**input**
+```
+2
+2
+5
+```
+
+**output**
+```
+1 10
+1 10 11 100 101
+```
+
+### DSA08006 - SỐ 0 VÀ SỐ 9
+
+Cho số tự nhiên N. Hãy tìm số nguyên dương X nhỏ nhất được tạo bởi số 9 và số 0 chia hết cho N. Ví dụ với N = 5 ta sẽ tìm ra  X = 90.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T (T≤100).
+- Những dòng kế tiếp mỗi dòng ghi lại một test. Mỗi test là một số tự nhiên N được ghi trên một dòng (N≤100).
+
+**Output:** 
+- Đưa ra theo từng dòng số X nhỏ nhất chia hết cho N tìm được .
+
+**input**
+```
+2
+5
+7
+```
+
+**output**
+```
+90
+9009
+```
+
+### DSA08007 - SỐ BDN 1
+
+Ta gọi số nguyên dương K là một số BDN nếu các chữ số trong K chỉ bao gồm các 0 hoặc 1 có nghĩa. Ví dụ số K = 1, 10, 101. Cho số tự nhiên N (N<2<sup>63</sup>). Hãy cho biết có bao nhiêu số BDN nhỏ hơn N. Ví dụ N=100 ta có 4 số BDN bao gồm các số: 1, 10, 11, 100.
+
+**Input:** 
+- Dòng đầu tiên ghi lại số tự nhiên T là số lượng Test;
+- T dòng kế tiếp mỗi dòng ghi lại một bộ Test. Mỗi test là một số tự nhiên N.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+3
+10
+100
+200
+```
+
+**output**
+```
+2
+4
+7
+```
+
+### DSA08008 - SỐ BDN 2
+
+Ta gọi số nguyên dương K là một số BDN nếu các chữ số trong K chỉ bao gồm các 0 hoặc 1 có nghĩa. Ví dụ số K =  101 là số BDN, k=102 không phải là số BDN.
+
+Số BDN của N là số P =M*N sao cho P là số BDN. Cho số tự nhiên N (N<1000), hãy tìm số BDN nhỏ nhất của N.
+
+Ví dụ. Với N=2, ta tìm được số BDN của N là P = 5 * 2 = 10. N = 17 ta tìm được số BDN của 17 là P = 653 * 17 = 11101.
+
+**Input:** 
+- Dòng đầu tiên ghi lại số tự nhiên T là số lượng Test;
+- T dòng kế tiếp mỗi dòng ghi lại một bộ Test. Mỗi test là một số tự nhiên N.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+3
+2
+12
+17
+```
+
+**output**
+```
+10
+11100
+11101
+```
+
+### DSA08009 - BIẾN ĐỔI S – T
+
+Cho hai số nguyên dương S và T (S, T<10000) và hai thao tác (a), (b) dưới đây:
+
+Thao tác (a): Trừ S đi 1  (S = S-1) ;
+
+Thao tác (b): Nhân S với 2 ( S = S*2);
+
+Hãy dịch chuyển S thành T sao cho số lần thực hiện các thao tác (a), (b) là ít nhất. Ví dụ với    S =2, T=5 thì số các bước ít nhất để dịch chuyển S thành T thông qua 4 thao tác sau:
+
+Thao tác (a): 2*2 = 4;
+
+Thao tác (b): 4-1 = 3;
+
+Thao tác (a): 3*2 = 6;
+
+Thao tác (b): 6-1 = 5;
+
+**Input:** 
+- Dòng đầu tiên ghi lại số tự nhiên T là số lượng Test;
+- T dòng kế tiếp mỗi dòng ghi lại một bộ Test. Mỗi test là một bộ đôi S và T.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+3
+2 5
+3 7
+7 4
+```
+
+**output**
+```
+4
+4
+3
+```
+
+### DSA08010 - BIẾN ĐỔI SỐ TỰ NHIÊN
+
+Cho số tự nhiên N (N<10^9) và hai phép biến đổi (a), (b) dưới đây.
+
+- Thao tác (a): Trừ N đi 1 (N=N-1). Ví dụ N=17, thao tác (a) biến đổi N = N-1 =16.
+- Thao tác (b): N = max(u,v) nếu u*v =N (u>1, v>1). Ví dụ N=16, thao tác (b) có thể biến đổi N = max(2, 8)=8 hoặc N=max(4, 4)=4.
+
+Chỉ được phép sử dụng hai thao tác (a) hoặc (b), hãy biến đổi N thành 1 sao số các thao tác (a), (b) được thực hiện ít nhất. Ví dụ với N=17, số các phép (a), (b) nhỏ nhất biến đổi N thành 1 là 4 bước như sau:
+
+- Thao tác (a): N = N-1 = 17-1 = 16
+- Thao tác (b): 16 = max(4,4) = 4
+- Thao tác (b): 4 = max(2,2) = 2
+- Thao tác (a): 2 = 2-1 = 1
+
+**Input:** 
+- Dòng đầu tiên ghi lại số tự nhiên T là số lượng Test;
+- T dòng kế tiếp mỗi dòng ghi lại một bộ Test. Mỗi test là một số N.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+3
+17
+50
+100
+```
+
+**output**
+```
+4
+5
+5
+```
+
+### DSA08011 - KHOẢNG CÁCH XÂU KÝ TỰ
+
+Cho tập n xâu ký tự S và hai xâu s, t Î S. Ta giả thiết các xâu ký tự S[i] Î S có độ dài bằng nhau.  Hãy tìm khoảng cách đường đi ngắn nhất từ s đến t. Biết từ một xâu ký tự bất kỳ ta chỉ được phép dịch chuyển đến xâu khác với nó duy nhất 1 ký tự. Ví dụ ta có tập các từ S = { POON, TOON, PLEE, SAME, POIE, PLEA, PLIE, POIN }, s = TOON, t = PLEA ta có độ dài đường đi ngắn nhất là 7 tương ứng với các phép dịch chuyển : TOON -> POON –> POIN –> POIE –> PLIE –> PLEE –> PLEA.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T (T≤100).
+- Mỗi test được tổ chức thành 2 dòng. Dòng thứ nhất ghi lại n là số từ trong S và hai từ s, t.  Dòng thứ 2 đưa vào n xâu xâu ký tự của S; các xâu ký tự được viết cách nhau một vài khoảng trống, có độ dài không vượt quá 10 kí tự.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+1
+8 TOON  PLEA
+POON TOON PLEE SAME  POIE  PLEA  PLIE  POIN
+```
+
+**output**
+```
+7
+```
+
+### DSA08012 - TÌM SỐ K THỎA MÃN ĐIỀU KIỆN
+
+Cho hai số nguyên dương L, R. Hãy đưa ra số các số K trong khoảng [L, R] thỏa mãn điều kiện:
+
+- Tất cả các chữ số của K đều khác nhau.
+- Tất cả các chữ số của K đều nhỏ hơn hoặc bằng 5.
+
+Ví dụ với L = 4, R = 13 ta có 5 số thỏa mãn yêu cầu là 4, 5, 10, 12, 13,
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T.
+- Dòng tiếp theo đưa vào các bộ test. Mỗi bộ test được là một cặp L, R được viết trên một dòng.
+- T, L, R thỏa mãn ràng buộc: 1≤T≤100; 0≤L≤R≤10<sup>5</sup>.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+4 13
+100 1000
+```
+
+**output**
+```
+5
+100
+```
+
+### DSA08013 - DI CHUYỂN TRÁNH VẬT CẢN
+
+Cho một bảng kích thước N x N, trong đó có các ô trống ‘.’ và vật cản ‘X’. Các hàng và các cột được đánh số từ 0.
+
+Mỗi bước di chuyển, bạn có thể đi từ ô (x, y) tới ô (u, v) nếu như 2 ô này nằm trên cùng một hàng hoặc một cột, và không có vật cản nào ở giữa.
+
+Cho điểm xuất phát và điểm đích. Bạn hãy tính số bước di chuyển ít nhất?
+
+**Input:** 
+- Dòng đầu ghi số bộ test (không quá 10). Mỗi test gồm:
+  - Dòng đầu tiên là số nguyên dương N (1 ≤ N ≤ 100).
+  - N dòng tiếp theo, mỗi dòng gồm N kí tự mô tả bảng.
+  - Cuối cùng là 4 số nguyên a, b, c, d với (a, b) là tọa độ điểm xuất phát, (c, d) là tọa độ đích. Dữ liệu đảm bảo hai vị trí này không phải là ô có vật cản.
+
+**Output:** 
+- Với mỗi test, in ra một số nguyên là đáp số của bài toán.
+
+**input**
+```
+1
+3
+.X.
+.X.
+...
+0 0 0 2
+```
+
+**output**
+```
+3
+```
+
+### DSA08014 - GIEO MẦM
+
+Trên một giá có kích thước R x C (R hàng, C cột), một số hạt mầm đã được tra vào các ô. Một số hạt mầm được bón thêm chất dinh dưỡng, nên đã nảy mầm sớm thành cây non.
+
+Mỗi ngày, các cây non sẽ lan truyền chất dinh dưỡng của nó cho các mầm ở ô xung quanh (trái, trên, phải, dưới), làm cho các hạt mầm này phát triển thành cây non. Tuy nhiên, có thể có một số hạt mầm được gieo ở vị trí lẻ loi, do không nhận được chất dinh dưỡng nên không thể nảy mầm.
+
+Các bạn hãy xác định xem cần ít nhất bao nhiêu ngày để tất cả các hạt đều mầm?
+
+**Input:** 
+- Dòng đầu ghi số bộ test (không quá 10). Mỗi bộ test gồm:
+  - Dòng đầu tiên gồm 2 số nguyên R và C (1 ≤ R, C ≤ 500).
+  - R dòng tiếp theo, mỗi dòng gồm C số nguyên A[i][j].
+  - A[i][j] = 0, ô (i, j) là ô trống.
+  - A[i][j] = 1, ô (i, j) là hạt chưa nảy mầm.
+  - A[i][j] = 2, ô (i, j) là cây non.
+
+**Output:** 
+- Với mỗi test in ra thời gian ngắn nhất để tất cả các hạt đều nảy mầm. Nếu có hạt nào chưa nảy mầm, in ra -1.
+
+**input**
+```
+2
+3 5
+2 1 0 2 1
+1 0 1 2 1
+1 0 0 2 1
+3 5
+2 1 0 2 1
+0 0 1 2 1
+1 0 0 2 1
+```
+
+**output**
+```
+2
+-1
+```
+
+### DSA08015 - DI CHUYỂN TRONG KHÔNG GIAN
+
+Cho một hình hộp chữ nhật có kích thước A x B x C, trong đó A là chiều cao, B là chiều rộng và C là chiều dài. Mỗi ô có thể là một ô trống ‘.’ hoặc vật cản ‘#’.
+
+Mỗi bước, bạn được phép di chuyển sang một ô kề bên cạnh (không được đi chéo). Nhiệm vụ của bạn là tìm đường đi ngắn nhất bắt đầu ‘S’ tới vị trí kết thúc ‘E’.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (1 ≤ N ≤ 50).
+- Mỗi test bắt đầu bởi 3 số nguyên A, B, C (A, B, C ≤ 30).
+- Tiếp theo là A khối, mỗi khối gồm B x C kí tự mô tả một lát cắt của hình hộp chữ nhật. Giữa 2 khối có một dấu xuống dòng.
+
+**Output:** 
+- In ra một số nguyên là đường đi ngắn nhất từ S tới E. Nếu không di chuyển được, in ra -1.
+
+**input**
+```
+2
+3 4 5
+S....
+.###.
+.##..
+###.#
+
+#####
+#####
+##.##
+##...
+
+#####
+#####
+#.###
+####E
+
+1 3 3
+S##
+#E#
+###
+```
+
+**output**
+```
+11
+-1
+```
+
+### DSA08016 - HEXGAME
+
+HEXGAME là một trò chơi xếp hình gồm 10 miếng ghép hình lục giác đều, trên mỗi miếng ghép được điền một số nguyên, có 8 miếng được điền số  từ 1 đến 8 và có hai miếng điền số 0. Các miếng liên kết với nhau tạo thành lưới tổ ong. Ban đầu các miếng ghép ở vị trí như hình vẽ. Tại mỗi bước, chọn một miếng ghép có đúng 6 miếng ghép kề cạnh làm tâm, rồi xoay một nấc 6 miếng ghép kề cạnh đó theo chiều kim đồng hồ. Như vậy chỉ có hai cách chọn tâm, đó là chọn tâm bên trái và chọn tâm bên phải.
+
+![download](https://user-images.githubusercontent.com/64203006/165966213-7f176848-3767-4aa8-800e-06d62a8781ca.png)
+
+Yêu cầu: Cho một trạng thái của trò chơi (nhận được sau một dãy biến đổi từ trạng thái ban đầu), hãy tính số phép biến đổi ít nhất để đưa về trạng thái ban đầu.
+
+**Input:** 
+- Dòng đầu ghi số bộ test (không quá 10). Mỗi bộ test gồm:
+  - Dòng đầu tiên chứa 3 số ở 3 miếng ghép dòng thứ nhất (thứ tự từ trái qua phải).
+  - Dòng thứ hai chứa 4 số ở 4 miếng ghép dòng thứ hai (thứ tự từ trái qua phải).
+  - Dòng thứ 3 chứa 3 số ở 3 miếng ghép dòng thứ ba (thứ tự từ trái qua phải).
+
+**Output:** 
+- Với mỗi bộ test in ra một số nguyên là số phép biến đổi ít nhất để đưa được về trạng thái ban đầu.
+
+**input**
+```
+1
+1 0 2
+8 6 0 3
+7 5 4
+```
+
+**output**
+```
+5
+```
+
+### DSA08017 - SỐ LỘC PHÁT 1
+
+Một số được gọi là lộc phát nếu chỉ có 2 chữ số 6 và 8. Cho số tự nhiên N. Hãy liệt kê các số lộc phát có không quá N chữ số.
+
+**Input:** 
+- Dòng đầu tiên ghi lại số tự nhiên T là số lượng bộ test (T<10);
+- T dòng kế tiếp mỗi dòng ghi số N (1<N<15).
+
+**Output:** 
+- In ra đáp án theo thứ tự giảm dần.
+
+**input**
+```
+2
+2
+3
+```
+
+**output**
+```
+88 86 68 66 8 6
+888 886 868 866 688 686 668 666 88 86 68 66 8 6
+```
+
+### DSA08018 - SỐ LỘC PHÁT 2
+
+Một số được gọi là lộc phát nếu chỉ có 2 chữ số 6 và 8. Cho số tự nhiên N. Hãy liệt kê các số lộc phát có không quá N chữ số.
+
+**Input:** 
+- Dòng đầu tiên ghi lại số tự nhiên T là số lượng bộ test (T<10);
+- T dòng kế tiếp mỗi dòng ghi số N (1<N<15).
+
+**Output:** 
+- Dòng đầu tiên là số lượng số lộc phát tìm được. Dòng thứ hai in đáp án theo thứ tự tăng dần.
+
+**input**
+```
+2
+2
+3
+```
+
+**output**
+```
+6
+6 8 66 68 86 88
+14
+6 8 66 68 86 88 666 668 686 688 866 868 886 888
+```
+
+### DSA08019 - SỐ LỘC PHÁT 3
+
+Một số được gọi là lộc phát nếu chỉ có 2 chữ số 6 và 8. Cho số tự nhiên N. Hãy liệt kê các số lộc phát có không quá N chữ số.
+
+**Input:** 
+- Dòng đầu tiên ghi lại số tự nhiên T là số lượng bộ test (T<10);
+- T dòng kế tiếp mỗi dòng ghi số N (1<N<15).
+
+**Output:** 
+- Dòng đầu tiên là số lượng số lộc phát tìm được. Dòng thứ hai in ra đáp án theo thứ tự giảm dần.
+
+**input**
+```
+2
+2
+3
+```
+
+**output**
+```
+6
+88 86 68 66 8 6
+14
+888 886 868 866 688 686 668 666 88 86 68 66 8 6
+```
+
+### DSA08020 - BIẾN ĐỔI SỐ NGUYÊN TỐ
+
+Cho cặp số S và T là các số nguyên tố có 4 chữ số (Ví dụ S = 1033, T = 8197 là các số nguyên tố có 4 chữ số). Hãy viết chương trình tìm cách dịch chuyển S thành T thỏa mãn đồng thời những điều kiện dưới đây:
+
+1. Mỗi phép dịch chuyển chỉ được phép thay đổi một chữ số của số ở bước trước đó (ví dụ nếu S=1033 thì phép dịch chuyển S thành 1733 là hợp lệ);
+2. Số nhận được cũng là một số nguyên tố có 4 chữ số (ví dụ nếu S=1033 thì phép dịch chuyển S thành 1833 là không hợp lệ, và S dịch chuyển thành 1733 là hợp lệ);
+3. Số các bước dịch chuyển là ít nhất.
+
+Ví dụ số các phép dịch chuyển ít nhất để S = 1033 thành  T = 8179 là 6 bao gồm các phép dịch chuyển như sau:       
+
+8179 <- 8779 <- 3779 <- 3739 <- 3733 <- 1733 <- 1033.
+
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T (T≤100)
+- Những dòng kế tiếp mỗi dòng đưa vào một test. Mỗi test là một bộ đôi S, T.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+1033 8179
+1033 8779
+```
+
+**output**
+```
+6
+5
+```
+
+### DSA08021 - DI CHUYỂN TRONG MA TRẬN
+
+Cho ma trận A[M][N]. Nhiệm vụ của bạn hãy tìm số bước đi ít nhất dịch chuyển từ vị trí A[1][1] đến vị trí A[M][N]. Biết mỗi bước đi ta chỉ được phép dịch chuyển đến vị trí A[i][j+A[i][j]] hoặc vị trí A[i+A[i][j]][j] bên trong ma trận.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng test T.
+- Dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất là hai số M, N; phần thứ hai là các phần tử của ma trận A[][]; các số được viết cách nhau một vài khoảng trống.
+- T, M, N, A[i][j] thỏa mãn ràng buộc: 1≤T≤100; 1≤M, N, A[i][j]≤10<sup>3</sup>.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng. In ra -1 nếu không tìm được đáp án.
+
+**input**
+```
+1
+3 3
+2 1 2
+1 1 1
+1 1 1
+```
+
+**output**
+```
+2
+```
+
+### DSA08022 - BỘI SỐ LỚN NHẤT CỦA 3
+
+Cho dãy số A[] có N phần tử là các chữ số từ 0 đến 9. Nhiệm vụ của bạn là hãy chọn lấy một tổ hợp các phần tử và sắp xếp chúng sao cho thu được số lớn nhất chia hết cho 3.
+
+Nếu không tìm được số nào, in ra -1.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (1 ≤ N ≤ 50).
+- Mỗi test bắt đầu bởi số nguyên N (1 ≤ N ≤ 100 000).
+- Dòng tiếp theo gồm N số nguyên A[i] (0 ≤ A[i] ≤ 9).
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được trên một dòng.
+
+**input**
+```
+3
+3
+8 1 9
+5
+8 1 7 6 0
+2
+5 2
+5
+2 2 1 1 1
+```
+
+**output**
+```
+981
+8760
+-1
+2211
+```
+
+### DSA08025 - QUÂN MÃ
+
+Cho một quân mã trên bàn cờ vua tại vị trí ST. Nhiệm vụ của bạn là hãy tìm số bước di chuyển ít nhất để đưa quân mã tới vị trí EN.
+
+![download](https://user-images.githubusercontent.com/64203006/165969742-543ef438-3a51-416f-a1b6-ea64dc9830b5.png)
+
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm 2 xâu dạng “xy” và “uv”, trong đó x, y là kí tự trong “abcdefgh” còn y, v là số thuộc 1, 2, 3, 4, 5, 6, 7, 8.
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được trên một dòng.
+
+**input**
+```
+8
+e2 e4
+a1 b2
+b2 c3
+a1 h8
+a1 h7
+h8 a1
+b1 c3
+f6 f6
+```
+
+**output**
+```
+2
+4
+2
+6
+5
+6
+1
+0
+```
+
+### DSA08029 - QUAY HÌNH VUÔNG
+
+Có một chiếc bảng hình chữ nhật với 6 miếng ghép, trên mỗi miếng ghép được điền một số nguyên trong khoảng từ 1 đến 6. Tại mỗi bước, chọn một hình vuông (bên trái hoặc bên phải), rồi quay theo chiều kim đồng hồ.
+
+![download](https://user-images.githubusercontent.com/64203006/165971824-6a62601a-f4ea-4e81-ab54-978c348bc794.png)
+
+Yêu cầu: Cho một trạng thái của bảng, hãy tính số phép biến đổi ít nhất để đưa bảng đến trạng thái đích.
+
+**Input:** 
+- Dòng đầu ghi số bộ test (không quá 10). Mỗi bộ test gồm hai dòng:
+  - Dòng đầu tiên chứa 6 số là trạng thái bảng ban đầu (thứ tự từ trái qua phải, dòng 1 tới dòng 2).
+  - Dòng thứ hai chứa 6 số là trạng thái bảng đích (thứ tự từ trái qua phải, dòng 1 tới dòng 2).
+
+**Output:** 
+- Với mỗi test, in ra một số nguyên là đáp số của bài toán.
+
+**input**
+```
+1
+1 2 3 4 5 6
+4 1 2 6 5 3
+```
+
+**output**
+```
+2
+```
+
+### DSA08045 - HÀNG RÀO
+
+Trên cánh đồng có N hàng rào. Mỗi hàng rào được miêu tả bằng một đoạn thẳng đứng hoặc ngang trong mặt phẳng hai chiều. Nếu hai hàng rào gặp nhau, chúng chỉ có thể gặp nhau ở đầu mút của đoạn thẳng. Mỗi hàng rào chỉ giao với hai hàng rào khác tại các kiểu đầu mút của đoạn thẳng.
+
+Có M chú bò đang ăn cỏ trên cánh đồng. Mỗi chú bò được thể hiện bằng một điểm trên mặt phẳng tọa độ hai chiều. Input đảm bảo không có chú bò nào nằm trên đoạn thẳng đại diện cho các hàng rào, và không có hai chú bò có cùng tọa độ. Các chú bò có thể di chuyển tự do trong vùng bao quanh bởi các hàng rào và tạo thành bầy đàn.
+
+Các bạn hãy tìm xem đàn bò nào có số lượng nhiều nhất?
+
+**Input:** 
+- Dòng đầu ghi số bộ test (không quá 10). Mỗi bộ test như sau:
+  - Dòng đầu tiên là 2 số N, M (1 <= N, M <= 500).
+  - N dòng tiếp theo, mỗi dòng gồm 4 số nguyên Ax, Ay, Bx, By mô tả tọa độ của một hàng rào.
+  - M dòng tiếp theo, mỗi dòng gồm 2 số nguyên Cx, Cy mô tả tọa độ của một chú bò.
+  - Các tọa độ có giá trị trong khoảng từ 0 tới 10^6.
+
+**Output:** 
+- In ra số lượng lớn nhất có thể của một đàn bò.
+
+**input**
+```
+1
+7 3
+0 0 10 0
+10 0 10 5
+12 5 10 5
+10 5 1 5
+12 5 12 7
+0 7 12 7
+0 7 0 0
+3 4
+6 6
+17 3
+```
+
+**output**
+```
+2
+```
+
+## Graph
+
+## Graph (Advanced)
+
+## Binary Tree
+
 ### DSA09011 - SỐ LƯỢNG HÒN ĐẢO
 
 Cho một bản đồ kích thước N x M được mô tả bằng ma trận A[][].A[i][j] = 1 có nghĩa vị trí (i, j) là nổi trên biển. 2 vị trí (i, j) và (x, y) được coi là liền nhau nếu như nó có chung đỉnh hoặc chung cạnh. Một hòn đảo là một tập hợp các điểm (i, j) mà A[i][j] = 1 và có thể di chuyển giữa hai điểm bất kì trong đó.

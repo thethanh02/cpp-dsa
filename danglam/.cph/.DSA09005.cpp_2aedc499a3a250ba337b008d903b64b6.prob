@@ -1,0 +1,1 @@
+{"name":"Local: DSA09005","url":"/mnt/d/code/cpp-dsa/danglam/DSA09005.cpp","tests":[{"id":1650967610161,"input":"1\n6 9 1\n1 2 1 3 2 3 2 5 3 4 3 5 4 5 4 6 5 6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/danglam/DSA09005.cpp","group":"local","local":true}

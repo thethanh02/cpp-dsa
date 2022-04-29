@@ -1,0 +1,1 @@
+{"name":"Local: DSA07021","url":"/mnt/d/code/cpp-dsa/danglam/DSA07021.cpp","tests":[{"id":1651127150349,"input":"4\n(()(\n()()((\n((()()())))\n()(())(","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/danglam/DSA07021.cpp","group":"local","local":true}
