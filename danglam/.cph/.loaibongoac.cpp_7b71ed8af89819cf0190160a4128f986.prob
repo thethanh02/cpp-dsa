@@ -1,0 +1,1 @@
+{"name":"Local: loaibongoac","url":"/mnt/d/code/cpp-dsa/danglam/loaibongoac.cpp","tests":[{"id":1651648730802,"input":"4\n(A - B + C)-((A+  (B-C)))  - (C-(D-E))\n((A )-((B)))\n((A-(B+C)))\n(A-B)-(C-D)","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/danglam/loaibongoac.cpp","group":"local","local":true}

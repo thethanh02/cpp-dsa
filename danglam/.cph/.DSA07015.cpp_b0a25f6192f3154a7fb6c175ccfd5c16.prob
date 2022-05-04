@@ -1,0 +1,1 @@
+{"name":"Local: DSA07015","url":"/mnt/d/code/cpp-dsa/danglam/DSA07015.cpp","tests":[{"id":1651392797943,"input":"4\n6*3+2-(6-4/2)\n100+99*22\n6*((4*3)+5)\n1-2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/danglam/DSA07015.cpp","group":"local","local":true}

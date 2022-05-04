@@ -1,0 +1,1 @@
+{"name":"Local: CTDL_003","url":"/mnt/d/code/cpp-dsa/danglam/CTDL_003.cpp","tests":[{"id":1651406385445,"input":"4 10\n6 5 3 7\n5 4 6 5","output":"13\n1 0 0 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/danglam/CTDL_003.cpp","group":"local","local":true}
