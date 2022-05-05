@@ -48,6 +48,8 @@ string maxBinarynum() {
     return maxi;
 }
 int main() {
+	// freopen("test.inp", "r", stdin);
+	// freopen("test.out", "w", stdout);
     cin >> n;
     memset(vs, 0, sizeof(vs));
     for (int i = 0; i < n; i++) 
