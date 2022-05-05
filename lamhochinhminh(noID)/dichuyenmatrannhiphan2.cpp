@@ -4,6 +4,7 @@ struct Matrix {
     int x, y; string num;
 };
 int n;
+const string Hex = "123456789ABCDEF";
 string a[105][105];
 bool vs[105][105];
 void update(Matrix A, queue<Matrix>& q2, string& maxi, int i, int j) {
@@ -47,13 +48,33 @@ string maxBinarynum() {
     }
     return maxi;
 }
+int Pow(string s) {
+    reverse(s.begin(), s.end());
+    int res = 0;
+    for (int i = 0; i < 4; i++) {
+        if (s[i] == '1') res += pow(2, i);
+    }
+    return res;
+}
+string bin_to_hex(string s) {
+    string ans;
+    while (s.size() % 4 != 0) s.insert(s.begin(), '0');
+    for (int i = 0; i < s.size(); i += 4) {
+        string tmp = s.substr(i, 4);
+        ans += Hex[Pow(tmp) - 1];
+    }
+    return ans;
+}
 int main() {
 	// freopen("test.inp", "r", stdin);
 	// freopen("test.out", "w", stdout);
+    double start = (double)clock();
     cin >> n;
     memset(vs, 0, sizeof(vs));
     for (int i = 0; i < n; i++) 
         for (int j = 0; j < n; j++) cin >> a[i][j];
     string A = maxBinarynum();
-    cout << A;
+    cout << bin_to_hex(A);
+    double end = (double)clock();
+    cout << endl << (end - start)/CLOCKS_PER_SEC << "s";
 }
