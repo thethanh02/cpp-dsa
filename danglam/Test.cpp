@@ -1,20 +1,60 @@
-#include<bits/stdc++.h>
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
 using namespace std;
-int main(){
-    int n;
+class PERSON {
+    char name[30];
+    char dob[30];
+
+   public:
+    void Init() {
+        cin.ignore();
+        cout << "Ho ten: ";
+        cin.getline(name, 30);
+        cin.ignore();
+        cout << "Ngay sinh: ";
+        cin.getline(dob, 30);
+        cin.ignore();
+    }
+
+    void Print() {
+        cout << "Ho ten: " << name << endl;
+        cout << "Ngay sinh: " << dob << endl;
+    }
+};
+
+class STUDENT : public PERSON {
+    char lop[30];
+    double mark;
+
+   public:
+    void Init() {
+        PERSON::Init();
+        cout << "Lop: ";
+        cin.getline(lop, 30);
+        cin.ignore();
+        cout << "Diem thi: ";
+        cin >> mark;
+    }
+    void Print() {
+        PERSON::Print();
+        cout << "Lop: " << lop << endl;
+        cout << "Diem thi: " << mark << endl;
+    }
+};
+
+int main() {
+    int i, n;
+    STUDENT a[100];
+    cout << "n = ";
     cin >> n;
-    vector<vector<int>> v;
-    for (int t = 0; t < n; t++) {
-        vector<int> a(100);
-        for (int i = 0; i < n; i++) cin >> a[i];
-        for (int i = 0; i < n; i++)
-            for (int j = i * 2; j < 100; j += n) a[j] = a[i];
-        v.push_back(a);
+    for (i = 0; i < n; i++) {
+        cout << "Hoc sinh thu " << (i + 1) << ": \n";
+        a[i].Init();
     }
-    for (int i = 0; i < n; i++)
-        for (int j = i + n; j < 100; j += n) v.push_back(v[i]);
-    for (auto i : v) {
-        for (int j : i) cout << j << " ";
-        cout << endl;
-    }
+    cout << "Thong tin vua nhap:\n";
+    for (i = 0; i < n; i++)
+        a[i].Print();
+
+    return 0;
 }
