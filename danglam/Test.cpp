@@ -2,6 +2,7 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
+// alo test wsl git
 class PERSON {
     char name[30];
     char dob[30];
