@@ -27,9 +27,9 @@ int TPLT() {
 int DinhTru() {
     int ans = 0;
     for (int i = 1; i <= v; i++) {
+        memset(vs, 0, sizeof(vs));
         vs[i] = 1;
         if (stplt_bandau < TPLT()) ans++;
-        memset(vs, 0, sizeof(vs));
     }
     return ans;
 }
@@ -40,7 +40,8 @@ int CanhCau() {
             memset(vs, 0, sizeof(vs));
             int tmp = adj[i][j];
             adj[i].erase(adj[i].begin() + j);
-            if (stplt_bandau < TPLT()) ans++;
+            DFS(i); // ??
+            if (stplt_bandau < TPLT() + 1) ans++;
             adj[i].insert(adj[i].begin() + j, tmp);
         }
     }

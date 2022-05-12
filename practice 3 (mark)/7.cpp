@@ -30,10 +30,10 @@ int TPLT() {
 void DinhTru() {
     int ans = 0;
     for (int i = 1; i <= v; i++) {
+        memset(vs, 0, sizeof(vs));
         vs[i] = 1;
         int tmp = TPLT();
         if (stplt_bandau < tmp) dinhtru.push_back({tmp, i});
-        memset(vs, 0, sizeof(vs));
     }
 }
 bool cmp(ii a, ii b) {
