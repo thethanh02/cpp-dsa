@@ -1,0 +1,1 @@
+{"name":"Local: tonggannhat","url":"/mnt/d/code/cpp-dsa/noID/tonggannhat.cpp","tests":[{"id":1652330960380,"input":"2\n5 21\n5 6 7 8 9\n10 500\n93 181 245 214 315 36 185 138 216 295","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/noID/tonggannhat.cpp","group":"local","local":true}
