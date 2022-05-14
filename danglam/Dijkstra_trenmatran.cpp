@@ -1,45 +1,52 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef pair<int, int> ii;
-typedef pair<ii, int> iii;
 #define X first
 #define Y second
 
-int n, x, y, w, st;
-vector<vector<int>> a;
-vector<int> D;
-void reinit() {
-    a.clear();
-    a.resize(n, vector<int> (n, 1e9));
-    D.assign(n, INT_MAX);
-}
+int n, st;
+// vector<vector<int>> a;
+// vector<int> D, par;
+// void reinit() {
+//     a.clear();
+//     a.resize(n + 1, vector<int> (n + 1, 1e9));
+//     D.assign(n + 1, 1e9);
+//     par.assign(n + 1, -1);
+// }
+int a[100][100], D[100], par[100];
 void Dijkstra(int st) {
+    for (int i = 0; i <= n; i++) {
+        D[i] = 1e9;
+        par[i] = -1;
+    }
+
     priority_queue<ii, vector<ii>, greater<ii>> q;
     D[st] = 0;
     q.push({0, st});
     while (!q.empty()) {
-        int u = q.top().Y;
+        int u = q.top().second;
         q.pop();
-        for (int v = 0; v < n; v++) {
-            if (a[u][v] != INT_MAX) {
+        for (int v = 1; v <= n; v++) {
+            if (a[u][v] != 1e9) {
                 int d_u_v = a[u][v];
                 if (D[u] + d_u_v < D[v]) {
                     D[v] = D[u] + d_u_v;
+                    par[v] = u;
                     q.push({D[v], v});
                 }
             }
         }
     }
-    for (int i = 0; i < n; i++) cout << D[i] << " ";
+    for (int i = 1; i <= n; i++) cout << D[i] << " ";
 }
 int main() {
     cin >> n >> st;
-    reinit();
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < n; j++) cin >> a[i][j];
+    // reinit();
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++) cin >> a[i][j];
     Dijkstra(st);
 }
-// 7 0
+// 7 1
 // 0          20         5          17         1000000000 1000000000 1000000000
 // 20         0          1000000000 1          1000000000 1000000000 1
 // 5          1000000000 0          25         3          10         1000000000
