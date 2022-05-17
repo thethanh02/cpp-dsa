@@ -8,7 +8,7 @@ Một xâu nhị phân độ dài n được gọi là thuận nghịch hay đ�
 
 Ví dụ với n = 4 ta tìm được 4 xâu nhị phân thuận nghịch như dưới đây.
 ```
-0 0 0 0     
+0 0 0 0   
 0 1 1 0     
 1 0 0 1     
 1 1 1 1
@@ -322,7 +322,7 @@ Output:  Với mỗi test, in ra đáp án tìm được, mỗi xâu in ra trên
 
 ### DSA01009 - XÂU AB ĐẶC BIỆT
 
-Một xâu kí tự S = (s1, s2, .., sn) được gọi là xâu AB độ dài n nếu với mọi siÎS thì si hoặc là kí tự A hoặc si là kí tự B . Ví dụ xâu S = “ABABABAB” là một xâu AB độ dài 8. Cho số tự nhiên N và số tự nhiên K (1£K<N£15 được nhập từ bàn phím), hãy viết chương trình liệt kê tất cả các xâu AB có độ dài N chứa duy nhất một dãy K kí tự A liên tiếp.
+Một xâu kí tự S = (s1, s2, .., sn) được gọi là xâu AB độ dài n nếu với mọi si∈S thì si hoặc là kí tự A hoặc si là kí tự B . Ví dụ xâu S = “ABABABAB” là một xâu AB độ dài 8. Cho số tự nhiên N và số tự nhiên K (1£K<N£15 được nhập từ bàn phím), hãy viết chương trình liệt kê tất cả các xâu AB có độ dài N chứa duy nhất một dãy K kí tự A liên tiếp.
 
 **Input:** 
 chỉ có một dòng ghi hai số N và K.
@@ -7165,7 +7165,7 @@ Chỉ được phép sử dụng hai thao tác (a) hoặc (b), hãy biến đổ
 
 ### DSA08011 - KHOẢNG CÁCH XÂU KÝ TỰ
 
-Cho tập n xâu ký tự S và hai xâu s, t Î S. Ta giả thiết các xâu ký tự S[i] Î S có độ dài bằng nhau.  Hãy tìm khoảng cách đường đi ngắn nhất từ s đến t. Biết từ một xâu ký tự bất kỳ ta chỉ được phép dịch chuyển đến xâu khác với nó duy nhất 1 ký tự. Ví dụ ta có tập các từ S = { POON, TOON, PLEE, SAME, POIE, PLEA, PLIE, POIN }, s = TOON, t = PLEA ta có độ dài đường đi ngắn nhất là 7 tương ứng với các phép dịch chuyển : TOON -> POON –> POIN –> POIE –> PLIE –> PLEE –> PLEA.
+Cho tập n xâu ký tự S và hai xâu s, t ∈ S. Ta giả thiết các xâu ký tự S[i] ∈ S có độ dài bằng nhau.  Hãy tìm khoảng cách đường đi ngắn nhất từ s đến t. Biết từ một xâu ký tự bất kỳ ta chỉ được phép dịch chuyển đến xâu khác với nó duy nhất 1 ký tự. Ví dụ ta có tập các từ S = { POON, TOON, PLEE, SAME, POIE, PLEA, PLIE, POIN }, s = TOON, t = PLEA ta có độ dài đường đi ngắn nhất là 7 tương ứng với các phép dịch chuyển : TOON -> POON –> POIN –> POIE –> PLIE –> PLEE –> PLEA.
 
 **Input:** 
 - Dòng đầu tiên đưa vào số lượng test T (T≤100).
@@ -7639,9 +7639,281 @@ Các bạn hãy tìm xem đàn bò nào có số lượng nhiều nhất?
 
 ## Graph
 
-## Graph (Advanced)
+###	DSA09001 - CHUYỂN DANH SÁCH CẠNH SANG DANH SÁCH KỀ
 
-## Binary Tree
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy viết chương trình thực hiện chuyển đổi biểu diễn đồ thị dưới dạng danh sách kề.
+
+**Input:**
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào hai số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:**
+- Đưa ra danh sách kề của các đỉnh tương ứng theo khuôn dạng của ví dụ dưới đây. Các đỉnh trong danh sách in ra theo thứ tự tăng dần.
+
+**input**
+```
+1
+6 9
+1 2
+1 3 
+2 3
+2 5
+3 4
+3 5
+4 5
+4 6
+5 6
+```
+
+**output**
+```
+1: 2 3
+2: 1 3 5
+3: 1 2 4 5
+4: 3 5 6
+5: 2 3 4 6
+6: 4 5
+```
+
+###	DSA09002 - CHUYỂN TỪ DANH SÁCH KỀ SANG DANH SÁCH CẠNH
+
+Cho đơn đồ thị G vô hướng liên thông được mô tả bởi danh sách kề. Hãy in ra danh sách cạnh tương ứng của G.
+
+**Input:**
+- Dòng đầu tiên ghi số N là số đỉnh (1<N<50)
+- N dòng tiếp theo mỗi dòng ghi 1 danh sách kề lần lượt theo thứ tự từ đỉnh 1 đến đỉnh N
+
+**Output:**
+- Ghi ra lần lượt từng cạnh của đồ thị theo thứ tự tăng dần.
+
+**input**
+```
+3
+2 3
+1 3
+1 2
+```
+
+**output**
+```
+1 2
+1 3
+2 3
+```
+
+###	DSA09003 - BIỂU DIỄN ĐỒ THỊ CÓ HƯỚNG.
+
+Cho đồ thị có hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy viết chương trình thực hiện chuyển đổi biểu diễn đồ thị dưới dạng danh sách kề.
+
+**Input:**
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào hai số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:**
+- Đưa ra danh sách kề của các đỉnh tương ứng theo khuôn dạng của ví dụ dưới đây. Các đỉnh trong danh sách in ra theo thứ tự tăng dần.
+
+**input**
+```
+1
+6 9
+1 2
+2 5
+3 1
+3 2
+3 5
+4 3
+5 4
+5 6
+6 4
+```
+
+**output**
+```
+1: 2
+2: 5
+3: 1 2 5
+4: 3
+5: 4 6
+6: 4
+```
+
+###	DSA09004 - DFS TRÊN ĐỒ THỊ VÔ HƯỚNG
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy viết thuật toán duyệt theo chiều sâu bắt đầu tại đỉnh u∈V (DFS(u)=?)
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra danh sách các đỉnh được duyệt theo thuật toán DFS(u) của mỗi test theo khuôn dạng của ví dụ dưới đây.
+
+**input**
+```
+1
+6 9 5
+1 2
+1 3
+2 3
+2 4
+3 4
+3 5
+4 5
+4 6
+5 6
+```
+
+**output**
+```
+5 3 1 2 4 6
+```
+
+###	DSA09005 - BFS TRÊN ĐỒ THỊ VÔ HƯỚNG
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy viết thuật toán duyệt theo chiều sâu bắt đầu tại đỉnh u∈V (BFS(u)=?)
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra danh sách các đỉnh được duyệt theo thuật toán BFS(u) của mỗi test theo khuôn dạng của ví dụ dưới đây.
+
+**input**
+```
+1
+6 9 1
+1 2 1 3 2 3 2 5 3 4 3 5 4 5 4 6 5 6
+```
+
+**output**
+```
+1 2 3 5 4 6
+```
+
+###	DSA09006 - ĐƯỜNG ĐI THEO DFS VỚI ĐỒ THỊ VÔ HƯỚNG
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy tìm đường đi từ đỉnh s∈V đến đỉnh t∈V trên đồ thị bằng thuật toán DFS.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra đường đi từ đỉnh s đến đỉnh t của mỗi test theo thuật toán DFS của mỗi test theo khuôn dạng của ví dụ dưới đây. Nếu không có đáp án, in ra -1.
+
+**input**
+```
+1
+6 9 1 6
+1 2 1 3 2 3 2 5 3 4 3 5 4 5 4 6 5 6
+```
+
+**output**
+```
+1 2 3 4 5 6
+```
+
+###	DSA09007 - ĐƯỜNG ĐI THEO BFS VỚI ĐỒ THỊ VÔ HƯỚNG
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy tìm đường đi từ đỉnh s∈V đến đỉnh t∈V trên đồ thị bằng thuật toán BFS.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra đường đi từ đỉnh s đến đỉnh t của mỗi test theo thuật toán BFS của mỗi test theo khuôn dạng của ví dụ dưới đây. Nếu không có đáp án, in ra -1.
+
+**input**
+```
+1
+6 9 1 6
+1 2 1 3 2 3 2 5 3 4 3 5 4 5 4 6 5 6
+```
+
+**output**
+```
+1 2 5 6
+```
+
+###	DSA09008 - ĐẾM SỐ THÀNH PHẦN LIÊN THÔNG
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy tìm số thành phần liên thông của đồ thị.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra số thành phần liên thông của đồ thị.
+
+**input**
+```
+1
+5 6 
+1 2 1 3 2 3 3 4 3 5 4 5
+```
+
+**output**
+```
+1
+```
+
+###	DSA09009 - TÌM SỐ THÀNH PHẦN LIÊN THÔNG VỚI BFS
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy tìm số thành phần liên thông của đồ thị bằng thuật toán BFS.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra số thành phần liên thông của đồ thị bằng thuật toán BFS.
+
+**input**
+```
+1
+6 6 
+1 2 1 3 2 3 3 4 3 5 4 5
+```
+
+**output**
+```
+2
+```
+
+###	DSA09010 - KIỂM TRA TÍNH LIÊN THÔNG MẠNH
+
+Cho đồ thị có hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy kiểm tra xem đồ thị có liên thông mạnh hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra “YES”, hoặc “NO” theo từng dòng tương ứng với test là liên thông mạnh hoặc không liên thông mạnh.
+
+**input**
+```
+1
+6 9 
+1 2 2 4 3 1 3 2 3 5 4 3 5 4 5 6 6 3
+```
+
+**output**
+```
+YES
+```
 
 ### DSA09011 - SỐ LƯỢNG HÒN ĐẢO
 
@@ -7672,3 +7944,1180 @@ Nhiệm vụ của bạn là hãy đếm số lượng đảo xuất hiện trê
 ```
 5
 ```
+
+###	DSA09012 - LIỆT KÊ ĐỈNH TRỤ
+
+Cho đồ thị vô hướng liên thông G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy đưa ra tất cả các đỉnh trụ của đồ thị?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra danh sách các đỉnh trụ của mỗi test  theo từng dòng.
+
+**input**
+```
+1
+5 5
+1 2 1 3 2 3 2 5 3 4
+```
+
+**output**
+```
+2 3
+```
+
+###	DSA09013 - LIỆT KÊ CẠNH CẦU
+
+Cho đồ thị vô hướng liên thông G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy đưa ra tất cả các cạnh cầu của đồ thị?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra danh sách các cạch cầu của mỗi test theo từng dòng. In ra đáp án theo thứ tự từ điển, theo dạng “a b …” với a < b.
+
+**input**
+```
+1
+5 5
+1 2 
+1 3
+2 3
+2 5
+3 4
+```
+
+###	DSA09014 - KIỂM TRA CHU TRÌNH TRÊN ĐỒ THỊ VÔ HƯỚNG
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy kiểm tra xem đồ thị có tồn tại chu trình hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra YES hoặc “NO” kết quả test theo từng dòng tương ứng với đồ thị tồn tại hoặc không tồn tại chu trình.
+
+**input**
+```
+1
+6  9
+1 2 1 3 2 3 2 5 3 4 3 5 4 5 4 6 5 6
+```
+
+**output**
+```
+YES
+```
+
+###	DSA09015 - KIỂM TRA CHU TRÌNH TRÊN ĐỒ THỊ CÓ HƯỚNG
+
+Cho đồ thị có hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy kiểm tra xem đồ thị có tồn tại chu trình hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra YES hoặc “NO” kết quả test theo từng dòng tương ứng với đồ thị tồn tại hoặc không tồn tại chu trình.
+
+**input**
+```
+1
+6 9  
+1 2 2 4 3 1 3 2 3 5 4 3 5 4 5 6 6 4
+```
+
+**output**
+```
+YES
+```
+
+###	DSA09016 - KIỂM TRA CHU TRÌNH TRÊN ĐỒ THỊ CÓ HƯỚNG VỚI DFS
+
+Cho đồ thị có hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Sử dụng thuật toán DFS, hãy kiểm tra xem đồ thị có tồn tại chu trình hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E| +1 dòng: dòng đầu tiên đưa vào ba số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị, và u là đỉnh xuất phát; |E| dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra YES hoặc “NO” kết quả test theo từng dòng tương ứng với đồ thị tồn tại hoặc không tồn tại chu trình.
+
+**input**
+```
+1
+6 9  
+1 2 2 4 3 1 3 2 3 5 4 3 5 4 5 6 6 4
+```
+
+**output**
+```
+YES
+```
+
+###	DSA09017 - KIỂM TRA ĐỒ THỊ CÓ PHẢI LÀ CÂY HAY KHÔNG
+
+Một đồ thị N đỉnh là một cây, nếu như nó có đúng N-1 cạnh và giữa 2 đỉnh bất kì, chỉ tồn tại duy nhất 1 đường đi giữa chúng.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi số nguyên N (1 ≤ N ≤ 1000).
+- N-1 dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v cho biết có cạnh nối giữa đỉnh u và v.
+
+**Output:** 
+- Với mỗi test, in ra “YES” nếu đồ thị đã cho là một cây, in ra “NO” trong trường hợp ngược lại.
+
+**input**
+```
+2
+4
+1 2
+1 3
+2 4
+4
+1 2
+1 3
+2 3
+```
+
+**output**
+```
+YES
+NO
+```
+
+###	DSA09020 - CHUYỂN DANH SÁCH KỀ SANG MA TRẬN KỀ
+
+Cho đơn đồ thị vô hướng có n đỉnh dưới dạng danh sách kề.
+
+Hãy biểu diễn đồ thị bằng ma trận kề.
+
+**Input:** 
+Dòng đầu tiên chứa số nguyên n – số đỉnh của đồ thị (1 ≤  n ≤  1000). n dòng tiếp theo, dòng thứ i chứa các số nguyên là các đỉnh kề với đỉnh i.  
+
+**Output:** 
+Ma trận kề của đồ thị.
+
+**input**
+```
+3
+2 3
+1 3
+1 2
+```
+
+**output**
+```
+0 1 1
+1 0 1
+1 1 0
+```
+
+###	DSA09021 - CHUYỂN MA TRẬN KỀ SANG DANH SÁCH KỀ
+
+Ma trận kề A của một đồ thị vô hướng là một ma trận chỉ có các số 0 hoặc 1 trong đó A[i][j] = 1 có ý nghĩa là đỉnh i kề với đỉnh j (chỉ số tính từ 1).
+
+Danh sách kề thì liệt kê các đỉnh kề với đỉnh đó theo thứ tự tăng dần.
+
+Hãy chuyển biểu diễn đồ thị từ dạng ma trận kề sang dạng danh sách kề.
+
+**Input:** 
+Dòng đầu tiên chứa số nguyên n – số đỉnh của đồ thị (1 < n ≤ 1000). n dòng tiếp theo, mỗi dòng có n số nguyên có giá trị 0 và 1 mô tả ma trận kề của đồ thị. 
+
+**Output:** 
+Gồm n dòng, dòng thứ i chứa các số nguyên là đỉnh có nối với đỉnh i và được sắp xếp tăng dần. Dữ liệu đảm bảo mỗi đỉnh có kết nối với ít nhất 1 đỉnh khác.
+
+**input**
+```
+3
+0 1 1
+1 0 1
+1 1 0
+```
+
+**output**
+```
+2 3
+1 3
+1 2
+```
+
+###	DSA09022 - DFS TRÊN ĐỒ THỊ CÓ HƯỚNG
+
+Cho đồ thị có hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy viết thuật toán duyệt theo chiều sâu bắt đầu tại đỉnh u∈V (DFS(u)=?)
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào ba số |V|, |E|, u∈V tương ứng với số đỉnh, số cạnh và đỉnh bắt đầu duyệt; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra danh sách các đỉnh được duyệt theo thuật toán DFS(u) của mỗi test theo khuôn dạng của ví dụ dưới đây.
+
+**input**
+```
+1
+6 9 5
+1 2 2 5 3 1 3 2 3 5 4 3 5 4 5 6 6 3
+```
+
+**output**
+```
+5 4 3 1 2 6
+```
+
+###	DSA09024 - BFS TRÊN ĐỒ THỊ CÓ HƯỚNG
+
+Cho đồ thị có hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy viết thuật toán duyệt theo chiều sâu bắt đầu tại đỉnh u∈V (BFS(u)=?)
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào ba số |V|, |E|, u∈V tương ứng với số đỉnh, số cạnh và đỉnh bắt đầu duyệt; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra danh sách các đỉnh được duyệt theo thuật toán BFS(u) của mỗi test theo khuôn dạng của ví dụ dưới đây.
+
+**input**
+```
+1
+6 9 1
+1 2 2 5 3 1 3 2 3 5 4 3 5 4 5 6 6 4
+```
+
+**output**
+```
+1 2 5 4 6 3
+```
+
+###	DSA09025 - ĐƯỜNG ĐI THEO DFS VỚI ĐỒ THỊ CÓ HƯỚNG
+
+Cho đồ thị có hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy tìm đường đi từ đỉnh s∈V đến đỉnh t∈V trên đồ thị bằng thuật toán DFS.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào ba số |V|, |E|, u∈V tương ứng với số đỉnh, số cạnh và đỉnh bắt đầu duyệt; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra đường đi từ đỉnh s đến đỉnh t của mỗi test theo thuật toán DFS của mỗi test theo khuôn dạng của ví dụ dưới đây. Nếu không có đáp án, in ra -1.
+
+**input**
+```
+1
+6 9 1 6
+1 2 2 5 3 1 3 2 3 5 4 3 5 4 5 6 6 4
+```
+
+**output**
+```
+1 2 5 6
+```
+
+###	DSA09026 - ĐƯỜNG ĐI THEO BFS VỚI ĐỒ THỊ CÓ HƯỚNG
+
+Cho đồ thị có hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy tìm đường đi từ đỉnh s∈V đến đỉnh t∈V trên đồ thị bằng thuật toán BFS.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào ba số |V|, |E|, u∈V tương ứng với số đỉnh, số cạnh và đỉnh bắt đầu duyệt; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤200; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra đường đi từ đỉnh s đến đỉnh t của mỗi test theo thuật toán BFS của mỗi test theo khuôn dạng của ví dụ dưới đây. Nếu không có đáp án, in ra -1.
+
+**input**
+```
+1
+6 9 1 6
+1 2 2 5 3 1 3 2 3 5 4 3 5 4 5 6 6 4
+```
+
+**output**
+```
+1 2 5 6
+``` 
+
+###	DSA09027 - KIỂM TRA ĐƯỜNG ĐI
+
+Cho đồ thị vô hướng có N đỉnh và M cạnh. Có Q truy vấn, mỗi truy vấn yêu cầu trả lời câu hỏi giữa 2 đỉnh x và y có tồn tại đường đi tới nhau hay không?
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test gồm 2 số nguyên N, M (1 ≤ N, M ≤ 1000).
+- M dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v cho biết có cạnh nối giữa đỉnh u và v.
+- Dòng tiếp là số lượng truy vấn Q (1 ≤ Q ≤ 1000).
+- Q dòng tiếp theo, mỗi dòng gồm 2 số nguyên x và y.
+
+**Output:** 
+- Với mỗi truy vấn, in ra “YES” nếu có đường đi từ x tới y, in ra “NO” nếu ngược lại.
+
+**input**
+```
+1
+6 5
+1 2
+2 3
+3 4
+1 4
+5 6
+2
+1 5
+2 4
+```
+
+**output**
+```
+NO
+YES
+``` 
+
+###	DSA09028 - TÔ MÀU ĐỒ THỊ
+
+Một trong những bài toán kinh điển của lý thuyết đồ thị là bài toán Tô màu đồ thị. Bài toán được phát biểu như sau: Cho đồ thị vô hướng G =<V, E> được biểu diễn dưới dạng danh sách cạnh và số M. Nhiệm vụ của bạn là kiểm tra xem đồ thị có thể tô màu các đỉnh bằng nhiều nhất M màu sao cho hai đỉnh kề nhau đều có màu khác nhau hay không?
+
+![mcolor](https://user-images.githubusercontent.com/64203006/168848471-8c83421f-919a-46d1-ad94-39610c19d5d9.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào ba số V, E, M tương ứng với số đỉnh, số cạnh và số màu; phần thứ hai đưa vào các cạnh của đồ thị.
+- T, V, E, M thỏa mãn ràng buộc: 1≤T ≤100; 1≤V≤10; 1≤ E ≤N(N-1), 1≤V≤N.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+4 5 3
+1 2
+2 3
+3 4
+4 1
+1 3
+3 3 2
+1 2
+2 3
+1 3
+```
+
+**output**
+```
+YES
+NO
+``` 
+
+###	DSA09029 - ĐƯỜNG ĐI HAMILTON
+
+Đường đi đơn trên đồ thị có hướng hoặc vô hướng đi qua tất cả các đỉnh của đồ thị mỗi đỉnh đúng một lần được gọi là đường đi Hamilton. Cho đồ thị vô hướng G = <V, E>, hãy kiểm tra xem đồ thị có đường đi Hamilton hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào hai số V, E tương ứng với số đỉnh, số cạnh của đồ thị; phần thứ hai đưa vào các cạnh của đồ thị.
+- T, V, E thỏa mãn ràng buộc: 1≤T ≤100; 1≤V≤10; 1≤ E ≤15.
+
+**Output:** 
+- Đưa ra 1 hoặc 0 tương ứng với test có hoặc không có đường đi Hamilton theo từng dòng.
+
+**input**
+```
+2
+4 4
+1 2 2 3 3 4 2 4
+4 3
+1 2 2 3 2 4
+```
+
+**output**
+```
+1
+0
+``` 
+
+###	DSA09030 - ĐỒ THỊ HAI PHÍA
+
+Đồ thị hai phía là một đồ thị đặc biệt, trong đó tập các đỉnh có thể được chia thành hai tập không giao nhau thỏa mãn điều kiện không có cạnh nối hai đỉnh bất kỳ thuộc cùng một tập. Cho đồ thị N đỉnh và M cạnh, bạn hãy kiểm tra đồ thị đã cho có phải là một đồ thị hai phía hay không?
+
+![download](https://user-images.githubusercontent.com/64203006/168848951-c7396d42-f9cd-47c2-ad13-531dd3d21585.png)
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤  20).
+- Mỗi test bắt đầu bởi số nguyên N và M (1 ≤  N, M ≤  1000).
+- M dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v cho biết có cạnh nối giữa đỉnh u và v.
+
+**Output:** 
+- Với mỗi test, in ra “YES” nếu đồ thị đã cho là một đồ thị hai phía, in ra “NO” trong trường hợp ngược lại.
+
+**input**
+```
+2
+5 4
+1 5
+1 3
+2 3
+4 5
+3 3
+1 2
+1 3
+2 3
+```
+
+**output**
+```
+YES
+NO
+``` 
+
+###	DSA09031 - CHÚ CỪU XA CÁCH
+
+Trên cánh đồng kích thước N x N có K chú cừu. Người nông dân sợ các chú cừu đi lạc nên đã làm một số rào chắn giữa các khu vực. Các chú cừu chỉ có thể di chuyển lên trên, xuống dưới, sang trái, sang phải khu vực bên cạnh, và không thể vượt qua được hàng rào.
+
+Hai chú cừu A và B được gọi là ‘xa cách’ nếu như chúng không thể di chuyển tới vị trí của nhau. Các bạn hãy xác định xem số cặp chú cừu xa cách bằng nhau nhiêu?
+
+
+**Input:** 
+Dòng đầu tiên gồm 3 số nguyên dương N, K và M (1 ≤  N ≤  100, K ≤  100, M ≤  N^2).  M dòng tiếp theo, mỗi dòng gồm 4 số nguyên u, v, x, y cho biết có rào chắn ở giữa hai khu vực (u, v) và (x, y) (2 ô này cạnh nhau). K dòng cuối, mỗi dòng chứa 2 số nguyên là tọa độ của mỗi chú cừu.
+
+**Output:** 
+In ra số cặp chú cừu bị xa cách tìm được.
+
+![download](https://user-images.githubusercontent.com/64203006/168849278-f062cf88-46e5-453e-be0a-d7d1fd4847fa.png)
+
+**input**
+```
+3 3 3
+2 2 2 3
+3 3 3 2
+3 3 2 3
+3 3
+2 2
+2 3
+```
+
+**output**
+```
+2
+``` 
+
+*Giải thích test: Cặp (3, 1) và (2, 1).*
+
+###	DSA09032 - KẾT BẠN
+
+Trường học X có N sinh viên, trong đó có M cặp là bạn bè của nhau. Bạn của bạn cũng là bạn, tức là nếu A là bạn của B, B là bạn của C thì A và C cũng là bạn bè của nhau.
+
+Các bạn hãy xác định xem số lượng sinh viên nhiều nhất trong một nhóm bạn là bao nhiêu?
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi 2 số nguyên N và M (N, M ≤ 100 000).
+- M dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v (u #v) cho biết sinh viên u là bạn của sinh viên v.
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được trên một dòng.
+
+**input**
+```
+2
+3 2
+1 2
+2 3
+10 12
+1 2
+3 1
+3 4
+5 4
+3 5
+4 6
+5 2
+2 1
+7 1
+1 2
+9 10
+8 9
+```
+
+**output**
+```
+3
+7
+``` 
+
+###	DSA09033 - MẠNG XÃ HỘI
+
+Tý đang xây dựng một mạng xã hội và mời các bạn của mình dùng thử. Bạn của bạn cũng là bạn. Vì vậy, Tý muốn mạng xã hội của mình là hoàn hảo, tức với mọi bộ ba X, Y, Z, nếu X kết bạn với Y, Y kết bạn với Z thì X và Z cũng phải là bạn bè của nhau trên mạng xã hội.
+
+Các bạn hãy xác định xem mạng xã hội hiện tại của Tý có là hoàn hảo hay không? Nếu có hãy in ra “YES”, “NO” trong trường hợp ngược lại.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi 2 số nguyên N và M (N, M ≤ 100 000).
+- M dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v (u #v) cho biết sinh viên u là bạn của sinh viên v.
+
+**Output:** 
+- Với mỗi test, in ra đáp án tìm được trên một dòng.
+
+**input**
+```
+3
+4 3
+1 3
+3 4
+1 4
+4 4
+3 1
+2 3
+3 4
+1 2
+10 4
+4 3
+5 10
+8 9
+1 2
+```
+
+**output**
+```
+YES
+NO
+YES
+``` 
+
+###	DSA09034 - ĐẾM SỐ AO
+
+Sau khi thi trượt môn Cấu trúc dữ liệu và giải thuật, một số sinh viên D19 CNTT - PTIT quyết định bỏ học, đầu tư thuê đất để trồng rau. Mảnh đất thuê là một hình chữ nhật N x M (1≤ N≤ 100; 1≤ M≤ 100) ô đất hình vuông. Nhưng chỉ sau đó vài ngày, trận lụt khủng khiếp đã diễn ra làm một số ô đất bị ngập. Mảnh đất bỗng biến thành các cái ao. Và sinh viên D19 lại dự định chuyển sang nuôi cá. Các bạn ấy muốn biết mảnh đất được chia thành bao nhiêu cái ao để có thể tính toán nuôi cá cho hợp lý. Hãy giúp các bạn ấy nhé. *Chú ý: Ao là gồm một số ô đất bị ngập có chung đỉnh. Dễ nhận thấy là một ô đất có thể có tối đa 8 ô chung đỉnh.*
+
+
+Các bạn hãy xác định xem mạng xã hội hiện tại của Tý có là hoàn hảo hay không? Nếu có hãy in ra “YES”, “NO” trong trường hợp ngược lại.
+
+**Input:** 
+Dòng1: 2 số nguyên cách nhau bởi dấu cách: N và M. Dòng 2..N+1: M kí tự liên tiếp nhau mỗi dòng đại diện cho 1 hàng các ô đất.  Mỗi kí tự là 'W' hoặc '.' tương ứng với ô đất đã bị ngập và ô đất vẫn còn nguyên.
+
+**Output:** 
+Một dòng chứa 1 số nguyên duy nhất là số ao tạo thành.
+
+**input**
+```
+10 12
+W........WW.
+.WWW.....WWW
+....WW...WW.
+.........WW.
+.........W..
+..W......W..
+.W.W.....WW.
+W.W.W.....W.
+.W.W......W.
+..W.......W.
+```
+
+**output**
+```
+3
+``` 
+
+###	DSA09037 - HỌP MẶT
+
+Có K người (1 ≤ K ≤ 100) đứng tại vị trí nào đó trong N địa điểm cho trước (1 ≤ N ≤ 1,000) được đánh số từ 1..N. Các điểm được nối với nhau bởi M đoạn đường một chiều (1 ≤ M ≤ 10,000) (không có đoạn đường nào nối một điểm với chính nó).
+
+Mọi người muốn cùng tụ họp tại một địa điểm nào đó. Tuy nhiên, với các đường đi cho trước, chỉ có một số địa điểm nào đó có thể được chọn là điểm họp mặt. Cho trước K, N, M và vị trí ban đầu của K người cùng với M đường đi một chiều, hãy xác định xem có bao nhiêu điểm có thể được chọn làm điểm họp mặt. 
+
+**Input:** 
+- Dòng 1: Ghi 3 số: K, N, và M 
+- Dòng 2 đến K+1: dòng i+1 chứa một số nguyên trong khoảng (1..N) cho biết địa điểm mà người thứ i đang đứng. 
+- Dòng K+2 đến M+K+1: Mỗi dòng ghi một cặp số A và B mô tả một đoạn đường đi một chiều từ A đến B (cả hai trong khoảng 1..N và A != B).
+
+**Output:** 
+- Số địa điểm có thể được chọn là điểm họp mặt.
+
+**input**
+```
+2 4 4
+2
+3
+1 2
+1 4
+2 3
+3 4
+```
+
+**output**
+```
+2
+``` 
+
+*Giải thích Ví dụ: có thể họp mặt tại điểm 3 và điểm 4.*
+
+###	DSA09049 - LAN TRUYỀN DINH DƯỠNG
+
+Cho một cây có N đỉnh và gốc tại đỉnh 1. Mỗi nút lá có chức năng tổng hợp chất dinh dưỡng, đồng thời lan truyền năng lượng cũng như các chất dinh dưỡng cho nút cha của nó để thực hiện quá trình tổng hợp.
+
+Quá trình lan truyền năng lượng sẽ làm tăng giá trị dinh dưỡng lên 1. Tức là nếu một nút tổng hợp được giá trị dinh dưỡng bằng V, sẽ giúp cho nút cha của nó sẽ tổng hợp được giá trị dinh dưỡng bằng V+1. Nếu một nút cha có nhiều nút con, giá trị dinh dưỡng của nó bằng tổng của giá trị dinh dưỡng của các nút con gửi lên.
+
+Biết rằng mỗi nút lá ban đầu tổng hợp được chất dinh dưỡng có giá trị 1. Nhiệm vụ của bạn là hãy xác định xem mỗi nút của cây tổng hợp được bao nhiêu giá trị dinh dưỡng?
+
+**Input:** 
+- Dòng đầu tiên là số lượng đỉnh N (N <= 200 000).
+- Dòng tiếp theo gồm N-1 số nguyên, a[2], a[3], …, a[N] lần lượt là cha của các nút 2, 3, …, N.
+
+**Output:** 
+- In ra N số nguyên, số nguyên thứ i cho biết giá trị dinh dưỡng mà nút i tổng hợp được.
+
+***Test1***
+
+**input**
+```
+3
+1 1
+```
+
+**output**
+```
+5 1 1
+``` 
+
+***Test2***
+
+**input**
+```
+5
+1 2 2 4
+```
+
+**output**
+```
+13 8 1 3 1
+``` 
+
+###	DSA10003 - KIỂM TRA CHU TRÌNH SỬ DỤNG DISJOIN SET
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Sử dụng **Disjoin Set**, hãy kiểm tra xem đồ thị có tồn tại chu trình hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào hai số |V|, |E| tương ứng với số đỉnh,  số cạnh của đồ thị; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤100; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra YES hoặc “NO” kết quả test theo từng dòng tương ứng với đồ thị tồn tại hoặc không tồn tại chu trình.
+
+**input**
+```
+1
+6 9
+1 2 1 3 2 3 2 5 3 4 3 5 4 5 4 6 5 6
+```
+
+**output**
+```
+YES
+``` 
+
+###	DSA10004 - ĐƯỜNG ĐI VÀ CHU TRÌNH EULER VỚI ĐỒ THỊ VÔ HƯỚNG
+
+Cho đồ thị vô hướng liên thông G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy kiểm tra xem đồ thị có đường đi Euler hay chu trình Euler hay không?
+
+Đường đi Euler bắt đầu tại một đỉnh, và kết thúc tại một đỉnh khác.
+
+Chu trình Euler bắt đầu tại một đỉnh, và kết thúc chu trình tại chính đỉnh đó.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào hai số |V|, |E| tương ứng với số đỉnh,  số cạnh của đồ thị; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤100; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra 1, 2, 0 kết quả mỗi test theo từng dòng tương ứng với đồ thị có đường đi Euler, chu trình Euler và trường hợp không tồn tại.
+
+**input**
+```
+2
+6 10  
+1 2 1 3 2 3 2 4 2 5 3 4 3 5 4 5 4 6 5 6
+6 9  
+1 2 1 3 2 3 2 4 2 5 3 4 3 5 4 5 4 6
+```
+
+**output**
+```
+2
+1
+``` 
+
+###	DSA10005 - CHU TRÌNH EULER TRONG ĐỒ THỊ CÓ HƯỚNG
+
+Cho đồ thị có hướng liên thông yếu G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy kiểm tra xem đồ thị có chu trình Euler hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào hai số |V|, |E| tương ứng với số đỉnh,  số cạnh của đồ thị; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤100; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra 1, 0 kết quả mỗi test theo từng dòng tương ứng với đồ thị có chu trình Euler và trường hợp không tồn tại đáp án.
+
+**input**
+```
+2
+6  10  
+1 2 2 4 2 5 3 1 3 2 4 3 4 5 5 3 5 6 6 4
+3 3
+1 2 2 3 1 3
+```
+
+**output**
+```
+1
+0
+``` 
+
+###	TN05009 - CHU TRÌNH THEO DFS
+
+Cho đồ thị vô hướng G= được biểu diễn dưới dạng danh sách cạnh. Hãy kiểm tra xem đồ thị có chu trình từ đỉnh 1 hay không, nếu có, hãy in ra chu trình đầu tiên tìm thấy theo DFS.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào hai số N, M  tương ứng với số đỉnh, số cạnh.
+- Dòng tiếp theo đưa vào các bộ đôi u, v tương ứng với một cạnh của đồ thị.
+- T, N, M thỏa mãn ràng buộc: 1≤T≤100; 1≤ N ≤10<sup>3</sup>; 1≤ M ≤ N*(N-1)/2;
+
+**Output:** 
+- Đưa ra chu trình đầu tiên tìm thấy theo DFS từ đỉnh 1.
+- Nếu không có chu trình từ đỉnh 1, ghi ra NO
+
+**input**
+```
+1
+6 9
+1 2 1 3 2 3 2 5 3 4 3 5 4 5 4 6 5 6
+```
+
+**output**
+```
+1 2 3 1
+``` 
+
+## Graph (Advanced)
+
+###	DSA09018 - LIỆT KÊ ĐỈNH TRỤ
+
+Cho đồ thị vô hướng liên thông G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy đưa ra tất cả các đỉnh trụ của đồ thị?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào hai số |V|, |E| tương ứng với số đỉnh và số cạnh; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤100; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra danh sách các đỉnh trụ của mỗi test  theo từng dòng.
+
+**input**
+```
+1
+5 5
+1 2 1 3 2 3 2 5 3 4
+```
+
+**output**
+```
+2 3
+``` 
+
+###	DSA09018 - KIỂM TRA CHU TRÌNH
+
+Cho đồ thị vô hướng G=<V, E> được biểu diễn dưới dạng danh sách cạnh. Hãy kiểm tra xem đồ thị có tồn tại chu trình hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào hai số |V|, |E| tương ứng với số đỉnh và số cạnh; Dòng tiếp theo đưa vào các bộ đôi u∈V, v∈V tương ứng với một cạnh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤100; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra YES hoặc “NO” kết quả test theo từng dòng tương ứng với đồ thị tồn tại hoặc không tồn tại chu trình.
+
+**input**
+```
+1
+6 9
+1 2 1 3 2 3 2 5 3 4 3 5 4 5 4 6 5 6
+```
+
+**output**
+```
+YES
+``` 
+
+###	DSA10001 - TÌM ĐƯỜNG
+
+Cho một bảng S[][] kích thước N x M, bao gồm các ô trống, các vật cản. Ban đầu bạn ở vị trí S. Nhiệm vụ của bạn là hãy di chuyển tới vị trí T, sao cho số lần đổi hướng không quá hai lần.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi hai số nguyên N và M (1 ≤ N, M ≤ 500).
+- N dòng tiếp theo, mỗi dòng gồm M kí tự mô tả bảng S. Trong đó: ‘.’ là một ô trống, ‘*’ là vật cản, ‘S’ là vị trí xuất phát và ‘T’ là vị trí đích. (Chỉ có một vị trí S và T duy nhất).
+
+**Output:** 
+- Với mỗi test, in ra “YES” nếu tìm được đường đi, ra in “NO” trong trường hợp ngược lại.
+
+**input**
+```
+2
+5 5
+..S..
+****.
+T....
+****.
+.....
+5 5
+S....
+****.
+.....
+.****
+..T..
+```
+
+**output**
+```
+YES
+NO
+``` 
+
+###	DSA10006 - CÂY KHUNG CỦA ĐỒ THỊ THEO THUẬT TOÁN DFS
+
+Cho đồ thị vô hướng G=(V, E). Hãy xây dựng một cây khung của đồ thị G với đỉnh u ∈ V là gốc của cây bằng thuật toán DFS.
+
+**Input:** 
+
+Dòng đầu tiên gồm một số nguyên T (1 ≤ T ≤ 20) là số lượng bộ test.
+
+Tiếp theo là T bộ test, mỗi bộ test có dạng sau:
+
+- Dòng đầu tiên gồm 3 số nguyên N=|V|, M=|E|, u (1 ≤ N ≤ 10<sup>3</sup>, 1 ≤ M ≤ 10<sup>5, 1 ≤ u ≤ N).
+- Mỗi test bắt đầu bởi hai số nguyên N và M (1 ≤ N, M ≤ 500).
+- M dòng tiếp theo, mỗi dòng gồm 2 số nguyên a, b (1 ≤ a, b ≤ N, a ≠ b) tương ứng cạnh nối hai chiều từ a tới b.
+- Dữ liệu đảm bảo giữa hai đỉnh chỉ tồn tại nhiều nhất một cạnh nối.
+
+**Output:** 
+
+Với mỗi bộ test, nếu tồn tại cây khung thì in ra N – 1 cạnh của cây khung với gốc là đỉnh u trên N – 1 dòng theo thứ tự duyệt của thuật toán DFS. Ngược lại nếu không tồn tại cây khung thì in ra -1.
+
+
+**input**
+```
+2
+4 4 2
+1 2
+1 3
+2 4
+3 4
+4 2 2
+1 2
+3 4
+```
+
+**output**
+```
+2 1
+1 3
+3 4
+-1
+``` 
+
+###	DSA10007 - CÂY KHUNG CỦA ĐỒ THỊ THEO THUẬT TOÁN BFS
+
+Cho đồ thị vô hướng G=(V, E). Hãy xây dựng một cây khung của đồ thị G với đỉnh u ∈ V là gốc của cây bằng thuật toán BFS.
+
+**Input:** 
+
+Dòng đầu tiên gồm một số nguyên T (1 ≤ T ≤ 20) là số lượng bộ test.
+
+Tiếp theo là T bộ test, mỗi bộ test có dạng sau:
+
+- Dòng đầu tiên gồm 3 số nguyên N=|V|, M=|E|, u (1 ≤ N ≤ 10<sup>3</sup>, 1 ≤ M ≤ 10<sup>5, 1 ≤ u ≤ N).
+- Mỗi test bắt đầu bởi hai số nguyên N và M (1 ≤ N, M ≤ 500).
+- M dòng tiếp theo, mỗi dòng gồm 2 số nguyên a, b (1 ≤ a, b ≤ N, a ≠ b) tương ứng cạnh nối hai chiều từ a tới b.
+- Dữ liệu đảm bảo giữa hai đỉnh chỉ tồn tại nhiều nhất một cạnh nối.
+
+**Output:** 
+
+Với mỗi bộ test, nếu tồn tại cây khung thì in ra N – 1 cạnh của cây khung với gốc là đỉnh u trên N – 1 dòng theo thứ tự duyệt của thuật toán BFS. Ngược lại nếu không tồn tại cây khung thì in ra -1.
+
+
+**input**
+```
+2
+4 4 2
+1 2
+1 3
+2 4
+3 4
+4 2 2
+1 2
+3 4
+```
+
+**output**
+```
+2 1
+2 4
+1 3
+-1
+``` 
+
+###	DSA10008 - DIJKSTRA
+
+Cho đồ thị có trọng số không âm G=<V, E> được biểu diễn dưới dạng danh sách cạnh trọng số. Hãy viết chương trình tìm đường đi ngắn nhất từ đỉnh u∈V đến tất cả các đỉnh còn lại trên đồ thị.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E|+1 dòng: dòng đầu tiên đưa vào hai ba số |V|, |E| tương ứng với số đỉnh và u∈V là đỉnh bắt đầu; |E| dòng tiếp theo mỗi dòng đưa vào bộ ba u∈V, v∈V, w tương ứng với một cạnh cùng với trọng số canh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤100; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra kết quả của mỗi test theo từng dòng. Kết quả mỗi test là trọng số đường đi ngắn nhất từ đỉnh u đến các đỉnh còn lại của đồ thị theo thứ tự tăng dần các đỉnh.
+
+
+**input**
+```
+1
+9 12 1
+1 2 4
+1 8 8
+2 3 8
+2 8 11
+3 4 7
+3 6 4
+3 9 2
+4 5 9
+4 6 14
+5 6 10
+6 7 2
+6 9 6
+```
+
+**output**
+```
+0 4 12 19 26 16 18 8 14 
+``` 
+
+###	DSA10009 - FLOYD
+
+Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm N đỉnh và M cạnh, các đỉnh được đánh số từ 1 tới N và các cạnh được đánh số từ 1 tới M.
+
+Có Q truy vấn, mỗi truy vấn yêu cầu bạn tìm đường đi ngắn nhất giữa đỉnh X[i] tới Y[i].
+
+**Input:** 
+- Dòng đầu tiên hai số nguyên N và M (1 ≤ N ≤ 100, 1 ≤ M ≤ N*(N-1)/2).
+- M dòng tiếp theo, mỗi dòng gồm 3 số nguyên u, v, c cho biết có cạnh nối giữa đỉnh u và v có độ dài bằng c (1 ≤ c ≤ 1000).
+- Tiếp theo là số lượng truy vấn Q (1 ≤ Q ≤ 100 000).
+- Q dòng tiếp theo, mỗi dòng gồm 2 số nguyên X[i], Y[i].
+
+**Output:** 
+- Với mỗi truy vấn, in ra đáp án là độ dài đường đi ngắn nhất tìm được.
+
+
+**input**
+```
+5 6
+1 2 6
+1 3 7
+2 4 8
+3 4 9
+3 5 1
+4 5 2
+3
+1 5
+2 5
+4 3
+```
+
+**output**
+```
+8
+10
+3
+``` 
+
+###	DSA10011 - DI CHUYỂN TRÊN BẢNG SỐ
+
+Cho một bảng số kích thước N x M. Chi phí khi đi qua ô (i,j) bằng A[i][j]. Nhiệm vụ của bạn là hãy tìm một đường đi từ ô (1, 1) tới ô (N, M) sao cho chi phí là nhỏ nhất. Tại mỗi ô, bạn được phép đi sang trái, sang phải, đi lên trên và xuống dưới.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi hai số nguyên N và M (1 ≤ N, M ≤ 500).
+- N dòng tiếp theo, mỗi dòng gồm M số nguyên A[i][j] (0 ≤ A[i][j] ≤ 9).
+
+**Output:** 
+- Với mỗi test, in ra một số nguyên là chi phí nhỏ nhất cho đường đi tìm được.
+
+
+**input**
+```
+3
+4
+5
+0 3 1 2 9
+7 3 4 9 9
+1 7 5 5 3
+2 3 4 2 5
+1
+6
+0 1 2 3 4 5
+5 5
+1 1 1 9 9
+9 9 1 9 9
+1 1 1 9 9
+1 9 9 9 9
+1 1 1 1 1
+```
+
+**output**
+```
+24
+15
+13
+``` 
+
+###	DSA10012 - ĐƯỜNG ĐI TRUNG BÌNH
+
+Cho một đồ thị có hướng gồm N đỉnh và M cạnh. Nhiệm vụ của bạn là hãy tính khoảng cách trung bình ngắn nhất giữa hai node bất kì nếu như chúng liên thông với nhau. Input đảm bảo rằng trong một nhóm liên thông, nếu như u đi tới được v thì v cũng đi tới được v với mọi cặp u, v.
+
+![download](https://user-images.githubusercontent.com/64203006/168857532-7c2d984e-5752-4ecb-b0dc-ea000eb75ed8.png)
+
+**Input:** 
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20). Mỗi test bắt đầu bởi hai số nguyên N và M (1 ≤ N ≤ 100, M ≤ N*(N-1)/2). M dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v cho biết có cạnh nối đơn hướng từ u tới v.
+
+**Output:** 
+Với mỗi test, in ra đáp án tìm được với độ chính xác 2 chữ số sau dấu phảy.
+
+
+**input**
+```
+2
+4 5
+1 2
+2 4
+1 3
+3 1
+4 3
+7 5
+1 2
+1 4
+4 2
+2 7
+7 1
+```
+
+**output**
+```
+1.83
+1.75
+``` 
+
+Giải thích test 1: Ta có
+
+d(1, 2) = 1, d(1, 3) = 1, d(1, 4) = 2; d (2, 1) = 3, d(2, 3) = 2, d(2, 4) = 1;
+
+d(3, 1) = 1, d(3, 2) = 2, d(3, 4) = 3; d(4, 1) = 2, d(4, 2) = 3, d(4, 3) = 1.
+
+Trung bình bằng 22/12 = 1.83
+
+###	DSA10015 - KRUSKAL
+
+Cho đồ thị vô hướng có trọng số G=<V, E, W>. Nhiệm vụ của bạn là hãy xây dựng một cây khung nhỏ nhất của đồ thị bằng thuật toán Kruskal.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai phần: phần thứ nhất đưa vào hai số V, E tương ứng với số đỉnh và số cạnh của đồ thị; phần thứ 2 đưa vào E cạnh của đồ thị, mỗi cạnh là một bộ 3: đỉnh đầu, đỉnh cuối và trọng số của cạnh.
+- T, S, D thỏa mãn ràng buộc: 1≤T≤100;  1≤V≤100; 1≤E, W≤10000.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+3 3
+1 2 5
+2 3 3
+1 3 1
+2 1
+1 2 5
+```
+
+**output**
+```
+4
+5
+``` 
+
+###	DSA10016 - NỐI ĐIỂM
+
+Cho N điểm trên mặt phẳng Oxy. Để vẽ được đoạn thẳng nối A và B sẽ tốn chi phí tương đương với khoảng cách từ A tới B.
+
+Nhiệm vụ của bạn là nối các điểm với nhau, sao cho N điểm đã cho tạo thành 1 thành phần liên thông duy nhất và chi phí để thực hiện là nhỏ nhất có thể.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+- Mỗi test bắt đầu bởi số nguyên N (1 ≤ N ≤ 100).
+- N dòng tiếp theo, mỗi dòng gồm 2 số thực x[i], y[i] là tọa độ của điểm thứ i (|x[i]|, |y[i]| ≤ 100).
+
+**Output:** 
+- Với mỗi test, in ra chi phí nhỏ nhất tìm được với độ chính xác 6 chữ số thập phân sau dấu phẩy.
+
+**input**
+```
+1
+3
+1.0 1.0
+2.0 2.0
+2.0 4.0
+```
+
+**output**
+```
+3.414214
+``` 
+
+###	DSA10017 - CHU TRÌNH ÂM
+
+Cho đồ thị có trọng số G=<V, E> được biểu diễn dưới dạng danh sách cạnh trọng số âm hoặc dương. Hãy viết chương trình xác định xem đồ thị có chu trình âm hay không.
+
+**Input:** 
+- Dòng đầu tiên đưa vào T là số lượng bộ test.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm |E|+1 dòng: dòng đầu tiên đưa vào hai số |V|, |E| tương ứng với số đỉnh và số cạnh của đồ thị; |E| dòng tiếp theo mỗi dòng đưa vào bộ ba u∈V, v∈V, w tương ứng với một cạnh cùng với trọng số canh của đồ thị.
+- T, |V|, |E| thỏa mãn ràng buộc: 1≤T≤100; 1≤|V|≤10<sup>3</sup>; 1≤|E|≤|V|(|V|-1)/2;
+
+**Output:** 
+- Đưa ra 1 hoặc 0 theo từng dòng của mỗi test tương ứng với đồ thị có hoặc không có chu trình âm.
+
+**input**
+```
+2
+3 3
+1 2 -1
+2 3 4
+3 1 -2
+3 3
+1 2 -1
+2 3 2
+3 1 -2
+```
+
+**output**
+```
+0
+1
+``` 
+
+## Tree
+
+

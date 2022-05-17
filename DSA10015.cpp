@@ -2,7 +2,7 @@
 using namespace std;
 
 typedef pair<int, int> ii;
-typedef pair<int, ii> iii; // X: dau, Y.X: cuoi, Y.Y: trong so
+typedef pair<int, ii> iii; // X: trog so, Y.X: dau, Y.Y: cuoi
 #define X first
 #define Y second
 
