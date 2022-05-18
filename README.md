@@ -8,9 +8,9 @@ Một xâu nhị phân độ dài n được gọi là thuận nghịch hay đ�
 
 Ví dụ với n = 4 ta tìm được 4 xâu nhị phân thuận nghịch như dưới đây.
 ```
-0 0 0 0   
-0 1 1 0     
-1 0 0 1     
+0 0 0 0 
+0 1 1 0   
+1 0 0 1   
 1 1 1 1
 ```
 
@@ -31,11 +31,11 @@ Ví dụ với n = 4 ta tìm được 4 xâu nhị phân thuận nghịch như d
 
 Cho dãy A[] gồm N số tự nhiên khác nhau và số tự nhiên K. Hãy viết chương trình liệt kê tất cả các dãy con của dãy số A[] sao cho tổng các phần tử trong dãy con đó đúng bằng K. Dữ liệu vào trên bàn phím (n=5, K=50), 5 số dòng thứ 2 là các phần tử dãy A:
 ```
-5 50      
+5 50   
 5 10 15 20 25
 ```
 Các dãy con thoả mãn điều kiện tìm được liệt kê trên màn hình:
-- Mỗi dòng ghi lại một dãy con. Hai phần tử khác nhau của dãy con được viết cách nhau bởi một  khoảng trống.
+- Mỗi dòng ghi lại một dãy con. Hai phần tử khác nhau của dãy con được viết cách nhau bởi một khoảng trống.
 - Dòng cuối cùng ghi lại số các dãy con có tổng các phần tử đúng bằng K tìm được.
 ```
 10 15 25
@@ -67,8 +67,8 @@ Giá trị tối ưu FOPT và phương án XOPT tìm được sẽ liệt kê tr
 
 **input**
 ```
-4 10                               
-6 5 3 7    
+4 10                
+6 5 3 7  
 5 4 6 5
 ```
 
@@ -80,7 +80,7 @@ Giá trị tối ưu FOPT và phương án XOPT tìm được sẽ liệt kê tr
 
 ### CTDL_004 - DÃY CON TĂNG DẦN BẬC K
 
-Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN } và số tự nhiên K (K<=N<=100). Ta gọi một dãy con tăng dần bậc K của dãy số AN là một dãy các số gồm K phần tử trong dãy đó thỏa mãn tính chất tăng dần. Bài toán được đặt ra là in ra màn hình  số các dãy con tăng dần bậc K của dãy số AN. Ví dụ :
+Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN } và số tự nhiên K (K<=N<=100). Ta gọi một dãy con tăng dần bậc K của dãy số AN là một dãy các số gồm K phần tử trong dãy đó thỏa mãn tính chất tăng dần. Bài toán được đặt ra là in ra màn hình số các dãy con tăng dần bậc K của dãy số AN. Ví dụ :
 
 **Input:**
 - Dòng đầu tiên ghi lại hai số N và K tương ứng với số phần tử của dãy số và bậc của dãy con.
@@ -92,7 +92,7 @@ Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN } và số tự nhiên K
 **input**
 ```
 5 3
-2 5 15 10 20  
+2 5 15 10 20 
 ```
 
 **output**
@@ -131,13 +131,13 @@ Cho hai số N, K và một tập con K phần tử X[] =(X1, X2,.., XK) của 1
 
 Input:
 
-*   Dòng đầu tiên đưa vào số lượng test T.
-*   Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một xâu nhi phân X.
-*   T, X[] thỏa mãn ràng buộc: 1≤T≤100; 1≤length(X)≤10<sup>3</sup>.
+* Dòng đầu tiên đưa vào số lượng test T.
+* Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một xâu nhi phân X.
+* T, X[] thỏa mãn ràng buộc: 1≤T≤100; 1≤length(X)≤10<sup>3</sup>.
 
 Output:
 
-*   Đưa ra kết quả mỗi test theo từng dòng.
+* Đưa ra kết quả mỗi test theo từng dòng.
 
 **input**
 ```
@@ -160,13 +160,13 @@ Cho số tự nhiên N và một hoán vị X\[\] của 1, 2, .., N. Nhiệm v�
 
 Input:
 
-*   Dòng đầu tiên đưa vào số lượng test T.
-*   Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là số N; dòng tiếp theo đưa vào hoán vị X\[\] của 1, 2, .., N.
-*   T, N, X\[\] thỏa mãn ràng buộc: 1≤T≤100; 1≤ N≤10<sup>3</sup>.
+* Dòng đầu tiên đưa vào số lượng test T.
+* Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là số N; dòng tiếp theo đưa vào hoán vị X\[\] của 1, 2, .., N.
+* T, N, X\[\] thỏa mãn ràng buộc: 1≤T≤100; 1≤ N≤10<sup>3</sup>.
 
 Output:
 
-*   Đưa ra kết quả mỗi test theo từng dòng.
+* Đưa ra kết quả mỗi test theo từng dòng.
 
 **input**
 ```
@@ -189,13 +189,13 @@ Cho hai số nguyên dương N và K. Nhiệm vụ của bạn là hãy liệt k
 
 Input:
 
-*   Dòng đầu tiên đưa vào số lượng test T.
-*   Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một cặp số tự nhiên N, K được viết trên một dòng.
-*   T, n thỏa mãn ràng buộc: 1≤T≤100; 1≤k ≤ n≤15.
+* Dòng đầu tiên đưa vào số lượng test T.
+* Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một cặp số tự nhiên N, K được viết trên một dòng.
+* T, n thỏa mãn ràng buộc: 1≤T≤100; 1≤k ≤ n≤15.
 
 Output:
 
-*   Đưa ra kết quả mỗi test theo từng dòng.
+* Đưa ra kết quả mỗi test theo từng dòng.
 
 
 **input**
@@ -217,13 +217,13 @@ Cho số nguyên dương N. Nhiệm vụ của bạn là hãy liệt kê tất c
 
 Input:
 
-*   Dòng đầu tiên đưa vào số lượng test T.
-*   Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên N được viết trên một dòng.
-*   T, n thỏa mãn ràng buộc: 1≤T, N≤10.
+* Dòng đầu tiên đưa vào số lượng test T.
+* Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên N được viết trên một dòng.
+* T, n thỏa mãn ràng buộc: 1≤T, N≤10.
 
 Output:
 
-*   Đưa ra kết quả mỗi test theo từng dòng.
+* Đưa ra kết quả mỗi test theo từng dòng.
 
 **input**
 ```
@@ -244,13 +244,13 @@ Cho số nguyên dương N. Nhiệm vụ của bạn là hãy liệt kê tất c
 
 Input:
 
-*   Dòng đầu tiên đưa vào số lượng test T.
-*   Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên N được viết trên một dòng.
-*   T, n thỏa mãn ràng buộc: 1≤T, N≤10.
+* Dòng đầu tiên đưa vào số lượng test T.
+* Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên N được viết trên một dòng.
+* T, n thỏa mãn ràng buộc: 1≤T, N≤10.
 
 Output:
 
-*   Đưa ra kết quả mỗi test theo từng dòng.
+* Đưa ra kết quả mỗi test theo từng dòng.
 
 **input**
 ```
@@ -271,13 +271,13 @@ Xâu ký tự str được gọi là xâu AB nếu mỗi ký tự trong xâu ho�
 
 Input:
 
-*   Dòng đầu tiên đưa vào số lượng test T.
-*   Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên n.
-*   T, n thỏa mãn ràng buộc: 1≤T≤10; 1≤n≤10.
+* Dòng đầu tiên đưa vào số lượng test T.
+* Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một số tự nhiên n.
+* T, n thỏa mãn ràng buộc: 1≤T≤10; 1≤n≤10.
 
 Output:
 
-*   Đưa ra kết quả mỗi test theo từng dòng. Mỗi xâu cách nhau 1 khoảng trống.
+* Đưa ra kết quả mỗi test theo từng dòng. Mỗi xâu cách nhau 1 khoảng trống.
 
 **input**
 ```
@@ -350,7 +350,7 @@ BBAAA
 
 Hãy viết chương trình nhận vào một chuỗi (có thể khá dài) các ký tự số và đưa ra màn hình hoán vị kế tiếp của các ký tự số đó (với ý nghĩa là hoán vị có giá trị lớn hơn tiếp theo nếu ta coi chuỗi đó là một giá trị số nguyên). Chú ý: Các ký tự số trong dãy có thể trùng nhau.
 
-Ví dụ:               
+Ví dụ:           
 
 123 -> 132
 
@@ -9120,4 +9120,839 @@ Cho đồ thị có trọng số G=<V, E> được biểu diễn dưới dạng 
 
 ## Tree
 
+###	DSA11001 - CÂY BIỂU THỨC 1
 
+Cây biểu thức là một cây nhị phân trong đó mỗi node trung gian là một phép toán, mỗi node lá là một toán hạng. Ví dụ với biểu thức P = 3 + ((5+9)*2) sẽ được biểu diễn như cây dưới đây.
+
+![download](https://user-images.githubusercontent.com/64203006/169007933-244975f7-9522-4d52-b552-8e4ae66351b3.png)
+
+Đối với cây biểu thức, duyệt theo thứ tự trước ta sẽ được biểu thức tiền tố, duyệt theo thứ tự sau ta sẽ được biểu thức hậu tố, duyệt theo thứ tự giữa ta được biểu thức trung tố. Chú ý, cây biểu thức luôn là cây nhị phân đầy (mỗi node trung gian đều có hai node con).
+
+Cho biểu thức hậu tố P, hãy sử dụng cây biểu thức để đưa ra biểu thức trung tố tương ứng với biểu thức P.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test là một biểu thức hậu tố P.
+- T, P thỏa mãn ràng buộc : 1≤T≤100; 1≤lengh(P)≤100.
+
+**Output:** 
+- Đưa ra biểu thức trung tố tương ứng với P.
+
+**input**
+```
+2
+ab+ef*g*-
+wlrb+-*
+```
+
+**output**
+```
+a + b - e * f * g
+w * l - r + b
+``` 
+
+###	DSA11002 - CÂY BIỂU THỨC 2
+
+Cho một cây biểu thức là một cây nhị phân đầy đủ bao gồm các phép toán +, -, \*. / và một số toán hạng có giá trị nguyên. Nhiệm vụ của bạn là hãy tính toán giá trị biểu thức được biểu diễn trên cây nhị phân đầy đủ. Ví dụ với cây dưới đây là biểu diễn của biểu thức P = ( (5\*4) + (100-20)) sẽ cho ta giá trị là 100.
+
+![download](https://user-images.githubusercontent.com/64203006/169007933-244975f7-9522-4d52-b552-8e4ae66351b3.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test là gồm hai dòng: dòng thứ nhất đưa vào N là số lượng node của cây; dòng thứ hai đưa vào nội dung các node của cây; các node được viết cách nhau một vài khoảng trống. Các số có giá trị nguyên không vượt quá 1000.
+- T, N, P thỏa mãn ràng buộc : 1≤T≤100; 1≤N, lenght(P)≤100.
+
+**Output:** 
+- Đưa ra giá trị của cây biểu thức.
+
+**input**
+```
+2
+7
++ * - 5 4 100 20
+3
+- 4 7 
+```
+
+**output**
+```
+100
+-3
+```
+
+###	DSA11003 - DUYỆT CÂY 1
+
+Cho phép duyệt cây nhị phân Inorder và Preorder, hãy đưa ra kết quả phép duyệt Postorder của cây nhị phân. Ví dụ với cây nhị phân có các phép duyệt cây nhị phân của cây dưới đây:
+
+```
+         1
+      /    \    
+     2       3
+   /   \      \
+  4     5      6
+```
+
+Inorder: 4 2 5 1 3 6
+
+Preorder: 1 2 4 5 3 6
+
+Postorder: 4 5 2 6 3 1 
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 3 dòng: dòng đầu tiên đưa vào số N là số lượng node; dòng tiếp theo đưa vào N số theo phép duyệt Inorder; dòng cuối cùng đưa vào N số là kết quả của phép duyệt Preorder; các số được viết cách nhau một vài khoảng trống.
+- T, N, node thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤1000; 1≤ giá trị node ≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+1
+6
+4 2 5 1 3 6
+1 2 4 5 3 6
+```
+
+**output**
+```
+4 5 2 6 3 1
+```
+
+###	DSA11004 - DUYỆT CÂY THEO MỨC
+
+Cho cây nhị phân, nhiệm vụ của bạn là duyệt cây theo Level-order. Phép duyệt level-order trên cây là phép thăm node theo từng mức của cây. Ví dụ với cây dưới đây sẽ cho ta kết quả của phép duyệt level-order: 20  8  22  4  12  10  14.
+
+![download](https://user-images.githubusercontent.com/64203006/169009802-2135ce8f-a90a-438f-b2ba-1880ca41afd1.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt level-order theo từng dòng.
+
+**input**
+```
+2
+2
+1 2 R 1 3 L
+4
+10 20 L 10 30 R 20 40 L 20 60 R
+```
+
+**output**
+```
+1 3 2
+10 20 30 40 60
+```
+
+###	DSA11005 - DUYỆT CÂY 2
+
+Cho hai mảng là phép duyệt Inorder và Level-order, nhiệm vụ của bạn là xây dựng cây nhị phân và đưa ra kết quả phép duyệt Postorder. Level-order là phép duyệt theo từng mức của cây. Ví dụ như cây dưới đây ta có phép Inorder và Level-order như dưới đây:
+
+Inorder : 4 8 10 12 14 20 22
+
+Level order: 20 8 22 4 12 10 14
+
+![download](https://user-images.githubusercontent.com/64203006/169010113-4e97345a-8ab4-4a80-a119-1dcee7b563f1.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 3 dòng: dòng đầu tiên đưa vào số N là số lượng node; dòng tiếp theo đưa vào N số là phép duyệt Inorder; dòng cuối cùng đưa vào N số là phép duyệt Level-order; các số được viết cách nhau một vài khoảng trống.
+- T, N, node thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤A[i]≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+2
+3
+1 0 2 
+0 1 2 
+7
+3 1 4 0 5 2 6 
+0 1 2 3 4 5 6 
+```
+
+**output**
+```
+1 2 0
+3 4 1 5 6 2 0
+```
+
+###	DSA11006 - DUYỆT CÂY KIỂU XOẮN ỐC
+
+Cho cây nhị phân, nhiệm vụ của bạn là duyệt cây theo xoắn ốc (spiral-order). Phép. Ví dụ với cây dưới đây sẽ cho ta kết quả của phép duyệt spiral-order: 1 2 3  4 5 6 7.
+
+![download](https://user-images.githubusercontent.com/64203006/169011045-205133d5-c04a-4345-a8dc-5fadfc4474d1.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+2
+2
+1 2 R 1 3 L
+4
+10 20 L 10 30 R 20 40 L 20 60 R
+```
+
+**output**
+```
+1 3 2
+10 0 30 60 40
+```
+
+###	DSA11008 - KIỂM TRA NODE LÁ
+
+Cho cây nhị phân, nhiệm vụ của bạn là kiểm tra xem tất cả các node lá của cây có cùng một mức hay không? Ví dụ với cây dưới đây sẽ cho ta kết quả là Yes.
+
+![download](https://user-images.githubusercontent.com/64203006/169011286-ce6cfa9d-491f-476f-93a1-ce33d1250eff.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+2
+2
+1 2 R 1 3 L
+4
+10 20 L 10 30 R 20 40 L 20 60 R
+```
+
+**output**
+```
+1
+0
+```
+
+###	DSA11010 - CÂY NHỊ PHÂN HOÀN HẢO
+
+Cho cây nhị phân, nhiệm vụ của bạn là kiểm tra xem cây nhị phân có phải là một cây hoàn hảo hay không (perfect tree)? Một cây nhị phân được gọi là cây hoàn hảo nếu tất cả các node trung gian của nó đều có hai node con và tất cả các node lá đều có cùng một mức.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+3
+6
+10 20 L 10 30 R 20 40 L 20 50 R 30 60 L 30 70 R
+2
+18 15 L 18 30 R
+5
+1 2 L 2 4 R 1 3 R 3 5 L 3 6 R
+```
+
+**output**
+```
+Yes
+Yes
+No
+```
+
+###	DSA11011 - CÂY NHỊ PHÂN ĐỦ
+
+Cho cây nhị phân, nhiệm vụ của bạn là kiểm tra xem cây nhị phân có phải là một cây đủ hay không (full binary tree)? Một cây nhị phân được gọi là cây đủ nếu tất cả các node trung gian của nó đều có hai node con.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+2
+4
+1 2 L 1 3 R 2 4 L 2 5 R
+3
+1 2 L 1 3 R 2 4 L
+```
+
+**output**
+```
+1
+0
+```
+
+###	DSA11012 - CÂY NHỊ PHÂN BẰNG NHAU
+
+Cho hai cây nhị phân, nhiệm vụ của bạn là kiểm tra xem cây nhị phân có giống nhau hay không?
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 3 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái của mỗi cây; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+2
+2
+1 2 L 1 3 R
+2
+1 2 L 1 3 R
+2
+1 2 L 1 3 R
+2
+1 3 L 1 2 R
+```
+
+**output**
+```
+1
+0
+```
+
+###	DSA11014 - TỔNG NODE LÁ BÊN PHẢI
+
+Cho cây nhị phân, nhiệm vụ của bạn là tính tổng của tất cả các node lá bên phải trên cây? Ví dụ với cây dưới đây ta có kết quả là 2.
+
+![download](https://user-images.githubusercontent.com/64203006/169011952-af885f76-dac8-4383-bfbf-52c99259c2f7.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 3 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+2
+2
+1 2 L 1 3 R
+5
+10 20 L 10 30 R 20 40 L 20 60 R 30 90 L
+```
+
+**output**
+```
+3
+60
+```
+
+###	DSA11015 - TỔNG LỚN NHẤT
+
+Cho cây nhị phân có giá trị mỗi node là một số, nhiệm vụ của bạn là tìm tổng lớn nhất từ một node lá này sang một node lá khác? Ví dụ với cây dưới đây ta có tổng lớn nhất là 27.
+
+![download](https://user-images.githubusercontent.com/64203006/169012115-bb74c4be-9cd3-42aa-be5c-81d3eec5adfd.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 3 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+1
+12
+-15 5 L -15 6 R 5 -8 L 5 1 R -8 2 L -8 -3 R 6 3 L 6 9 R 9 0 R 0 4 L 0 -1 R -1 10 L
+```
+
+**output**
+```
+27
+```
+
+###	DSA11016 - BIẾN ĐỔI SANG CÂY NHỊ PHÂN TÌM KIẾM
+
+Cho cây nhị phân, nhiệm vụ của bạn là dịch chuyển cây nhị phân thành cây nhị phân tìm kiếm. Phép dịch chuyển phải bảo toàn được cấu trúc cây nhị phân ban đầu. Ví dụ dưới đây sẽ minh họa phép dịch chuyển:
+
+![download](https://user-images.githubusercontent.com/64203006/169010358-f97283fb-99b4-492f-9295-ec971388af20.png)
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 3 dòng: dòng đầu tiên đưa vào số N là số lượng cạnh của cây; dòng tiếp theo đưa vào N bộ ba (u, v, x), trong đó u là node cha, v là node con, x= R nếu v là con phải, x=L nếu v là con trái; u, v, x được viết cách nhau một vài khoảng trống.
+- T, N, u, v, thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤u, v≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng là phép duyệt Inorder của cây tìm kiếm.
+
+**input**
+```
+2
+2
+1 2 R 1 3 L
+4
+10 20 L 10 30 R 20 40 L 20 60 R
+```
+
+**output**
+```
+1 2 3
+10 20 30 40 60
+```
+
+###	DSA11017 - DUYỆT CÂY NHỊ PHÂN TÌM KIẾM 1
+
+Cho mảng A[] gồm N node là biểu diễn phép duyệt theo thứ tự giữa (Preorder) của cây nhị phân tìm kiếm. Nhiệm vụ của bạn là đưa ra phép duyệt theo thứ tự sau của cây nhị phân tìm kiếm.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào số N là số lượng node; dòng tiếp theo đưa vào N số A[i]; các số được viết cách nhau một vài khoảng trống.
+- T, N, node thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤A[i]≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả phép duyệt Postorder theo từng dòng.
+
+**input**
+```
+2
+5
+40 30 35 80 100
+8
+40 30 32 35 80 90 100 120
+```
+
+**output**
+```
+35 30 100 80 40
+35 32 30 120 100 90 80 40
+```
+
+###	DSA11018 - XÂY DỰNG LẠI CÂY NHỊ PHÂN TÌM KIẾM
+
+Cho một mảng là phép duyệt level-order của cây nhị phân tìm kiếm. Nhiệm vụ của bạn là xây dựng lại cây nhị phân tìm kiếm bảo toàn được cấu trúc cây nhị phân ban đầu.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm dòng: dòng đầu tiên đưa vào số N là số lượng node của cây tìm kiếm; dòng tiếp theo đưa vào phép duyệt level-order của cây tìm kiếm; các số được viết cách nhau một vài khoảng trống.
+- T, N, node thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤node≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng là phép duyệt trước (preOrder) của cây tìm kiếm.
+
+**input**
+```
+2
+9
+7 4 12 3 6 8 1 5 10
+6
+1 3 4 6 7 8
+```
+
+**output**
+```
+7 4 3 1 6 5 12 8 10
+1 3 4 6 7 8
+```
+
+###	DSA11019 - DUYỆT CÂY NHỊ PHÂN TÌM KIẾM 2
+
+Cho một mảng A[] gồm N phần tử biểu diễn phép duyệt preorder của cây nhị phân tìm kiếm. Nhiệm vụ của bạn là đưa ra phép duyệt postorder của cây nhị phân tìm kiếm.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào số N là số lượng node của cây tìm kiếm; dòng tiếp theo đưa vào phép duyệt preorder của cây tìm kiếm; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤A[i]≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng là phép duyệt postorder của cây tìm kiếm.
+
+**input**
+```
+2
+5
+40 30 35 80 100
+8
+40 30 32 35 80 90 100 120
+```
+
+**output**
+```
+35 30 100 80 40
+35 32 30 120 100 90 80 40
+```
+
+###	DSA11020 - KIỂM TRA CÂY NHỊ PHÂN TÌM KIẾM
+
+Cho một mảng A[] gồm N phần tử. Nhiệm vụ của bạn là đưa ra 1 nếu mảng A[] biểu diễn phép duyệt inorder của cây nhị phân tìm kiếm, ngược lại đưa ra 0.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T.
+- Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 2 dòng: dòng đầu tiên đưa vào số N là số lượng node của cây tìm kiếm; dòng tiếp theo đưa vào N số A[i]; các số được viết cách nhau một vài khoảng trống.
+- T, N, A[i] thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10<sup>3</sup>; 1≤A[i]≤10<sup>4</sup>;
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+3
+5
+10 20 30 40 50
+6
+90 80 100 70 40 30
+3
+1 1 2
+```
+
+**output**
+```
+1
+0
+0
+```
+
+###	DSA11021 - NODE LÁ CỦA CÂY NHỊ PHÂN TÌM KIẾM
+
+Cho dãy số gồm N số là phép duyệt theo thứ tự trước (Preorder) của một cây nhị phân tìm kiếm. Hãy in ra tất cả các node lá của cây ?
+
+Ví dụ với dãy A[] = {30, 20, 15, 25, 23, 28, 40, 35, 33, 38, 45} là phép duyệt cây theo thứ tự trước sẽ cho ta kết quả: 15, 23, 28, 33, 38, 45.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T (T≤100).
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất là số tự nhiên N (N≤1000). Dòng tiếp theo là N số là phép duyệt theo thứ tự trước của cây BST.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+6
+10 5 1 7 40 50
+11
+30 20 15 25 23 28 40 35 33 38 45
+```
+
+**output**
+```
+1 7 50
+15 23 28 33 38 45
+```
+
+###	DSA11022 - NODE TRUNG GIAN CỦA CÂY NHỊ PHÂN TÌM KIẾM
+
+Cho dãy số gồm N số là phép duyệt theo thứ tự trước (Preorder) của một cây nhị phân tìm kiếm. Hãy đưa ra số các node trung gian của cây ?
+
+Ví dụ với dãy A[] = {30, 20, 15, 25, 23, 28, 40, 35, 33, 38, 45} là phép duyệt cây theo thứ tự trước sẽ cho ta kết quả là 5 bao gồm các node: 30, 20, 25, 40, 35.                     
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T (T≤100).
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất là số tự nhiên N (N≤1000). Dòng tiếp theo là N số là phép duyệt theo thứ tự trước của cây BST.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+6
+10 5 1 7 40 50
+11
+30 20 15 25 23 28 40 35 33 38 45
+```
+
+**output**
+```
+3
+5
+```
+
+###	DSA11023 - ĐỘ SÂU CÂY NHỊ PHÂN TÌM KIẾM
+
+Cho dãy số gồm N số là phép duyệt theo thứ tự trước (Preorder) của một cây nhị phân tìm kiếm. Hãy tìm độ sâu của cây ?
+
+Ví dụ với dãy A[] = {30, 20, 15, 25, 23, 28, 40, 35, 33, 38, 45} là phép duyệt cây theo thứ tự trước sẽ cho ta kết quả là 3.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T (T≤100).
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất là số tự nhiên N (N≤1000). Dòng tiếp theo là N số là phép duyệt theo thứ tự trước của cây BST.
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+6
+10 5 1 7 40 50
+11
+30 20 15 25 23 28 40 35 33 38 45
+```
+
+**output**
+```
+2
+3
+```
+
+###	DSA11024 - CÂY NHỊ PHÂN TÌM KIẾM CÂN BẰNG 1
+
+Hãy xây dựng một cây nhị phân tìm kiếm cân bằng từ dãy số A[] =(a0, a1, .., an-1}. Đưa ra nội dung node gốc của cây tìm kiếm cân bằng.  Ví dụ với dãy A[]={40, 28, 45, 38, 33, 15, 25, 20, 23, 35, 30} ta sẽ có cây nhị phân tìm kiếm cân bằng với node gốc là 33.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T (T≤100).
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất là số tự nhiên N (N≤10<sup>6</sup>). Dòng tiếp theo là N số của mảng A[].
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+11
+40 28 45 38 33 15 25 20 23 35 30
+10
+1 2 3 4 5 6 7 8 9 10
+```
+
+**output**
+```
+30
+5
+```
+
+###	DSA11025 - CÂY NHỊ PHÂN TÌM KIẾM CÂN BẰNG 2
+
+Hãy xây dựng một cây nhị phân tìm kiếm cân bằng từ dãy số A[] =(a0, a1, .., an-1}. Đưa ra phép duyệt theo thứ tự trước (preorder) của cây tìm kiếm cân bằng.  Ví dụ với dãy A[]={40, 28, 45, 38, 33, 15, 25, 20, 23, 35, 30} ta sẽ có phép duyệt theo thứ tự trước của cây nhị phân tìm kiếm cân bằng với node gốc là 33 : 33, 25, 20, 15, 23, 28, 30, 40, 38, 35, 45.
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T (T≤100).
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất là số tự nhiên N (N≤10<sup>6</sup>). Dòng tiếp theo là N số của mảng A[].
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+11
+40 28 45 38 33 15 25 20 23 35 30
+10
+1 2 3 4 5 6 7 8 9 10
+```
+
+**output**
+```
+30 23 15 20 25 28 38 33 35 40 45
+5 2 1 3 4 8 6 7 9 10
+```
+
+###	DSA11026 - DUYỆT SAU CÂY TÌM KIẾM CÂN BẰNG
+
+Hãy xây dựng một cây nhị phân tìm kiếm cân bằng từ dãy số A[] =(a0, a1, .., an-1}. Đưa ra phép duyệt theo thứ tự sau (post-order) của cây tìm kiếm cân bằng.  Ví dụ với dãy A[]={40, 28, 45, 38, 33, 15, 25, 20, 23, 35, 30} ta sẽ có phép duyệt theo thứ tự trước của cây nhị phân tìm kiếm cân bằng với node gốc là 33 : 15, 23, 20, 30, 28, 25, 35, 38, 45, 40, 33.  
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T (T≤100).
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất là số tự nhiên N (N≤10<sup>6</sup>). Dòng tiếp theo là N số của mảng A[].
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+11
+40 28 45 38 33 15 25 20 23 35 30
+10
+1 2 3 4 5 6 7 8 9 10
+```
+
+**output**
+```
+20 15 28 25 23 35 33 45 40 38 30
+1 4 3 2 7 6 10 9 8 5
+```
+
+###	DSA11027 - ĐẾM SỐ NODE LÁ CÂY NHỊ PHÂN TÌM KIẾM CÂN BẰNG
+
+Hãy xây dựng một cây nhị phân tìm kiếm cân bằng từ dãy số A[] =(a0, a1, .., an-1}. Đếm số node lá của cây nhị phân tìm kiếm cân bằng.  Ví dụ với dãy A[]={40, 28, 45, 38, 33, 15, 25, 20, 23, 35, 30} ta sẽ có phép duyệt theo thứ tự trước của cây nhị phân tìm kiếm cân bằng với số node lá là 5 : 15, 23, 30, 35 45.  
+
+**Input:** 
+- Dòng đầu tiên đưa vào số lượng bộ test T (T≤100).
+- Những dòng kế tiếp đưa vào T bộ test. Mỗi bộ test gồm 2 dòng: dòng thứ nhất là số tự nhiên N (N≤1000). Dòng tiếp theo là N số của mảng A[].
+
+**Output:** 
+- Đưa ra kết quả mỗi test theo từng dòng.
+
+**input**
+```
+2
+11
+40 28 45 38 33 15 25 20 23 35 30
+10
+1 2 3 4 5 6 7 8 9 10
+```
+
+**output**
+```
+5
+4
+```
+
+###	DSA11028 - ĐỘ CAO CỦA CÂY
+
+Cho một cây có N node, gốc tại  1. Độ cao của một node u được tính bằng khoảng cách từ u tới node gốc. Độ cao của node gốc bằng 0. Nhiệm vụ của bạn là hãy tìm node xa node gốc nhất và in ra độ cao của node này.
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T( T≤ 20).
+- Mỗi test bắt đầu bằng số nguyên N (1 ≤ N ≤ 100 000).
+- N-1 dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v cho biết node u nối với node v.
+
+**Output:** 
+- Với mỗi test, in ra một số nguyên là độ cao của cây.
+
+**input**
+```
+2
+5
+1 2
+1 3
+2 4
+2 5
+4
+1 2
+2 3
+3 4
+```
+
+**output**
+```
+2
+3
+```
+
+###	DSA11029 - ĐƯỜNG ĐI TỚI NODE LÁ
+
+Cho một cây có N node, gốc tại 1. Với mỗi node lá, bạn hãy in ra đường đi từ node gốc tới nó.
+
+![download](https://user-images.githubusercontent.com/64203006/169013925-4ff88c1c-5188-4149-9402-efc1d0db2b4b.png)
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T( T≤ 20).
+- Mỗi test bắt đầu bằng số nguyên N (1 ≤ N ≤ 1000).
+- N-1 dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v cho biết node u nối với node v.
+
+**Output:** 
+- Với mỗi test, in ra K dòng, trong đó K là số lượng node lá. Mỗi dòng là đường đi từ node gốc tới node lá X. Node lá nào có nhãn nhỏ hơn, in ra trước.
+
+**input**
+```
+2
+5
+1 2
+1 3
+2 4
+2 5
+4
+1 2
+2 3
+3 4
+```
+
+**output**
+```
+1 3
+1 2 4
+1 2 5
+1 2 3 4
+```
+
+###	DSA11030 - KHOẢNG CÁCH GIỮA HAI NODE
+
+Cho một cây có N node, gốc tại 1. Có Q truy vấn, mỗi truy vấn yêu cầu bạn tìm khoảng cách giữa hai node u và v.
+
+![download](https://user-images.githubusercontent.com/64203006/169014221-3c74e339-ba32-445a-8570-8893ee77ce3a.png)
+
+**Input:** 
+- Dòng đầu tiên là số lượng bộ test T( T≤ 20).
+- Mỗi test bắt đầu bằng số nguyên N (1 ≤ N ≤ 1000). N-1 dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v cho biết node u nối với node v.
+- Dòng tiếp theo là số lượng truy vấn Q (1 ≤ Q ≤ 1000). Q dòng tiếp theo, mỗi dòng gồm 2 số nguyên u và v.
+
+**Output:** 
+- Với mỗi test, in ra Q dòng là đáp án với mỗi truy vấn.
+
+**input**
+```
+1
+8
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+6 8
+5
+4 5
+4 6
+3 4
+2 4
+8 5
+```
+
+**output**
+```
+2
+4
+3
+1
+5
+```
+
+###	DSAKT060 - TRUY VẤN ĐỐI XỨNG
+
+Cho số nguyên S gồm N chữ số. Có Q truy vấn, mỗi truy vấn thuộc một trong hai loại sau:
+
+q L R: yêu cầu xác định xâu con S[L, L+1, …, R] có phải là một xâu đối xứng hay không?
+
+c U x: thay đổi kí tự thứ U thành chữ số x.
+
+**Input:** 
+- Dòng đầu tiên chứa số nguyên S gồm N kí tự (N  <= 10^5).
+- Tiếp theo là số lượng truy vấn Q (Q <= 10^5)
+- Q dòng tiếp theo, mỗi dòng gồm một loại truy vấn.
+
+**Output:** 
+- Với mỗi truy vấn loại 1, nếu xâu con là một số đối xứng, hãy in ra “YES”, ngược lại in ra “NO”.
+
+**input**
+```
+12345
+5
+q 1 5
+q 5 5
+c 4 3
+q 3 5
+q 3 4
+```
+
+**output**
+```
+NO
+YES
+NO
+YES
+```
