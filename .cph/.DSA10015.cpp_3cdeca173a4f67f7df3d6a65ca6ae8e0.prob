@@ -1,0 +1,1 @@
+{"name":"Local: DSA10015","url":"/mnt/d/code/cpp-dsa/DSA10015.cpp","tests":[{"id":1653141672418,"input":"1\n5 10\n1 2 2\n1 3 0\n1 4 3\n1 5 0\n2 3 2\n2 4 3\n2 5 1\n3 4 2\n3 5 1\n4 5 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/DSA10015.cpp","group":"local","local":true}
