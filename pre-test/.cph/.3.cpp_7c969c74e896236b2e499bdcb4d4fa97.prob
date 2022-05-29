@@ -1,0 +1,1 @@
+{"name":"Local: 3","url":"/mnt/d/code/cpp-dsa/pre-test/3.cpp","tests":[{"id":1653810600746,"input":"2\n(((X))(((Y))))\n(b)((c)()","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/pre-test/3.cpp","group":"local","local":true}
