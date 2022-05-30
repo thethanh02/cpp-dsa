@@ -1,0 +1,1 @@
+{"name":"Local: DSA11029","url":"/mnt/d/code/cpp-dsa/danglam/DSA11029.cpp","tests":[{"id":1653834669461,"input":"2\n5\n1 2\n1 3\n2 4\n2 5\n4\n1 2\n2 3\n3 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/danglam/DSA11029.cpp","group":"local","local":true}

@@ -2,8 +2,9 @@
 using namespace std;
 int main() {
     string s;
-    cin >> s;
-    int cnt = 0;
+    int n = 1e6 - 1;
+    while (n--) s.push_back('4');
+    long long cnt = 0;
     for (int i = 0; i < s.size(); i++) 
         if (s[i] == '0' || s[i] == '4' || s[i] == '8') cnt++;
     for (int i = 0; i < s.size() - 1; i++) {

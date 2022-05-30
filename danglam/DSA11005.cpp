@@ -1,54 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
-#include <bits/stdc++.h>
-using namespace std;
 struct Node {
     int data;
     Node *left, *right;
     Node(int a) {
-        this -> data = a;
-        this -> left = NULL; 
-        this -> right = NULL;
+        data = a;
+        left = right = NULL;
     }
 };
-int Search(int a[], int x, int n) {
-    for (int i = 0; i < n; i++) 
-        if (a[i] == x) return i;
+template <class X> void print(X a) {
+    for (auto i : a) cout << i << " ";
+    cout << endl;
+}
+int Search(vector<int> In, vector<int> Lev, int st, int en) {
+    for (int i = st; i <= en; i++) 
+        if (Lev[0] == In[i]) 
+            return i;
     return -1;
 }
-void printPostOrder(int in[], int lev[], int n) {
-    queue<int> q;
-    q.push(lev[0]);
-    while (!q.empty()) {
-        int x = q.front(); q.pop();
+Node* buildTree(vector<int> In, vector<int> Lev, int st, int en, int n) {
+    if (n <= 0) return NULL;
+    Node* root = new Node(Lev[0]);
+
+    int idx = Search(In, Lev, st, en);
+    unordered_set<int> s;
+    for (int i = st; i < idx; i++)
+        s.insert(In[i]);
+    // print(s);
+    vector<int> lLev, rLev;
+    for (int i = 1; i < n; i++) {
+        if (s.find(Lev[i]) != s.end()) lLev.push_back(Lev[i]);
+        else rLev.push_back(Lev[i]);
     }
-    // int x = Search(in, lev[0], n);
-    // if (x > 0 && x < n) printPostOrder(in, lev + 1, x);
-    // if (x != n - 1) printPostOrder(in + x + 1, lev + 1, n - x - 1);
-    // cout << lev[0] << " ";
+    // print(lLev);
+    // cout << st << " " << idx << " " << en << endl;
+    // print(rLev);
+    root->left = buildTree(In, lLev, st, idx - 1, idx - st);
+    root->right = buildTree(In, rLev, idx + 1, en, en - idx);
+    return root;
 }
-void levelOrder(Node *root) {
-    queue<Node*> q;
-    q.push(root);
-    while (!q.empty()) {
-        Node *u = q.front(); q.pop();
-        cout << u->data << " ";
-        if (u->left != NULL) q.push(u->left);
-        if (u->right != NULL) q.push(u->right);
-    }
-}
-void makeNode(Node *root, int n1, int n2, char c) {
-    if (c == 'L') root->left = new Node(n2);
-    else if (c == 'R') root->right = new Node(n2);
-}
-void Insert(Node *root, int n1, int n2, char c) {
-    if (root == NULL) return;
-    if (root->data == n1)
-        makeNode(root, n1, n2, c);
-    else {
-        Insert(root->left, n1, n2, c);
-        Insert(root->right, n1, n2, c);
-    }
+
+void printPostorder(Node* r) {
+    if (!r) return;
+    printPostorder(r->left);
+    printPostorder(r->right);
+    cout << r->data << " ";
 }
 
 int main() {
@@ -56,23 +52,11 @@ int main() {
     cin >> t;
     while (t--) {
         cin >> n;
-        int in[n], lev[n];
-        for (int& i : in) cin >> i;
-        for (int& i : lev) cin >> i;
-
-        Node *root = NULL;
-        for (int i = 0; i < n; i++) {
-            int n1, n2; char c;
-            
-            if (root == NULL) {
-                root = new Node(n1);
-                makeNode(root, n1, n2, c);
-            } else Insert(root, n1, n2, c);
-        }
-        levelOrder(root);
-        cout << endl;
-
-        printPostOrder(in, lev, n);
+        vector<int> In(n), Lev(n);
+        for (int &i : In) cin >> i;
+        for (int &i : Lev) cin >> i;
+        Node* root = buildTree(In, Lev, 0, n - 1, n);
+        // printPostorder(root);
         cout << endl;
     }
 }
