@@ -1,36 +1,23 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-struct SinhVien {
-    char Masv[50], Hoten[50];
-    int tongdiem;
-};
-int maxi;
-void nhap(struct SinhVien &a) {
-    fgets(a.Masv, 50, stdin);
-    fgets(a.Hoten, 50, stdin);
-    scanf("%d", &a.tongdiem);
-    if (a.tongdiem > maxi) maxi = a.tongdiem;
+#include <bits/stdc++.h>
+using namespace std;
+int n, a[100][100], d[100][100], e[100][100];
+void Floyd() {
+    int i, j, k;
+    for (i = 1; i <= n; i++)
+        for (j = 1; j <= n; j++) {
+            d[i][j] = a[i][j];
+            e[i][j] = i;
+        }
+    for (k = 1; k <= n; k++)
+        for (i = 1; i <= n; i++)
+            for (j = 1; j <= n; j++)
+                if (d[i][j] > d[i][k] + d[k][j]) {
+                    d[i][j] = d[i][k] + d[k][j];
+                    e[i][j] = k;
+                }
 }
-void in(struct SinhVien a) {
-    printf("Ma sv: %s\nHo ten: %s\nTong diem: %d\n", a.Masv, a.Hoten, a.tongdiem);
-}
+
 int main() {
-    int n;
-    scanf("%d" , &n);
-    struct SinhVien a[n];
-    maxi = 0;
-    for (int i = 0; i < n; i++) {
-    	scanf("\n");
-    	nhap(a[i]);
-    }
-    printf("Sv co tong diem cao nhat:\n");
-    for (int i = 0; i < n; i++) {
-        if (a[i].tongdiem == maxi) in(a[i]);
-    }
-    printf("Danh sach sv do:\n");
-    for (int i = 0; i < n; i++) {
-        if (a[i].tongdiem >= 17) in(a[i]);
-    }
-    return 0;
+    int t;
+    cin >> t;
 }
