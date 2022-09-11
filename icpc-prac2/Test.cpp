@@ -35,7 +35,7 @@ void Solution() {
         if (st != en && i.distance <= r * r) 
             Union(st, en);
     }
-    
+
     int cnt = 0;
     for (ii i : v) {
         ii temp = Find(i);
