@@ -1,23 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, a[100][100], d[100][100], e[100][100];
-void Floyd() {
-    int i, j, k;
-    for (i = 1; i <= n; i++)
-        for (j = 1; j <= n; j++) {
-            d[i][j] = a[i][j];
-            e[i][j] = i;
-        }
-    for (k = 1; k <= n; k++)
-        for (i = 1; i <= n; i++)
-            for (j = 1; j <= n; j++)
-                if (d[i][j] > d[i][k] + d[k][j]) {
-                    d[i][j] = d[i][k] + d[k][j];
-                    e[i][j] = k;
-                }
+typedef long long ll;
+const int MOD = 1000033;
+vector<ll> fact(MOD);
+void factorial() {
+    fact[0] = 1;
+    fact[1] = 1;
+    for (int i = 2; i < MOD; i++)
+        fact[i] = (fact[i - 1] * i) % MOD;
+}
+
+ll powerMod(ll a, ll b) {
+    if (b == 0) return 1;
+
+    ll x = powerMod(a, b / 2);
+    if (b % 2 == 0) return x * x % MOD;
+    return a * (x * x % MOD) % MOD;
 }
 
 int main() {
+    factorial();
     int t;
     cin >> t;
+    while (t--) {
+        ll l, r, k, res;
+        cin >> l >> r >> k;
+        if (r >= MOD) {
+            cout << 0 << endl;
+        } else {
+            ll res = powerMod(fact[l], (r - l)) * fact[r] % MOD;
+            cout << powerMod(res, k % (MOD - 1)) << endl;
+        }
+    }
 }
