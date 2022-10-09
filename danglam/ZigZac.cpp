@@ -32,7 +32,7 @@ int getVal(Node *root) {
     if (!root->left && !root->right) return root->val;
 
     bool isRight = root->sw;
-    root->sw = !root->sw;
+    root->sw = !root->sw; // di qua 1 node thi switch thay doi nguoc lai
     if (isRight)
         return getVal(root->right);
     else
@@ -40,14 +40,14 @@ int getVal(Node *root) {
     
 }
 void Solution(Node *root, int N, int thuong, int du) {
-    long long sum1 = 0, sum2 = 0;
+    long long sum_du = 0, sum_thuong = 0;
     for (int i = 0; i < N; i++) {
         int temp = getVal(root);
         cout << temp << endl;
-        if (i < du) sum1 += temp;
-        sum2 += temp;
+        if (i < du) sum_du += temp;
+        sum_thuong += temp;
     }
-    cout << sum1 * du + sum2 * thuong << endl;;
+    cout << sum_du * du + sum_thuong * thuong << endl;;
 }
 int main() {
     int n, k;
@@ -64,8 +64,8 @@ int main() {
             addNode(m[i] ,i, r, x, 0);
         }
     }
-    int h = height(root);
-    int N = pow(2, h - 1);
-    int thuong = k / N, du = k % N;
+    int h = height(root); // Tinh chieu cao cua cay
+    int N = pow(2, h - 1); // Tinh 1 vong lap cua cay
+    int thuong = k / N, du = k % N; 
     Solution(root, N, thuong, du);
 }
