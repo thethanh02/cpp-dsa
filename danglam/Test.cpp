@@ -1,35 +1,55 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-const int MOD = 1000033;
-vector<ll> fact(MOD);
-void factorial() {
-    fact[0] = 1;
-    fact[1] = 1;
-    for (int i = 2; i < MOD; i++)
-        fact[i] = (fact[i - 1] * i) % MOD;
+
+int n;
+vector<vector<int>> v;
+vector<int> x;
+
+
+int BFS(int st, int en) {
+    queue<pair<int, int>> q;
+    q.push({st, 0});
+    while (!q.empty()) {
+        int a = q.front().first;
+        int b = q.front().second;
+        q.pop();
+
+        for (int i : v[a]) {
+            if (b + 1 > 3) return 4;
+            if (i == en) return b + 1;        
+            q.push({i, b + 1});
+        }
+    }
+    return 4;
 }
 
-ll powerMod(ll a, ll b) {
-    if (b == 0) return 1;
+bool Solution() {
+    for (int i = 0; i < n - 1; i++) 
+        if (BFS(x[i], x[i + 1]) > 3)
+            return 0;
 
-    ll x = powerMod(a, b / 2);
-    if (b % 2 == 0) return x * x % MOD;
-    return a * (x * x % MOD) % MOD;
+    return 1;
 }
 
 int main() {
-    factorial();
     int t;
     cin >> t;
     while (t--) {
-        ll l, r, k, res;
-        cin >> l >> r >> k;
-        if (r >= MOD) {
-            cout << 0 << endl;
-        } else {
-            ll res = powerMod(fact[l], (r - l)) * fact[r] % MOD;
-            cout << powerMod(res, k % (MOD - 1)) << endl;
+        cin >> n;
+        v.clear();
+        v.resize(n + 1);
+        x.resize(n);
+
+        for (int i = 0, a, b; i < n - 1; i++) {
+            cin >> a >> b;
+            v[a].push_back(b);
+            v[b].push_back(a);
         }
+
+        for (int i = 0; i < n; i++) 
+            cin >> x[i];
+        
+        cout << Solution() << endl;
     }
 }

@@ -1,0 +1,1 @@
+{"name":"Local: ZigZac","url":"/mnt/d/code/cpp-dsa/danglam/ZigZac.cpp","tests":[{"id":1665320295862,"input":"5 1000000000\n2 4 1\n3 5 0\n-1 -1 1000\n-1 -1 20000\n-1 -1 500000","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/code/cpp-dsa/danglam/ZigZac.cpp","group":"local","local":true}
